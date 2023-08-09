@@ -1,0 +1,8 @@
+<view catchtap="__e" class="failure-model data-v-0f51b670" data-event-opts="{{[ [ 'tap',[ [ 'onClickSure',['$event'] ] ] ] ]}}" wx:if="{{showFailureModel}}">
+    <view class="model-box data-v-0f51b670">
+        <view class="title _p data-v-0f51b670">该游客为成年人，本订单已添加2成人 0儿童 0老人</view>
+        <view class="action data-v-0f51b670">
+            <view bindtap="__e" class="_p data-v-0f51b670" data-event-opts="{{[ [ 'tap',[ [ 'onClickSure',['$event'] ] ] ] ]}}">知道了</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,10 @@
+<view catchtap="__e" catchtouchmove="__e" class="feedback-model data-v-28973cf2" data-event-opts="{{[ [ 'tap',[ [ 'onCancelSubscrib',['$event'] ] ] ],[ 'touchmove',[ [ 'moveHandle',['$event'] ] ] ] ]}}" hidden="{{!(showSubscribeMessage===true&&isFalg===true)}}">
+    <view class="model-box data-v-28973cf2">
+        <view class="title _p data-v-28973cf2">{{''+title+''}}</view>
+        <image class="success-icon data-v-28973cf2" src="/static/images/ticket/ic-status-success.png"></image>
+        <view class="msg _p data-v-28973cf2">{{''+content+''}}</view>
+        <view catchtap="__e" class="action data-v-28973cf2" data-event-opts="{{[ [ 'tap',[ [ 'onClickSure',['$event'] ] ] ] ]}}">
+            <view class="_p data-v-28973cf2">开启提醒</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,3 @@
+<view class="star-contain data-v-26960ec4">
+    <image class="star data-v-26960ec4" src="{{starNum>=item?'https://cdn.app.universalbeijingresort.com/mini-program/static/images/planning/ic-face-yellow.png':'https://cdn.app.universalbeijingresort.com/mini-program/static/images/planning/ic-face-grey.png'}}" wx:for="{{num}}" wx:for-index="idx" wx:key="idx"></image>
+</view>

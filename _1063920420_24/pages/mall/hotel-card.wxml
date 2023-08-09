@@ -1,0 +1,43 @@
+<scroll-view class="mall-hotel-box data-v-72912c78" scrollX="{{true}}" style="width:100%;">
+    <view class="wrap-items-box _div data-v-72912c78" wx:for="{{listData}}" wx:for-index="idx" wx:for-item="lis" wx:key="idx">
+        <view catchtap="__e" class="floor-items-box _div data-v-72912c78" data-event-opts="{{[ [ 'tap',[ [ 'goDetail',[idx,'$0'],[ [ ['listData','',idx,'material_id'] ] ] ] ] ] ]}}" wx:if="{{lis}}">
+            <view class="floor-items-img-box data-v-72912c78">
+                <view class="poster-img data-v-72912c78">
+                    <om-image bind:__l="__l" class="data-v-72912c78" end="?imageMogr2/format/jpg/interlace/1/thumbnail/750x" height="{{170}}" mode="aspectFill" url="{{lis.back_img}}" vueId="{{'672f876b-1-'+idx}}" width="{{300}}"></om-image>
+                </view>
+                <view class="backcolor data-v-72912c78" style="{{'background:'+'linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7))'+';'}}"></view>
+            </view>
+            <view class="tag-box fw-semibold _div data-v-72912c78" wx:if="{{lis.label}}">
+                <view class="tag data-v-72912c78">{{''+lis.label+''}}</view>
+            </view>
+            <view class="con-box _div data-v-72912c78">
+                <view class="title-boxc _div data-v-72912c78">
+                    <view class="titlec fw-xblack _div data-v-72912c78">
+                        <filter-text bind:__l="__l" class="data-v-72912c78" content="{{lis.title}}" vueId="{{'672f876b-2-'+idx}}"></filter-text>
+                    </view>
+                    <view class="title-boxc-bottom _div data-v-72912c78">
+                        <view class="pricec _div data-v-72912c78" wx:if="{{lis.price===0||lis.price}}">{{'¥ '+lis.price+''}}<label class="_span data-v-72912c78">起</label>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="sub-swiper-container _div data-v-72912c78" wx:if="{{lis&&lis.sublist}}">
+            <view class="two-hotel-box _div data-v-72912c78" wx:if="{{lis.sublist.length}}">
+                <view catchtap="__e" class="items-box _div data-v-72912c78" data-event-opts="{{[ [ 'tap',[ [ 'goDetail',[idx,'$0','$1',ids],[ [ ['listData','',idx,'material_id'] ],[ ['listData','',idx],['sublist','',ids,'material_id'] ] ] ] ] ] ]}}" wx:if="{{ids<2}}" wx:for="{{lis.sublist}}" wx:for-index="ids" wx:for-item="hits" wx:key="ids">
+                    <view class="sub-swiper-container-img-box data-v-72912c78">
+                        <view class="img data-v-72912c78">
+                            <om-image bind:__l="__l" class="data-v-72912c78" end="?imageMogr2/format/jpg/interlace/1" height="{{98}}" mode="aspectFill" url="{{hits.back_img.cover_image.url}}" vueId="{{'672f876b-3-'+idx+'-'+ids}}" width="{{148}}"></om-image>
+                        </view>
+                        <view class="backcolor data-v-72912c78" style="{{'background:'+'linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7))'+';'}}"></view>
+                    </view>
+                    <view class="title fw-avenir _div data-v-72912c78">
+                        <filter-text bind:__l="__l" class="data-v-72912c78" content="{{hits.title}}" vueId="{{'672f876b-4-'+idx+'-'+ids}}"></filter-text>
+                    </view>
+                    <view class="price fw-regular _div data-v-72912c78" wx:if="{{hits.price===0||hits.price}}">{{'¥ '+hits.price+' 起'}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="sub-swiper-container _div data-v-72912c78" wx:else></view>
+    </view>
+</scroll-view>

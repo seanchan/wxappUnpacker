@@ -1,0 +1,12 @@
+{
+    "component": true,
+    "usingComponents": {
+        "filter-text": "/components/ui/filterText",
+        "confirm": "/components/inquiry-model/confirm",
+        "birthday-confirm": "/components/rtmap/article-text/birthday-confirm",
+        "indicator": "/components/rtmap/indicator",
+        "universal-map": "plugin://wx209d168c345dce2c/universal-map",
+        "toast": "/components/rtmap/toast",
+        "universal-walk-line": "plugin://wx209d168c345dce2c/universal-walk-line"
+    }
+}

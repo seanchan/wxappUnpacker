@@ -1,0 +1,23 @@
+<view bindtap="__e" class="rtmap-modal _div data-v-fa349682" data-event-opts="{{[ [ 'tap',[ [ 'handleCancel',['$event'] ] ] ] ]}}" wx:if="{{show}}">
+    <view catchtap="__e" class="{{['rtmap-modal--container _div data-v-fa349682',!_height?'auto--height':'']}}" data-event-opts="{{[ [ 'tap',[ [ '',['$event'] ] ] ] ]}}" style="{{'height:'+_height+';'}}">
+        <view class="rtmap-modal--container_title _div data-v-fa349682">
+            <view class="{{['rtmap-modal--container_title__text _div data-v-fa349682',titleAlign]}}" style="{{'color:'+titleColor+';'}}">{{title}}</view>
+            <view bindtap="__e" class="rtmap-modal--container_title__close _div data-v-fa349682" data-event-opts="{{[ [ 'tap',[ [ 'handleCancel',['$event'] ] ] ] ]}}" wx:if="{{closeable}}"></view>
+        </view>
+        <view class="rtmap-modal--container_tip _div data-v-fa349682" wx:if="{{tip}}">{{tip}}</view>
+        <view class="_div data-v-fa349682" style="width:100%;padding:0 40rpx;overflow:hidden;display:flex;flex-direction:column;">
+            <slot name="prefix"></slot>
+            <view class="rtmap-modal--container_body _div data-v-fa349682" style="{{'padding-bottom:'+($slots.suffix?'0rpx':'40rpx')+';'}}">
+                <slot></slot>
+            </view>
+            <slot name="suffix"></slot>
+        </view>
+        <block wx:if="{{cancelButtonShow||confirmButtonShow}}">
+            <slot name="footer" wx:if="{{$slots.footer}}"></slot>
+            <view class="rtmap-modal--container_footer _div data-v-fa349682" wx:else>
+                <view catchtap="__e" class="rtmap-modal--container_footer__button _div data-v-fa349682" data-event-opts="{{[ [ 'tap',[ [ 'handleCancel',['$event'] ] ] ] ]}}" style="{{'color:'+cancelButtonTextColor+';'}}" wx:if="{{cancelButtonShow}}">{{cancelButtonText}}</view>
+                <view catchtap="__e" class="rtmap-modal--container_footer__button sure _div data-v-fa349682" data-event-opts="{{[ [ 'tap',[ [ 'handleClose',['$event'] ] ] ] ]}}" style="{{'color:'+confirmButtonTextColor+';'}}" wx:if="{{confirmButtonShow}}">{{confirmButtonText}}</view>
+            </view>
+        </block>
+    </view>
+</view>

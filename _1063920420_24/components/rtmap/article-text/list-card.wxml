@@ -1,0 +1,27 @@
+<view class="package-card-wrap data-v-515a2317">
+    <view catchtap="__e" class="package-card data-v-515a2317" data-event-opts="{{[ [ 'tap',[ [ 'turnResult',['$0'],['content'] ] ] ] ]}}">
+        <font-weight bind:__l="__l" class="data-v-515a2317" vueId="11fa7142-1"></font-weight>
+        <view class="image data-v-515a2317">
+            <om-image bind:__l="__l" class="data-v-515a2317" end="?imageMogr2/format/jpg/interlace/1" height="{{170}}" mode="aspectFill" url="{{content.cover_image}}" vueId="11fa7142-2" width="{{300}}"></om-image>
+        </view>
+        <view class="mark data-v-515a2317" style="{{'background:'+'linear-gradient(180deg, rgba('+content.cover_image_transverse[0].theme_color[0]+', '+content.cover_image_transverse[0].theme_color[1]+', '+content.cover_image_transverse[0].theme_color[2]+', 0) 0%, rgba('+content.cover_image_transverse[0].theme_color[0]+', '+content.cover_image_transverse[0].theme_color[1]+', '+content.cover_image_transverse[0].theme_color[2]+', 100%))'+';'}}" wx:if="{{content.material_type==='package'}}"></view>
+        <view class="mark data-v-515a2317" style="{{'background:'+'linear-gradient(180deg, rgba('+content.theme_color[0]+', '+content.theme_color[1]+', '+content.theme_color[2]+', 0) 0%, rgba('+content.theme_color[0]+', '+content.theme_color[1]+', '+content.theme_color[2]+', 100%))'+';'}}" wx:else></view>
+        <view class="bottom-box data-v-515a2317">
+            <view class="title fw-xblack data-v-515a2317">
+                <filter-text bind:__l="__l" class="data-v-515a2317" content="{{content.title}}" vueId="11fa7142-3"></filter-text>
+            </view>
+            <view class="label data-v-515a2317">
+                <view class="label-left data-v-515a2317" wx:if="{{content.subtitle}}">
+                    <filter-text bind:__l="__l" class="data-v-515a2317" content="{{content.subtitle}}" vueId="11fa7142-4"></filter-text>
+                </view>
+                <block wx:else>
+                    <view class="label-left data-v-515a2317" wx:if="{{content.sub_title}}">
+                        <filter-text bind:__l="__l" class="data-v-515a2317" content="{{content.sub_title}}" vueId="11fa7142-5"></filter-text>
+                    </view>
+                </block>
+                <view class="label-right fw-semibold data-v-515a2317" wx:if="{{content.material_type==='package'&&content.amount}}">{{'¥'+content.amount+''}}<view class="amount data-v-515a2317">起</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

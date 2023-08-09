@@ -1,0 +1,10 @@
+<view class="data-v-15486ccb">
+    <view class="mask data-v-15486ccb" wx:if="{{showInquiryModel}}"></view>
+    <view class="inquiry-model data-v-15486ccb" wx:if="{{showInquiryModel}}">
+        <view class="inquiry data-v-15486ccb">确定删除该行程吗？</view>
+        <view class="inquiry-result data-v-15486ccb">
+            <view bindtap="__e" class="cancel data-v-15486ccb" data-event-opts="{{[ [ 'tap',[ [ 'cancelBtn',['$event'] ] ] ] ]}}">取消</view>
+            <view bindtap="__e" class="affirm data-v-15486ccb" data-event-opts="{{[ [ 'tap',[ [ 'confirmBtn',['$event'] ] ] ] ]}}">确定</view>
+        </view>
+    </view>
+</view>

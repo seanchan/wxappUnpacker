@@ -1,0 +1,11 @@
+<view class="data-v-5f70738d">
+    <font-weight bind:__l="__l" class="data-v-5f70738d" vueId="5ab36dfc-1"></font-weight>
+    <view class="navbar-contain data-v-5f70738d" style="{{'padding-top:'+top+'px'+';'+'height:'+frontImageStyle+'rpx'+';'+'background:'+backColor+';'}}">
+        <image bindtap="__e" class="top-icon data-v-5f70738d" data-event-opts="{{[ [ 'tap',[ [ 'onClickLeft',['$event'] ] ] ],[ 'tap',[ [ 'clikReporting',['$event'] ] ] ] ]}}" src="{{leftIcon}}" wx:if="{{leftIcon}}"></image>
+        <view bindtap="__e" class="top-cancel data-v-5f70738d" data-event-opts="{{[ [ 'tap',[ [ 'onClickLeft',['$event'] ] ] ],[ 'tap',[ [ 'clikReporting',['$event'] ] ] ] ]}}" wx:if="{{!leftIcon&&showCancel}}">取消</view>
+        <view class="{{['nav-title data-v-5f70738d',custom?'fw-xblack':'f-semibold']}}" style="{{'color:'+textColor+';'}}">
+            <filter-text bind:__l="__l" class="data-v-5f70738d" content="{{titleText}}" vueId="5ab36dfc-2"></filter-text>
+        </view>
+        <view class="empty data-v-5f70738d"></view>
+    </view>
+</view>

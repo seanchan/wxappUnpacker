@@ -1,0 +1,1 @@
+{"component":true,"usingComponents":{"circle-box":"/components/circle-box/index","om-image":"/components/om-image/index","filter-text":"/components/ui/filterText","universal-map":"plugin://universal-map/universal-map","universal-walk-line":"plugin://universal-map/universal-walk-line","toast":"/components/rtmap/toast","indicator":"/components/rtmap/indicator"}}

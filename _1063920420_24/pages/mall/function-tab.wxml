@@ -1,0 +1,26 @@
+<view class="mall-function-tab-box data-v-04c9e1fe">
+    <toast bind:__l="__l" class="data-v-04c9e1fe" vueId="9f288898-1"></toast>
+    <block wx:if="{{dataList.length>1}}">
+        <swiper bindchange="__e" class="swiper data-v-04c9e1fe" data-event-opts="{{[ [ 'change',[ [ 'handleSwiperChange',['$event'] ] ] ] ]}}" duration="{{100}}" style="{{'height:'+listHeihgt+'rpx'+';'}}">
+            <swiper-item class="swiper-item data-v-04c9e1fe" wx:for="{{dataList}}" wx:for-item="page" wx:key="index">
+                <view class="swiper-item-row _div data-v-04c9e1fe" wx:for="{{page.rows}}" wx:for-index="__i0__" wx:for-item="row" wx:key="*this">
+                    <view bindtap="__e" class="{{['swiper-item-row__button _div data-v-04c9e1fe',item.placer?'placer':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'goDetail',['$0','$1','$2'],[ [ ['dataList','',index],['rows','',__i0__],['','title',item.title,'type'] ],[ ['dataList','',index],['rows','',__i0__],['','title',item.title] ],[ ['dataList','',index],['rows','',__i0__],['','title',item.title,'index'] ] ] ] ] ] ]}}" wx:for="{{row}}" wx:for-index="__i1__" wx:key="title">
+                        <image class="swiper-item-row__button___icon _img data-v-04c9e1fe" mode="aspectFit" src="{{item.icon_img}}"></image>
+                        <view class="swiper-item-row__button___title _p data-v-04c9e1fe">{{item.title}}</view>
+                    </view>
+                </view>
+            </swiper-item>
+        </swiper>
+        <view class="indicator _div data-v-04c9e1fe" style="{{'padding-left:'+indicatorLeft+'rpx'+';'+'padding-right:'+indicatorRight+'rpx'+';'}}" wx:if="{{showIndicator}}"></view>
+    </block>
+    <view class="swiper _div data-v-04c9e1fe" style="{{'height:'+listHeihgt+'rpx'+';'}}" wx:if="{{dataList.length<=1}}">
+        <view class="swiper-item _div data-v-04c9e1fe" wx:for="{{dataList}}" wx:for-item="page" wx:key="index">
+            <view class="swiper-item-row _div data-v-04c9e1fe" wx:for="{{page.rows}}" wx:for-index="__i2__" wx:for-item="row" wx:key="*this">
+                <view bindtap="__e" class="{{['swiper-item-row__button _div data-v-04c9e1fe',item.placer?'placer':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'goDetail',['$0','$1','$2'],[ [ ['dataList','',index],['rows','',__i2__],['','title',item.title,'type'] ],[ ['dataList','',index],['rows','',__i2__],['','title',item.title] ],[ ['dataList','',index],['rows','',__i2__],['','title',item.title,'index'] ] ] ] ] ] ]}}" wx:for="{{row}}" wx:for-index="__i3__" wx:key="title">
+                    <image class="swiper-item-row__button___icon _img data-v-04c9e1fe" mode="aspectFit" src="{{item.icon_img}}"></image>
+                    <view class="swiper-item-row__button___title _p data-v-04c9e1fe">{{item.title}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

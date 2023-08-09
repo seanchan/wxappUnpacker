@@ -1,0 +1,11 @@
+{
+    "disableScroll": true,
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "home-action": "/components/back-white/back-white",
+        "indicator": "/components/indicator/indicator",
+        "toast": "/components/rtmap/toast",
+        "universal-map": "plugin://wx209d168c345dce2c/universal-map",
+        "universal-walk-line": "plugin://wx209d168c345dce2c/universal-walk-line"
+    }
+}

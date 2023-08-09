@@ -1,0 +1,10 @@
+<view class="scorll-contain data-v-23e21c0c">
+    <view class="title-box data-v-23e21c0c">
+        <view class="title-name f-semibold data-v-23e21c0c">{{''+$root.f0+''}}</view>
+        <view bindtap="__e" class="turn-more data-v-23e21c0c" data-event-opts="{{[ [ 'tap',[ [ 'goScenicDetail',['$event'] ] ] ] ]}}" wx:if="{{showMore}}">
+            <view class="text data-v-23e21c0c">全部</view>
+            <image class="turn-icon data-v-23e21c0c" src="/static/images/index/ic-arrow.png"></image>
+        </view>
+    </view>
+    <scroll-list bind:__l="__l" class="data-v-23e21c0c" list="{{listData}}" title="{{title}}" types="play" vueId="0d843cfc-1"></scroll-list>
+</view>

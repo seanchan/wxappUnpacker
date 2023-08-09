@@ -1,0 +1,65 @@
+<view class="{{['data-v-3f35cccc','home',isAddHack?'hack-white-line':'']}}">
+    <font-weight bind:__l="__l" class="data-v-3f35cccc" vueId="1da55560-1"></font-weight>
+    <toast bind:__l="__l" class="data-v-3f35cccc" vueId="1da55560-2"></toast>
+    <indicator bind:__l="__l" bind:reload="__e" class="data-v-3f35cccc" data-event-opts="{{[ [ '^reload',[ ['reLaunchMP'] ] ] ]}}" isHome="{{true}}" status="{{indicatorStatus}}" useCustomNavigationBar="{{false}}" vueId="1da55560-3" wx:if="{{indicatorStatus!=='INDICATOR_SUCCESS'&&!initSuccess}}"></indicator>
+    <camera-toast bind:__l="__l" class="data-v-3f35cccc" successStyle="{{isSuccess}}" vueId="1da55560-4" wx:if="{{showLoading}}"></camera-toast>
+    <home-action bind:__l="__l" bind:scancode="__e" bind:scancodeGames="__e" bind:search="__e" class="data-v-3f35cccc" data-event-opts="{{[ [ '^search',[ ['search'] ] ],[ '^scancode',[ ['scancode'] ] ],[ '^scancodeGames',[ ['scancodeGames'] ] ] ]}}" vueId="1da55560-5"></home-action>
+    <view bindtap="__e" class="double data-v-3f35cccc" data-event-opts="{{[ [ 'tap',[ [ 'doubleClick',['$event'] ] ] ] ]}}" data-time="{{touchStartTime}}"></view>
+    <home-swiper bind:__l="__l" bind:change="__e" class="data-v-3f35cccc" data-event-opts="{{[ [ '^change',[ ['bannerChangeHandler'] ] ] ]}}" initAnimationBlur="{{initAnimationBlur}}" listData="{{bannerList}}" netWork="{{network}}" pause="{{swiperPause}}" useAnimationBlur="{{useAnimationBlur}}" vueId="1da55560-6"></home-swiper>
+    <view class="content-layout data-v-3f35cccc">
+        <home-entrance bind:__l="__l" bind:blurIn="__e" bind:blurOut="__e" class="data-v-3f35cccc" data-event-opts="{{[ [ '^blurIn',[ ['blurInHandler'] ] ],[ '^blurOut',[ ['blurOutHandler'] ] ] ]}}" functionListData="{{functionList}}" myPlanList="{{myPlanList}}" pause="{{swiperPause}}" storyListData="{{storyList}}" vueId="1da55560-7" wechatcore="{{homeData.wechatcore}}"></home-entrance>
+        <view class="data-v-3f35cccc" wx:for="{{$root.l0}}" wx:key="index">
+            <home-show bind:__l="__l" class="data-v-3f35cccc" listData="{{showList}}" showMore="{{showListMore}}" title="{{showListTitle}}" vueId="{{'1da55560-8-'+index}}" wx:if="{{showPerform&&item[$orig]==='perform'&&showList.length!==0}}"></home-show>
+            <home-scenic bind:__l="__l" class="data-v-3f35cccc" listData="{{scenicList}}" showMore="{{scenicListMore}}" title="{{scenicListTitle}}" vueId="{{'1da55560-9-'+index}}" wx:if="{{showScenic&&item[$orig]==='scenic'&&scenicList.length!==0}}"></home-scenic>
+            <view class="scorll-contain data-v-3f35cccc" wx:if="{{showHotel&&item[$orig]==='hotel'&&hotelList.length!==0}}">
+                <view class="title-box data-v-3f35cccc">
+                    <view class="title-name f-semibold data-v-3f35cccc">{{''+item.f0+''}}</view>
+                    <view bindtap="__e" class="turn-more data-v-3f35cccc" data-event-opts="{{[ [ 'tap',[ [ 'goDetail',['hotel'] ] ] ] ]}}" wx:if="{{hotelListMore}}">
+                        <view class="text data-v-3f35cccc">全部</view>
+                        <image class="turn-icon data-v-3f35cccc" src="/static/images/index/ic-arrow.png"></image>
+                    </view>
+                </view>
+                <scroll-list bind:__l="__l" class="data-v-3f35cccc" list="{{hotelList}}" title="{{hotelListTitle}}" types="hotel" vueId="{{'1da55560-10-'+index}}"></scroll-list>
+            </view>
+            <view class="scorll-contain data-v-3f35cccc" wx:if="{{showRestaurant&&item[$orig]==='restaurant'&&restaurantList.length!==0}}">
+                <view class="title-box data-v-3f35cccc">
+                    <view class="title-name f-semibold data-v-3f35cccc">{{''+item.f1+''}}</view>
+                    <view bindtap="__e" class="turn-more data-v-3f35cccc" data-event-opts="{{[ [ 'tap',[ [ 'goDetail',['restaurant'] ] ] ] ]}}" wx:if="{{restaurantListMore}}">
+                        <view class="text data-v-3f35cccc">全部</view>
+                        <image class="turn-icon data-v-3f35cccc" src="/static/images/index/ic-arrow.png"></image>
+                    </view>
+                </view>
+                <scroll-list bind:__l="__l" class="data-v-3f35cccc" list="{{restaurantList}}" title="{{restaurantListTitle}}" types="restaurant" vueId="{{'1da55560-11-'+index}}"></scroll-list>
+            </view>
+            <view class="scorll-contain data-v-3f35cccc" wx:if="{{showShop&&item[$orig]==='shop'&&shopList.length!==0}}">
+                <view class="title-box data-v-3f35cccc">
+                    <view class="title-name f-semibold data-v-3f35cccc">{{''+item.f2+''}}</view>
+                    <view bindtap="__e" class="turn-more data-v-3f35cccc" data-event-opts="{{[ [ 'tap',[ [ 'goDetail',['store'] ] ] ] ]}}" wx:if="{{shopListMore}}">
+                        <view class="text data-v-3f35cccc">全部</view>
+                        <image class="turn-icon data-v-3f35cccc" src="/static/images/index/ic-arrow.png"></image>
+                    </view>
+                </view>
+                <scroll-list bind:__l="__l" class="data-v-3f35cccc" list="{{shopList}}" title="{{shopListTitle}}" types="store" vueId="{{'1da55560-12-'+index}}"></scroll-list>
+            </view>
+        </view>
+        <home-like bind:__l="__l" bind:checkNotice="__e" bind:putCollect="__e" class="data-v-3f35cccc" data-event-opts="{{[ [ '^putCollect',[ ['putCollect'] ] ],[ '^checkNotice',[ ['checkNotice'] ] ] ]}}" listData="{{likeList}}" title="猜你喜欢" vueId="1da55560-13" wx:if="{{likeList.length}}"></home-like>
+        <view class="nomore-box data-v-3f35cccc">暂无更多</view>
+    </view>
+    <view class="games-model data-v-3f35cccc" wx:if="{{showGamesModel}}">
+        <view class="inner-content data-v-3f35cccc">
+            <view class="mask-content data-v-3f35cccc">
+                <image class="dinosaur-mask data-v-3f35cccc" src="https://universal-prod-1301203089.cos.ap-beijing.myqcloud.com/mini-program/static/images/index/dinosaur-mask.png"></image>
+                <image bindtap="__e" class="dinosaur-button data-v-3f35cccc" data-event-opts="{{[ [ 'tap',[ [ 'toGames',['$event'] ] ] ] ]}}" src="https://universal-prod-1301203089.cos.ap-beijing.myqcloud.com/mini-program/static/images/index/dinosaur-button.png"></image>
+            </view>
+            <image bindtap="__e" class="dinosaur-close data-v-3f35cccc" data-event-opts="{{[ [ 'tap',[ [ 'cancelGames',['$event'] ] ] ] ]}}" src="https://universal-prod-1301203089.cos.ap-beijing.myqcloud.com/mini-program/static/images/index/close.png"></image>
+        </view>
+    </view>
+    <popups bind:__l="__l" bind:onClick="__e" bind:updateShow="__e" class="data-v-3f35cccc" data-event-opts="{{[ [ '^updateShow',[ [ '__set_sync',['$0','isShowAgreement','$event'],[''] ] ] ],[ '^onClick',[ ['onPopupsClick'] ] ] ]}}" show="{{isShowAgreement}}" vueId="1da55560-14" vueSlots="{{['default']}}">
+        <scroll-view bindtap="__e" class="data-v-3f35cccc" data-event-opts="{{[ [ 'tap',[ [ 'onTap',['$event'] ] ] ] ]}}" scrollY="{{true}}" style="height:100%;word-break:break-all;">欢迎来到北京环球度假区！在您使用前，请认真阅读并了解我们的<block wx:for="{{$root.l1}}" wx:key="index">
+                <label class="_span data-v-3f35cccc" data-url="{{item[$orig].h5_register_url}}" style="color:#0368D9;">{{'《'+item.f3+'》'}}</label>{{(index!==agreement.length-1?'和':'')+''}}</block>。<view class="_br data-v-3f35cccc"></view>1.在您开启网络权限后，可实现使用网络浏览北京环球度假区内容；<view class="_br data-v-3f35cccc"></view>2.在您开启系统通知权限后，我们可以向您发送通知；<view class="_br data-v-3f35cccc"></view>3.在您开启位置权限后，您允许我们获取您的位置信息，以便您可以使用导航及园区导览功能；<view class="_br data-v-3f35cccc"></view>4.在您开启相机权限后，您允许我方访问相机，以便您可以使用扫描功能、拍摄上传照片；<view class="_br data-v-3f35cccc"></view>5.在您开启存储权限后，您允许我们进行缓存以提升您的浏览视频的体验；<view class="_br data-v-3f35cccc"></view>6.在您开启设备信息权限后，您允许我们获取您的设备信息作为您的设备的唯一性标识，以便向您提供更契合您需求的页面展示和推荐个性化内容、了解用户画像，了解产品的适配性、识别异常状态。（更多详细信息参阅<block wx:for="{{$root.l2}}" wx:key="index">
+                <label class="_span data-v-3f35cccc" data-url="{{item[$orig].h5_register_url}}" style="color:#0368D9;">{{'《'+item.f4+'》'}}</label>{{(index!==agreement.length-1?'和':'')+''}}</block>。）<view class="_br data-v-3f35cccc"></view>上述权限均不会默认开启，我们会在相关的应用场景中向您申请，只有经过您明示授权才会开启、再实现功能或服务时使用，不会在功能后服务不需要时而通过您授权的权限收集信息。您可以查看完成版<block wx:for="{{$root.l3}}" wx:key="index">
+                <label class="_span data-v-3f35cccc" data-url="{{item[$orig].h5_register_url}}" style="color:#0368D9;">{{'《'+item.f5+'》'}}</label>{{(index!==agreement.length-1?'和':'')+''}}</block>。在您同意并接受后，将可以使用北京环球度假区为您提供的全部功能。</scroll-view>
+    </popups>
+    <reservation-notice bind:__l="__l" bind:clickSure="__e" catch:clickCancel="__e" class="data-v-3f35cccc" data-event-opts="{{[ [ '^clickCancel',[ [ 'clickCancel',['$event'] ] ] ],[ '^clickSure',[ ['clickSure'] ] ] ]}}" noticeNew="true" orderNotice="{{booking_notice}}" showNoticeModel="{{showNoticeModel}}" vueId="1da55560-15"></reservation-notice>
+    <launchapp bind:__l="__l" class="data-v-3f35cccc" vueId="1da55560-16"></launchapp>
+</view>

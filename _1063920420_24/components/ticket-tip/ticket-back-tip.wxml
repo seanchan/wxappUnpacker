@@ -1,0 +1,93 @@
+<view catchtouchmove="__e" class="rule-container _div data-v-13d32d56" data-event-opts="{{[ [ 'touchmove',[ [ 'clean',['$event'] ] ] ] ]}}">
+    <view class="{{['rule-detail-content _div data-v-13d32d56',ruleShow?'active':'']}}">
+        <view class="rule-title _div data-v-13d32d56">
+            <view class="rule-detail-title f-semibold _div data-v-13d32d56">{{''+title+''}}</view>
+            <view catchtap="__e" class="rule-img _div data-v-13d32d56" data-event-opts="{{[ [ 'tap',[ [ 'closeRule',['$event'] ] ] ] ]}}">
+                <image alt class="_img data-v-13d32d56" src="https://cdn.app.universalbeijingresort.com/mini-program/static/images/planning/ic-top-closex.png"></image>
+            </view>
+        </view>
+        <scroll-view class="data-v-13d32d56" scrollY="{{true}}" style="{{$root.s0}}">
+            <view class="data-v-13d32d56" wx:if="{{isNew}}">
+                <block wx:for="{{$root.l1}}" wx:key="index">
+                    <view class="item-title2 data-v-13d32d56" wx:if="{{item[$orig].type=='title'}}">
+                        <filter-text bind:__l="__l" class="data-v-13d32d56" content="{{item[$orig].content}}" vueId="{{'3acd84ea-1-'+index}}"></filter-text>
+                    </view>
+                    <view class="item-title1 data-v-13d32d56" wx:if="{{item[$orig].type=='title1'}}">
+                        <filter-text bind:__l="__l" class="data-v-13d32d56" content="{{item[$orig].content}}" vueId="{{'3acd84ea-2-'+index}}"></filter-text>
+                    </view>
+                    <view class="item-title2 data-v-13d32d56" wx:if="{{item[$orig].type=='title2'}}">
+                        <filter-text bind:__l="__l" class="data-v-13d32d56" content="{{item[$orig].content}}" vueId="{{'3acd84ea-3-'+index}}"></filter-text>
+                    </view>
+                    <view class="item-title3 data-v-13d32d56" wx:if="{{item[$orig].type=='title3'}}">
+                        <filter-text bind:__l="__l" class="data-v-13d32d56" content="{{item[$orig].content}}" vueId="{{'3acd84ea-4-'+index}}"></filter-text>
+                    </view>
+                    <block wx:else>
+                        <view class="data-v-13d32d56" wx:if="{{item[$orig].type=='text'}}">
+                            <block wx:for="{{item.l0}}" wx:for-index="ind" wx:for-item="ite" wx:key="ind">
+                                <view class="rule-detail-item inline-block data-v-13d32d56" wx:if="{{ite[$orig].type==='text'&&ite[$orig].content}}">
+                                    <filter-text bind:__l="__l" bind:callPhone="__e" class="data-v-13d32d56" content="{{ite[$orig].content}}" data-event-opts="{{[ [ '^callPhone',[ ['callPhone'] ] ] ]}}" vueId="{{'3acd84ea-5-'+index+'-'+ind}}"></filter-text>
+                                </view>
+                                <view class="item-images data-v-13d32d56" wx:if="{{ite[$orig].type=='image'}}">
+                                    <image class="item-image data-v-13d32d56" mode="widthFix" src="{{ite[$orig].content}}"></image>
+                                </view>
+                                <text bindtap="__e" class="link data-v-13d32d56" data-event-opts="{{[ [ 'tap',[ [ 'callUrl',['$event'] ] ] ] ]}}" data-value="{{ite[$orig].url}}" wx:if="{{ite[$orig].type==='url'}}">{{''+ite.f0+''}}</text>
+                            </block>
+                        </view>
+                        <block wx:else>
+                            <view class="item-images data-v-13d32d56" wx:if="{{item[$orig].type=='image'}}">
+                                <image class="item-image data-v-13d32d56" mode="widthFix" src="{{item[$orig].content}}"></image>
+                            </view>
+                        </block>
+                    </block>
+                    <text bindtap="__e" class="link data-v-13d32d56" data-event-opts="{{[ [ 'tap',[ [ 'callUrl',['$event'] ] ] ] ]}}" data-value="{{item[$orig].url}}" wx:if="{{item[$orig].type==='url'}}">{{''+item.f1+''}}</text>
+                </block>
+            </view>
+            <block wx:else>
+                <view class="data-v-13d32d56" wx:if="{{isNewRefund}}">
+                    <block wx:for="{{$root.l2}}" wx:key="index">
+                        <view class="item-title1 data-v-13d32d56" wx:if="{{item[$orig].type=='title'}}">
+                            <filter-text bind:__l="__l" class="data-v-13d32d56" content="{{item[$orig].content}}" vueId="{{'3acd84ea-6-'+index}}"></filter-text>
+                        </view>
+                        <view class="rule-detail-item inline-block data-v-13d32d56" wx:if="{{item[$orig].type==='text'&&item[$orig].content}}">
+                            <filter-text bind:__l="__l" bind:callPhone="__e" class="data-v-13d32d56" content="{{item[$orig].content}}" data-event-opts="{{[ [ '^callPhone',[ ['callPhone'] ] ] ]}}" vueId="{{'3acd84ea-7-'+index}}"></filter-text>
+                        </view>
+                        <view class="item-images data-v-13d32d56" wx:if="{{item[$orig].type=='image'}}">
+                            <image class="item-image data-v-13d32d56" mode="widthFix" src="{{item[$orig].content}}"></image>
+                        </view>
+                        <text bindtap="__e" class="link data-v-13d32d56" data-event-opts="{{[ [ 'tap',[ [ 'callUrl',['$event'] ] ] ] ]}}" data-value="{{item[$orig].url}}" wx:if="{{item[$orig].type==='url'}}">{{''+item.f2+''}}</text>
+                    </block>
+                </view>
+                <view class="data-v-13d32d56" wx:else>
+                    <block wx:for="{{content}}" wx:key="index">
+                        <view class="item-title1 data-v-13d32d56" wx:if="{{item.type=='title1'}}">
+                            <filter-text bind:__l="__l" class="data-v-13d32d56" content="{{item.content}}" vueId="{{'3acd84ea-8-'+index}}"></filter-text>
+                        </view>
+                        <view class="item-title2 data-v-13d32d56" wx:if="{{item.type=='title2'}}">
+                            <filter-text bind:__l="__l" class="data-v-13d32d56" content="{{item.content}}" vueId="{{'3acd84ea-9-'+index}}"></filter-text>
+                        </view>
+                        <view class="item-title3 data-v-13d32d56" wx:if="{{item.type=='title3'}}">
+                            <filter-text bind:__l="__l" class="data-v-13d32d56" content="{{item.content}}" vueId="{{'3acd84ea-10-'+index}}"></filter-text>
+                        </view>
+                        <view class="item-title2 data-v-13d32d56" wx:if="{{item.type=='title'}}">
+                            <filter-text bind:__l="__l" class="data-v-13d32d56" content="{{item.content}}" vueId="{{'3acd84ea-11-'+index}}"></filter-text>
+                        </view>
+                        <view class="item-title3 data-v-13d32d56" wx:if="{{item.type==='text3'}}">
+                            <filter-text bind:__l="__l" class="data-v-13d32d56" content="{{item.content}}" vueId="{{'3acd84ea-12-'+index}}"></filter-text>
+                        </view>
+                        <view class="item-images data-v-13d32d56" wx:if="{{item.type=='image'}}">
+                            <image class="item-image data-v-13d32d56" mode="widthFix" src="{{item.content}}"></image>
+                        </view>
+                        <view class="rule-detail-item data-v-13d32d56" wx:if="{{item.type==='text'&&isCoupon}}">
+                            <filter-text bind:__l="__l" class="data-v-13d32d56" content="{{item.content}}" vueId="{{'3acd84ea-13-'+index}}"></filter-text>
+                        </view>
+                        <view class="rule-detail-item data-v-13d32d56" wx:if="{{item.type==='text'&&!isCoupon}}">
+                            <filter-text bind:__l="__l" class="data-v-13d32d56" content="{{item.content}}" vueId="{{'3acd84ea-14-'+index}}"></filter-text>
+                        </view>
+                    </block>
+                </view>
+            </block>
+        </scroll-view>
+        <view catchtap="__e" class="btn-sure fw-medium data-v-13d32d56" data-event-opts="{{[ [ 'tap',[ [ 'closeRule',['$event'] ] ] ] ]}}" style="{{'padding-bottom:'+(isiPhoneX?'68rpx':'')+';'}}">确定</view>
+    </view>
+    <view catchtap="__e" class="{{['mask _div data-v-13d32d56',ruleShow?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'closeRule',['$event'] ] ] ] ]}}"></view>
+</view>

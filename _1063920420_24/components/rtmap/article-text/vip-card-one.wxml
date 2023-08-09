@@ -1,0 +1,27 @@
+<view bindtap="__e" class="vip-card" data-event-opts="{{[ [ 'tap',[ [ 'turnResult',['$0'],['item'] ] ] ] ]}}">
+    <view class="img-box">
+        <om-image bind:__l="__l" height="{{190}}" mode="aspectFill" url="{{item.cover_image}}" vueId="2e82c1fc-1" width="{{335}}"></om-image>
+    </view>
+    <view class="vip-top">
+        <view catchtap="__e" class="vip-book" data-event-opts="{{[ [ 'tap',[ [ 'checkNotice',['$0'],['item'] ] ] ] ]}}">
+            <view>预订须知</view>
+            <image alt class="book-img _img" src="/static/images/vip/vip-right.png"></image>
+        </view>
+    </view>
+    <view class="vip-bottom">
+        <view class="bottom-top">
+            <view class="{{['bottom-title','fw-xblack','black',fontSize]}}">
+                <filter-text bind:__l="__l" content="{{item.ticket_name}}" vueId="2e82c1fc-2"></filter-text>
+            </view>
+            <view class="{{['bottom-price','fw-avenir','black']}}" wx:if="{{item.amount}}">{{'¥'+item.amount}}<view class="price">起</view>
+            </view>
+            <view class="bottom-price1" wx:else></view>
+        </view>
+        <view class="{{['bottom-tips',item.vip_special_right.length===3||item.vip_special_right.length===2?'bottom-tips2':'',item.vip_special_right.length===1?'bottom-tips3':'']}}">
+            <view class="{{['tips-item',item.vip_special_right.length===3?'tips-item2':'']}}" wx:for="{{item.vip_special_right}}" wx:for-index="idx" wx:for-item="itm" wx:key="idx">
+                <image alt class="item-icon _img" src="{{itm.icon}}"></image>
+                <view class="{{['item-content','black']}}">{{''+itm.content+''}}</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,25 @@
+<view class="num-contain data-v-e2fe7e34" hidden="{{!showNum}}">
+    <view bindtap="__e" class="back-hover data-v-e2fe7e34" data-event-opts="{{[ [ 'tap',[ [ 'hideNumPop',['$event'] ] ] ] ]}}"></view>
+    <view class="pop-contain data-v-e2fe7e34">
+        <view class="title-box data-v-e2fe7e34">
+            <view class="empty data-v-e2fe7e34"></view>
+            <view class="title data-v-e2fe7e34">请选择国家/地区</view>
+            <image bindtap="__e" class="close-title _img data-v-e2fe7e34" data-event-opts="{{[ [ 'tap',[ [ 'hideNumPop',['$event'] ] ] ] ]}}" src="https://cdn.app.universalbeijingresort.com/mini-program/static/images/planning/ic-top-closex.png"></image>
+            <view class="change-line data-v-e2fe7e34" id="ob-change-line"></view>
+        </view>
+        <scroll-view class="scroll-box data-v-e2fe7e34" id="user-main" scrollIntoView="{{toView}}" scrollTop="{{scrollTop}}" scrollY="true">
+            <view class="{{['self-box data-v-e2fe7e34','ob-tab-view-'+idx]}}" data-index="{{idx}}" id="{{idx}}" wx:for="{{numList}}" wx:for-index="idx" wx:key="idx">
+                <view class="self-box-title data-v-e2fe7e34" id="{{item.key}}">{{''+item.key+''}}</view>
+                <view bindtap="__e" class="self-box-num data-v-e2fe7e34" data-event-opts="{{[ [ 'tap',[ [ 'tapNum',['$0'],[ [ ['numList','',idx],['list','',numIdx] ] ] ] ] ] ]}}" wx:for="{{item.list}}" wx:for-index="numIdx" wx:for-item="nums" wx:key="numIdx">
+                    <view class="self-name data-v-e2fe7e34">{{''+nums.ch_name+''}}</view>
+                    <view class="self-num data-v-e2fe7e34">{{'+'+nums.region_code+''}}</view>
+                </view>
+            </view>
+            <view class="empty-box data-v-e2fe7e34"></view>
+            <view class="fixed-right data-v-e2fe7e34">
+                <view bindtap="__e" class="{{['data-v-e2fe7e34','item-index','c-flex-center',isSelCurrent==index?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'onIndexClick',['$0',index],[ [ ['letters','',index] ] ] ] ] ] ]}}" wx:for="{{letters}}" wx:key="index">{{''+item+''}}</view>
+            </view>
+            <view class="c-btm-safearea data-v-e2fe7e34"></view>
+        </scroll-view>
+    </view>
+</view>

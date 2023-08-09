@@ -1,0 +1,5 @@
+<view class="custom _div data-v-5d63b4dc" style="{{'padding-top:'+top+'px'+';'+'height:'+frontImageStyle+'rpx'+';'}}" wx:if="{{frontImageStyle}}">
+    <view bindtap="__e" class="back _div data-v-5d63b4dc" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" style="{{topStyle}}">
+        <image alt class="_img data-v-5d63b4dc" src="{{$root.m0}}"></image>
+    </view>
+</view>

@@ -1,0 +1,4 @@
+<view class="toast-contain data-v-82b2ffcc">
+    <image class="loading data-v-82b2ffcc" src="{{successStyle?assetsImage.loading:assetsImage.cameraFailed}}"></image>
+    <view class="loading-text data-v-82b2ffcc">{{''+(successStyle?'识别中':'识别失败')+''}}</view>
+</view>

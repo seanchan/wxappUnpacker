@@ -1,0 +1,26 @@
+<view class="data-v-163be74c">
+    <view class="{{['l-advance-box data-v-163be74c',isVip?'l-advance-vip':'']}}">
+        <view class="l-left data-v-163be74c">
+            <view class="text data-v-163be74c">{{''+preSaleDescription+''}}</view>
+        </view>
+        <view bindtap="__e" class="l-right data-v-163be74c" data-event-opts="{{[ [ 'tap',[ [ 'isAdance',['$event'] ] ] ] ]}}" wx:if="{{isSubscribes===2}}">开售提醒</view>
+        <view bindtap="__e" class="l-right white-bg data-v-163be74c" data-event-opts="{{[ [ 'tap',[ [ 'isAdance',['$event'] ] ] ] ]}}" wx:else>取消提醒</view>
+    </view>
+    <view catchtouchmove="__e" class="isadvance data-v-163be74c" data-event-opts="{{[ [ 'touchmove',[ [ 'clean',['$event'] ] ] ] ]}}" wx:if="{{isShowAdance}}">
+        <view class="mask data-v-163be74c"></view>
+        <view class="advance-model data-v-163be74c">
+            <view class="advance data-v-163be74c" wx:if="{{isSubscribes===2}}">
+                <rich-text class="data-v-163be74c" nodes="{{title}}"></rich-text>
+            </view>
+            <view class="advance data-v-163be74c" wx:else>取消后您将收不到开售通知</view>
+            <view class="advance-result data-v-163be74c" wx:if="{{isSubscribes===2}}">
+                <view bindtap="__e" class="cancel data-v-163be74c" data-event-opts="{{[ [ 'tap',[ [ 'close',['$event'] ] ] ] ]}}">取消</view>
+                <view bindtap="__e" class="sure data-v-163be74c" data-event-opts="{{[ [ 'tap',[ [ 'confirm',['$event'] ] ] ] ]}}">确定</view>
+            </view>
+            <view class="advance-result data-v-163be74c" wx:else>
+                <view bindtap="__e" class="cancel data-v-163be74c" data-event-opts="{{[ [ 'tap',[ [ 'close',['$event'] ] ] ] ]}}">再想想</view>
+                <view bindtap="__e" class="sure data-v-163be74c" data-event-opts="{{[ [ 'tap',[ [ 'confirm',['$event'] ] ] ] ]}}">确定取消</view>
+            </view>
+        </view>
+    </view>
+</view>

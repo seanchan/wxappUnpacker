@@ -1,0 +1,30 @@
+<view>
+    <text class="fw-xblack"></text>
+    <text class="fw-heavy"></text>
+    <view class="loading">
+        <view class="error" style="{{'background:'+error+';'}}"></view>
+        <view class="loadingimg" style="{{'background:'+loadingimg+';'}}"></view>
+    </view>
+    <view class="images">
+        <image class="_img" src="{{seizeImg.size7070}}"></image>
+        <image class="_img" src="{{seizeImg.size120120}}"></image>
+        <image class="_img" src="{{seizeImg.size140140}}"></image>
+        <image class="_img" src="{{seizeImg.size14898}}"></image>
+        <image class="_img" src="{{seizeImg.size15091}}"></image>
+        <image class="_img" src="{{seizeImg.size156102}}"></image>
+        <image class="_img" src="{{seizeImg.size160120}}"></image>
+        <image class="_img" src="{{seizeImg.size30098}}"></image>
+        <image class="_img" src="{{seizeImg.size300130}}"></image>
+        <image class="_img" src="{{seizeImg.size300170}}"></image>
+        <image class="_img" src="{{seizeImg.size335120}}"></image>
+        <image class="_img" src="{{seizeImg.size335130}}"></image>
+        <image class="_img" src="{{seizeImg.size335140}}"></image>
+        <image class="_img" src="{{seizeImg.size335190}}"></image>
+        <image class="_img" src="{{seizeImg.size335208}}"></image>
+        <image class="_img" src="{{seizeImg.size345124}}"></image>
+        <image class="_img" src="{{seizeImg.size345194}}"></image>
+        <image class="_img" src="{{seizeImg.size345214}}"></image>
+        <image class="_img" src="{{seizeImg.size375200}}"></image>
+        <image class="_img" src="{{seizeImg.size375280}}"></image>
+    </view>
+</view>

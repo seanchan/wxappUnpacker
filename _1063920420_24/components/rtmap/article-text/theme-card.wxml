@@ -1,0 +1,13 @@
+<view catchtap="__e" class="list-card _div data-v-3b450d60" data-event-opts="{{[ [ 'tap',[ ['goDetail'] ] ] ]}}">
+    <om-image bind:__l="__l" class="data-v-3b450d60" end="?imageMogr2/format/jpg/interlace/1" height="{{190}}" mode="aspectFill" url="{{content.image.cover_image.url}}" vueId="63217067-1" width="{{335}}"></om-image>
+    <view class="list-card-bg _div data-v-3b450d60" style="{{'background-image:'+$root.m0+';'}}"></view>
+    <view class="list-card-bottom _div data-v-3b450d60">
+        <view class="{{['title fw-xblack _div data-v-3b450d60',titleClass,!content.sub_title?'title2':'']}}">
+            <filter-text bind:__l="__l" class="data-v-3b450d60" content="{{content.title}}" vueId="63217067-2"></filter-text>
+        </view>
+        <view class="desc f-regular _div data-v-3b450d60" wx:if="{{content.sub_title}}">
+            <filter-text bind:__l="__l" class="data-v-3b450d60" content="{{content.sub_title}}" vueId="63217067-3"></filter-text>
+        </view>
+    </view>
+    <view class="list-card-button f-semibold _div data-v-3b450d60">立即购买</view>
+</view>

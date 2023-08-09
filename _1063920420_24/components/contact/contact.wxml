@@ -1,0 +1,18 @@
+<view class="concat _div data-v-01d62e40" wx:if="{{name||tel||email}}">
+    <separated-line bind:__l="__l" class="data-v-01d62e40" vueId="e3ad7d00-1"></separated-line>
+    <view class="title _div data-v-01d62e40">联系人</view>
+    <view class="content _div data-v-01d62e40">
+        <view class="item _div data-v-01d62e40" wx:if="{{name}}">
+            <view class="left _div data-v-01d62e40">姓<label class="_span data-v-01d62e40" style="color:transparent !important;">白</label>名</view>
+            <view class="right _div data-v-01d62e40">{{''+name+''}}</view>
+        </view>
+        <view class="item _div data-v-01d62e40" wx:if="{{tel}}">
+            <view class="left _div data-v-01d62e40">手机号</view>
+            <view class="right _div data-v-01d62e40">{{''+tel+''}}</view>
+        </view>
+        <view class="item _div data-v-01d62e40" wx:if="{{email}}">
+            <view class="left _div data-v-01d62e40">邮<label class="_span data-v-01d62e40" style="color:#fff;">白</label>箱</view>
+            <view class="right _div data-v-01d62e40">{{''+email+''}}</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+<view class="title-wrapper _div data-v-e7fe37a8">
+    <view class="title-txt fw-semibold _div data-v-e7fe37a8">{{''+$root.f0+''}}</view>
+    <view bindtap="__e" class="all _div data-v-e7fe37a8" data-event-opts="{{[ [ 'tap',[ [ 'showTips',['$event'] ] ] ] ]}}" wx:if="{{isShowMore}}">
+        <view class="txt fw-regular _div data-v-e7fe37a8">全部</view>
+        <view class="icon-arrow _div data-v-e7fe37a8">
+            <image alt class="_img data-v-e7fe37a8" src="/static/images/mall/ic-arrow-black@3x.png"></image>
+        </view>
+    </view>
+</view>

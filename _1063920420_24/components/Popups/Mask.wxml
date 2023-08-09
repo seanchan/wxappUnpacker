@@ -1,0 +1,1 @@
+<view bindtap="__e" catchtouchmove="__e" class="mask data-v-9685ab9e" data-event-opts="{{[ [ 'tap',[ [ 'onTap',['$event'] ] ] ],[ 'touchmove',[ [ 'clean',['$event'] ] ] ] ]}}" style="{{$root.s0}}" wx:if="{{show}}"></view>

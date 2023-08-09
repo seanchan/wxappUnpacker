@@ -1,0 +1,9 @@
+<view class="outter _div data-v-cbe6692a">
+    <view class="padding _div data-v-cbe6692a" style="{{'height:'+navHeight+';'}}" wx:if="{{navType==='static'}}"></view>
+    <view class="{{['_div data-v-cbe6692a','navBar',customNav?'fixed':'absolute']}}" style="{{'height:'+navHeight+';'}}">
+        <view class="navBar-bg _div data-v-cbe6692a" style="{{'opacity:'+navBarBgOpacity+';'+'height:'+navHeight+';'+'background-color:'+backgroundColor+';'}}" wx:if="{{customNav}}"></view>
+        <nav-inner alwaysShowHome="{{alwaysShowHome}}" bind:__l="__l" bind:goBack="__e" bind:goHome="__e" cityName="{{cityName}}" class="data-v-cbe6692a" colorBlack="{{true}}" data-event-opts="{{[ [ '^goBack',[ ['goBack'] ] ],[ '^goHome',[ ['goHome'] ] ] ]}}" menuHeight="{{menuHeight}}" menuTop="{{menuTop}}" navBarBgOpacity="{{navBarBgOpacity}}" navHeight="{{navHeight}}" navType="{{navType}}" title="{{title}}" titleMargin="{{titleMargin}}" titleWidth="{{titleWidth}}" vueId="a24ec988-1" wx:if="{{customNav}}"></nav-inner>
+        <nav-inner alwaysShowHome="{{alwaysShowHome}}" bind:__l="__l" bind:goBack="__e" bind:goHome="__e" cityName="{{cityName}}" class="data-v-cbe6692a" colorBlack="{{false}}" data-event-opts="{{[ [ '^goBack',[ ['goBack'] ] ],[ '^goHome',[ ['goHome'] ] ] ]}}" menuHeight="{{menuHeight}}" menuTop="{{menuTop}}" navBarBgOpacity="{{navBarBgOpacity}}" navHeight="{{navHeight}}" navType="{{navType}}" vueId="a24ec988-2" wx:if="{{navType!=='static'}}"></nav-inner>
+    </view>
+    <view class="nav-anchor _div data-v-cbe6692a" id="nav-anchor"></view>
+</view>

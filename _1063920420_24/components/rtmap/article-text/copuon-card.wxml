@@ -1,0 +1,55 @@
+<view class="data-v-1eceece9" style="padding-bottom:20rpx;">
+    <view bindtap="__e" class="{{['data-v-1eceece9','couponCard']}}" data-event-opts="{{[ [ 'tap',[ [ 'goDetail',['$event'] ] ] ] ]}}">
+        <toast bind:__l="__l" class="data-v-1eceece9" vueId="92651318-1"></toast>
+        <view class="{{[ 'data-v-1eceece9','cardTop zk',[card.type==='discount_coupon'?'zk':'',card.type==='free'?'mf':'',card.type==='cash_coupon'?'xj':'',card.type==='onsite_voucher'?'dj':'',card.type==='online_voucher'?'lp':'',card.page_type==='meal_coupon'?'meal':'',card.stock_status===2?'opacity1':''] ]}}">
+            <view class="logo _div data-v-1eceece9">
+                <image alt="{{true}}" class="_img data-v-1eceece9" src="https://cdn.app.universalbeijingresort.com/mini-program/static/images/coupon/cash1@2x.png" wx:if="{{card.type=='cash_coupon'}}"></image>
+                <block wx:else>
+                    <image alt="{{true}}" class="_img data-v-1eceece9" src="https://cdn.app.universalbeijingresort.com/mini-program/static/images/coupon/cash.png" wx:if="{{card.type=='onsite_voucher'}}"></image>
+                    <block wx:else>
+                        <image alt="{{true}}" class="_img data-v-1eceece9" src="https://cdn.app.universalbeijingresort.com/mini-program/static/images/coupon/discount.png" wx:if="{{card.type=='discount_coupon'}}"></image>
+                        <block wx:else>
+                            <image alt="{{true}}" class="_img data-v-1eceece9" src="https://cdn.app.universalbeijingresort.com/mini-program/static/images/coupon/kims.png" wx:if="{{card.type=='online_voucher'}}"></image>
+                            <block wx:else>
+                                <image alt="{{true}}" class="_img data-v-1eceece9" src="https://cdn.app.universalbeijingresort.com/mini-program/static/images/handelCoupon/coupon-meal.png" wx:if="{{card.page_type==='meal_coupon'}}"></image>
+                            </block>
+                        </block>
+                    </block>
+                </block>
+            </view>
+            <view class="type _div data-v-1eceece9">{{''+card.type_name+''}}</view>
+            <view class="{{['price fw-xblack data-v-1eceece9',card.title.length>44?'titles2':card.title.length>38?'titles1':'']}}">
+                <filter-text bind:__l="__l" class="data-v-1eceece9" content="{{card.title}}" vueId="92651318-2"></filter-text>
+            </view>
+            <view class="tips data-v-1eceece9">
+                <filter-text bind:__l="__l" class="data-v-1eceece9" content="{{card.sub_title}}" vueId="92651318-3"></filter-text>
+            </view>
+        </view>
+        <view class="{{['cardBtn data-v-1eceece9',card.stock_status===2?'cardBtn1':'']}}">
+            <view class="cardBtn-bg data-v-1eceece9"></view>
+            <view class="data-v-1eceece9" wx:if="{{card.is_free===0}}">
+                <view class="price-box data-v-1eceece9">
+                    <view class="price fw-semibold data-v-1eceece9">{{'¥'+card.price+''}}</view>
+                    <view class="base-price data-v-1eceece9" wx:if="{{card.base_price>card.price}}">{{'¥'+card.base_price+''}}</view>
+                </view>
+                <view class="price-box-blackoutDate f-semibold data-v-1eceece9" hidden="{{!(card.is_applicable===1)}}">部分日期不适用</view>
+            </view>
+            <view class="num-box data-v-1eceece9" wx:if="{{page==='detail'&&card.is_free===0}}">
+                <view class="refund_num _div data-v-1eceece9" wx:if="{{card.refund_num!==undefined}}">{{'可退'+card.refund_num+'张'}}</view>
+                <image alt bindtap="__e" class="cut img-pic _img data-v-1eceece9" data-event-opts="{{[ [ 'tap',[ [ 'changeNum',['cut'] ] ] ] ]}}" src="{{num>0?'https://cdn.app.universalbeijingresort.com/mini-program/static/images/handelCoupon/cut-pic.png':imgSrc}}"></image>
+                <text class="num fw-semibold data-v-1eceece9">{{''+num+''}}</text>
+                <image alt bindtap="__e" class="add img-pic _img data-v-1eceece9" data-event-opts="{{[ [ 'tap',[ [ 'changeNum',['add'] ] ] ] ]}}" src="{{num>=card.refund_num?imgSrc1:'https://cdn.app.universalbeijingresort.com/mini-program/static/images/handelCoupon/add-pic.png'}}"></image>
+            </view>
+            <view class="data-v-1eceece9" wx:if="{{card.is_free===1}}">
+                <view class="dateBox data-v-1eceece9">
+                    <view class="tips data-v-1eceece9">有效日期</view>
+                    <view class="date data-v-1eceece9">{{''+card.validity_name+''}}</view>
+                </view>
+                <view class="price-box-blackoutDate f-semibold data-v-1eceece9" hidden="{{!(card.is_applicable===1)}}">部分日期不适用</view>
+            </view>
+            <view catchtap="__e" class="{{['get data-v-1eceece9',card.stock_status===2?'noget':card.is_receive||isReceive?'noget':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'handle',['$event'] ] ] ] ]}}" wx:if="{{page==='index'}}">{{''+(card.stock_status===2?'已抢光':card.is_free===0?'购买':card.is_receive||isReceive?'已领取':'领取')+''}}</view>
+        </view>
+    </view>
+    <birthday-confirm bind:__l="__l" bind:clickBirthdayCancel="__e" bind:clickBirthdayEdit="__e" bind:confirmBirthday="__e" class="data-v-1eceece9" data-event-opts="{{[ [ '^clickBirthdayCancel',[ ['clickBirthdayCancel'] ] ],[ '^clickBirthdayEdit',[ ['clickBirthdayEdit'] ] ],[ '^confirmBirthday',[ ['confirmBirthday'] ] ] ]}}" isBirthday="{{isBirthday}}" showDeleteModel="{{showBirthdayModel}}" showText="{{showBirthdayText}}" vueId="92651318-4"></birthday-confirm>
+    <confirm bind:__l="__l" bind:clickCancel="__e" bind:clickDelete="__e" cancelText="{{cancelText}}" class="data-v-1eceece9" confirmText="{{confirmText}}" data-event-opts="{{[ [ '^clickCancel',[ ['clickConfirmCancel'] ] ],[ '^clickDelete',[ ['clickConfirmDelete'] ] ] ]}}" isNotCloseMask="{{true}}" showDeleteModel="{{showDeleteModel}}" showText="{{showText}}" vueId="92651318-5"></confirm>
+</view>

@@ -1,0 +1,15 @@
+{
+    "component": true,
+    "usingComponents": {
+        "font-weight": "/components/ui/font-weight",
+        "ticket-card": "/components/rtmap/article-text/ticket-card",
+        "list-card": "/components/rtmap/article-text/list-card",
+        "vip-card": "/components/rtmap/article-text/vip-card",
+        "om-image": "/components/om-image/index",
+        "filter-text": "/components/ui/filterText",
+        "indicator": "/components/rtmap/indicator",
+        "universal-map": "plugin://wx209d168c345dce2c/universal-map",
+        "toast": "/components/rtmap/toast",
+        "universal-walk-line": "plugin://wx209d168c345dce2c/universal-walk-line"
+    }
+}

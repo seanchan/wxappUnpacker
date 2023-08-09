@@ -1,0 +1,10 @@
+<view class="data-v-4a127e37">
+    <font-weight bind:__l="__l" class="data-v-4a127e37" vueId="ceeaf944-1"></font-weight>
+    <view class="navbar-contain data-v-4a127e37" style="{{'padding-top:'+top+'px'+';'+'height:'+frontImageStyle+'rpx'+';'}}">
+        <image bindtap="__e" class="top-icon data-v-4a127e37" data-event-opts="{{[ [ 'tap',[ [ 'onClickLeft',['$event'] ] ] ] ]}}" src="/static/images/history/ic-top-back.png"></image>
+        <image bindtap="__e" class="top-icon data-v-4a127e37" data-event-opts="{{[ [ 'tap',[ [ 'onClickRight',['$event'] ] ] ] ]}}" src="{{rightIcon}}" wx:if="{{!createType}}"></image>
+    </view>
+    <view class="{{['data-v-4a127e37','front',frontFadeClass]}}" style="{{'padding-top:'+top+'px'+';'+'height:'+frontImageStyle+'rpx'+';'+'background:'+background+';'}}">
+        <view class="nav-title fw-semibold data-v-4a127e37">{{''+navTitle+''}}</view>
+    </view>
+</view>

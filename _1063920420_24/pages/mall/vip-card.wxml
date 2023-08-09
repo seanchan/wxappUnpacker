@@ -1,0 +1,18 @@
+<view class="mall-vip-box _div data-v-130343c2">
+    <toast bind:__l="__l" class="data-v-130343c2" vueId="17b52014-1"></toast>
+    <view bindtap="__e" class="vip-ticket-wrapper _div data-v-130343c2" data-event-opts="{{[ [ 'tap',[ [ 'showTips',['$event'] ] ] ] ]}}">
+        <om-image alt="{{listData[0].title}}" bind:__l="__l" class="data-v-130343c2" end="?imageMogr2/format/jpg/interlace/1/thumbnail/750x" height="{{190}}" mode="aspectFill" url="{{listData[0].back_img}}" vueId="17b52014-2" width="{{335}}"></om-image>
+        <view class="vip-name-price-wrapper _div data-v-130343c2">
+            <view class="vip-name fw-xblack _div data-v-130343c2">
+                <filter-text bind:__l="__l" class="data-v-130343c2" content="{{listData[0].title}}" vueId="17b52014-3"></filter-text>
+            </view>
+        </view>
+        <view class="tag-box _div data-v-130343c2">
+            <view class="tag _div data-v-130343c2" wx:for="{{list}}" wx:key="index">
+                <image class="tag-img _img data-v-130343c2" src="{{item.icon}}" wx:if="{{index!==1&&index!==3}}"></image>
+                <view class="tag-txt fw-regular _p data-v-130343c2" wx:if="{{index!==1&&index!==3}}">{{''+item.value+''}}</view>
+                <view class="line _div data-v-130343c2" wx:if="{{index===1||index===3}}"></view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,53 @@
+<view class="article-text _div">
+    <view style="{{'padding:'+item.pt+' 0 '+item.pb+';'}}" wx:for="{{content_list}}" wx:key="index">
+        <view wx:if="{{item.page_type==='image_banner'}}">
+            <swiper-imgs bind:__l="__l" bind:clickImgs="__e" content="{{item}}" data-event-opts="{{[ [ '^clickImgs',[ ['clickImgs'] ] ] ]}}" vueId="{{'c66e6ea2-1-'+index}}"></swiper-imgs>
+        </view>
+        <block wx:else>
+            <view wx:if="{{item.page_type==='image_one_one'||item.page_type==='image_one_two'||item.page_type==='image_two_two'||item.page_type==='image_long'}}">
+                <imgs-component bind:__l="__l" bind:clickImgs="__e" content="{{item}}" data-event-opts="{{[ [ '^clickImgs',[ ['clickImgs'] ] ] ]}}" vueId="{{'c66e6ea2-2-'+index}}"></imgs-component>
+            </view>
+            <block wx:else>
+                <view class="coupon-theme-box" wx:if="{{item.page_type==='coupon_theme'}}">
+                    <theme-card bind:__l="__l" bind:nav="__e" content="{{item}}" data-event-opts="{{[ [ '^nav',[ [ 'onThemeCardClick',['$0'],[ [ ['content_list','',index] ] ] ] ] ] ]}}" vueId="{{'c66e6ea2-3-'+index}}"></theme-card>
+                </view>
+                <block wx:else>
+                    <view class="coupon-box" wx:if="{{item.page_type==='coupon'||item.page_type==='meal_coupon'}}">
+                        <copuon-card articleId="{{articleId}}" articleTitle="{{storeTitle}}" articleTypeName="{{articleTypeName}}" bind:__l="__l" bind:claim="__e" card="{{item}}" class="vue-ref-in-for" data-event-opts="{{[ [ '^claim',[ ['onCouponClaim'] ] ] ]}}" data-ref="couponCard" vueId="{{'c66e6ea2-4-'+index}}"></copuon-card>
+                    </view>
+                    <block wx:else>
+                        <view wx:if="{{item.page_type==='story'}}">
+                            <view>
+                                <view bindtap="__e" class="story-card" data-event-opts="{{[ [ 'tap',[ [ 'turnResult',['$0'],[ [ ['content_list','',index] ] ] ] ] ] ]}}">
+                                    <view class="poster">
+                                        <om-image bind:__l="__l" end="?imageMogr2/format/jpg" height="{{208}}" mode="aspectFill" url="{{item.cover_image}}" vueId="{{'c66e6ea2-5-'+index}}" width="{{335}}"></om-image>
+                                    </view>
+                                    <view class="collect-box">
+                                        <image alt="{{item.title}}" catchtap="__e" class="img" data-event-opts="{{[ [ 'tap',[ [ 'storyCollect',['$0','$1','$2',index],[ [ ['content_list','',index,'material_type'] ],[ ['content_list','',index,'material_id'] ],[ ['content_list','',index] ] ] ] ] ] ]}}" src="{{item.favourited?'/static/images/show/ic_like-select.png':'/static/images/show/ic_like-nor.png'}}"></image>
+                                    </view>
+                                    <view class="title-box">
+                                        <view class="title fw-xblack">
+                                            <filter-text bind:__l="__l" content="{{item.title}}" vueId="{{'c66e6ea2-6-'+index}}"></filter-text>
+                                        </view>
+                                    </view>
+                                    <view class="btn">了解更多</view>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </block>
+            </block>
+        </block>
+        <view wx:if="{{item.page_type==='material'}}">
+            <card-one bind:__l="__l" bind:checkNotice="__e" bind:goPackageDetail="__e" bind:onCollect="__e" bind:turnResult="__e" class="vue-ref-in-for" content="{{item.list}}" data-event-opts="{{[ [ '^turnResult',[ ['turnResult'] ] ],[ '^onCollect',[ ['onCollect'] ] ],[ '^goPackageDetail',[ ['goPackageDetail'] ] ],[ '^checkNotice',[ ['checkNotice'] ] ] ]}}" data-ref="couponCardMultiple" idx="{{index}}" vueId="{{'c66e6ea2-7-'+index}}" wx:if="{{item.list.length===1}}"></card-one>
+            <card-two bind:__l="__l" bind:checkNotice="__e" bind:goPackageDetail="__e" bind:onCollect="__e" bind:turnResult="__e" content="{{item.list}}" data-event-opts="{{[ [ '^turnResult',[ ['turnResult'] ] ],[ '^onCollect',[ ['onCollect'] ] ],[ '^goPackageDetail',[ ['goPackageDetail'] ] ],[ '^checkNotice',[ ['checkNotice'] ] ] ]}}" idx="{{index}}" vueId="{{'c66e6ea2-8-'+index}}" wx:if="{{item.list.length===2||item.list.length===3}}"></card-two>
+            <block wx:else>
+                <card-thr bind:__l="__l" bind:onCollect="__e" bind:turnResult="__e" content="{{item.list}}" data-event-opts="{{[ [ '^turnResult',[ ['turnResult'] ] ],[ '^onCollect',[ ['onCollect'] ] ] ]}}" idx="{{index}}" vueId="{{'c66e6ea2-9-'+index}}" wx:if="{{item.list.length>3}}"></card-thr>
+            </block>
+        </view>
+        <view wx:else>
+            <detail-title beforType="{{content[index-1]['page_type']}}" bind:__l="__l" bind:videoPlay="__e" content="{{item}}" data-event-opts="{{[ [ '^videoPlay',[ ['e0'] ] ] ]}}" pageType="{{item['page_type']}}" styleColor="{{detailData.text1_semicircle_color}}" vueId="{{'c66e6ea2-10-'+index}}"></detail-title>
+        </view>
+    </view>
+    <reservation-notice bind:__l="__l" bind:clickCancel="__e" bind:clickSure="__e" data-event-opts="{{[ [ '^clickCancel',[ ['clickCancel'] ] ],[ '^clickSure',[ ['clickSure'] ] ] ]}}" noticeNew="true" orderNotice="{{booking_notice}}" showNoticeModel="{{showNoticeModel}}" vueId="c66e6ea2-11"></reservation-notice>
+</view>

@@ -1,0 +1,22 @@
+{
+    "navigationStyle": "custom",
+    "disableScroll": false,
+    "usingComponents": {
+        "font-weight": "/components/ui/font-weight",
+        "home-action": "/pages/home/home-action",
+        "home-entrance": "/pages/home/home-entrance",
+        "home-scenic": "/pages/home/home-scenic",
+        "home-show": "/pages/home/home-show",
+        "home-swiper": "/pages/home/home-swiper",
+        "home-like": "/pages/home/home-like",
+        "scroll-list": "/components/scroll-list/scroll-list",
+        "indicator": "/components/indicator/indicator",
+        "popups": "/components/Popups/index",
+        "camera-toast": "/pages/home/camera-toast",
+        "reservation-notice": "/components/ticket/reservation-notice",
+        "launchapp": "/components/launchapp/launchapp",
+        "toast": "/components/rtmap/toast",
+        "universal-map": "plugin://wx209d168c345dce2c/universal-map",
+        "universal-walk-line": "plugin://wx209d168c345dce2c/universal-walk-line"
+    }
+}

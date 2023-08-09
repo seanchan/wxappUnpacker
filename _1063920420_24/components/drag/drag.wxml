@@ -1,0 +1,8 @@
+<view class="_div data-v-4ead215e">
+    <movable-area class="moveContainer data-v-4ead215e" style="{{'height:'+areaHeaght+';'}}">
+        <movable-view animation="{{false}}" class="{{['moveCustomer data-v-4ead215e',isShow?'show':'']}}" direction="all" style="{{'height:'+height+'px'+';'+'width:'+width+'px'+';'}}" x="{{xx}}" y="{{yy}}">
+            <slot></slot>
+        </movable-view>
+    </movable-area>
+    <view class="height-box iphonex-bot data-v-4ead215e"></view>
+</view>

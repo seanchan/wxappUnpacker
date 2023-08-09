@@ -1,0 +1,1 @@
+{"component":true,"usingComponents":{"uni-calendar":"/subPackage1/coupon/components/uni-calendar/uni-calendar-dialog","indicator":"/components/indicator/indicator","universal-map":"plugin://universal-map/universal-map","universal-walk-line":"plugin://universal-map/universal-walk-line","toast":"/components/rtmap/toast"}}

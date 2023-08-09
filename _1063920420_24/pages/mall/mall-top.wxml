@@ -1,0 +1,6 @@
+<view class="{{['data-v-2178f9e3',isBackShow?'topbar-box top-bar-back-white':'topbar-box']}}" style="{{'height:'+tabBarHeight+'rpx'+';'}}">
+    <view class="img-box data-v-2178f9e3" style="{{'top:'+tabBarTop+'px'+';'}}">
+        <image bindtap="__e" class="img _img data-v-2178f9e3" data-event-opts="{{[ [ 'tap',[ [ 'turnSearch',['$event'] ] ] ] ]}}" src="/static/images/index/ic-top-search.png"></image>
+        <image bindtap="__e" class="img _img data-v-2178f9e3" data-event-opts="{{[ [ 'tap',[ [ 'toCustomer',['$event'] ] ] ] ]}}" src="https://cdn.app.universalbeijingresort.com/mini-program/static/images/reservation/music.png"></image>
+    </view>
+</view>

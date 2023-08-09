@@ -1,0 +1,43 @@
+<view class="home-swiper data-v-c5d44fa2">
+    <view class="backface data-v-c5d44fa2">
+        <image class="image-blur data-v-c5d44fa2" mode="aspectFill" src="{{listData[delayCurrentIndex].back_img+'?imageMogr2/format/jpg/interlace/1/thumbnail/750x'}}"></image>
+    </view>
+    <view class="swiper-wrap data-v-c5d44fa2" hidden="{{!(swiperImageFadeClass=='fade-out'?true:false)}}"></view>
+    <swiper autoplay="{{autoplay}}" bindanimationfinish="__e" bindchange="__e" circular="{{circular}}" class="swiper data-v-c5d44fa2" data-event-opts="{{[ [ 'change',[ [ 'currentChange',['$event'] ] ] ],[ 'animationfinish',[ [ 'testani',['$event'] ] ] ] ]}}" duration="{{duration}}" indicatorDots="{{indicatorDots}}" interval="{{interval}}" wx:if="{{listData.length>1}}">
+        <swiper-item bindtap="__e" class="data-v-c5d44fa2" data-event-opts="{{[ [ 'tap',[ [ 'clickSwper',['$0',idx],[ [ ['listData','',idx] ] ] ] ] ] ]}}" wx:for="{{listData}}" wx:for-index="idx" wx:for-item="itm" wx:key="idx">
+            <image bindload="__e" class="{{['data-v-c5d44fa2','image',swiperImageFadeClass]}}" data-event-opts="{{[ [ 'load',[ [ 'onLoadImage',[idx] ] ] ] ]}}" mode="aspectFill" src="{{itm.back_img+'?imageMogr2/format/jpg/interlace/1/thumbnail/750x'}}"></image>
+            <view class="cover data-v-c5d44fa2">
+                <view class="cover-top data-v-c5d44fa2" style="{{'background-image:'+'linear-gradient(to bottom, rgba('+itm.theme_color[0]+', '+itm.theme_color[1]+', '+itm.theme_color[2]+', 0.5), rgba('+itm.theme_color[0]+', '+itm.theme_color[1]+', '+itm.theme_color[2]+', 0))'+';'}}"></view>
+                <view class="cover-middle data-v-c5d44fa2" style="{{'background-image:'+'linear-gradient(to bottom, rgba('+itm.theme_color[0]+', '+itm.theme_color[1]+', '+itm.theme_color[2]+', 0), rgba('+itm.theme_color[0]+', '+itm.theme_color[1]+', '+itm.theme_color[2]+', 100))'+';'}}"></view>
+                <view class="cover-bottom data-v-c5d44fa2" style="{{'background-color:'+'rgb('+itm.theme_color[0]+', '+itm.theme_color[1]+', '+itm.theme_color[2]+')'+';'}}"></view>
+            </view>
+        </swiper-item>
+    </swiper>
+    <view class="swiper data-v-c5d44fa2" wx:if="{{listData.length===1}}">
+        <view bindtap="__e" class="data-v-c5d44fa2" data-event-opts="{{[ [ 'tap',[ [ 'clickSwper',['$0',idx],[ [ ['listData','',idx] ] ] ] ] ] ]}}" wx:for="{{listData}}" wx:for-index="idx" wx:for-item="itms" wx:key="idx">
+            <image bindload="__e" class="{{['data-v-c5d44fa2','image',swiperImageFadeClass]}}" data-event-opts="{{[ [ 'load',[ [ 'onLoadImage',[0] ] ] ] ]}}" mode="aspectFill" src="{{itms.back_img+'?imageMogr2/format/jpg/interlace/1/thumbnail/750x'}}"></image>
+            <view class="cover data-v-c5d44fa2">
+                <view class="cover-top data-v-c5d44fa2" style="{{'background-image:'+(itms.is_default?'':'linear-gradient(to bottom, rgba('+itms.theme_color[0]+', '+itms.theme_color[1]+', '+itms.theme_color[2]+', 0.5), rgba('+itms.theme_color[0]+', '+itms.theme_color[1]+', '+itms.theme_color[2]+', 0))')+';'}}"></view>
+                <view class="cover-middle data-v-c5d44fa2" style="{{'background-image:'+'linear-gradient(to bottom, rgba('+itms.theme_color[0]+', '+itms.theme_color[1]+', '+itms.theme_color[2]+', 0), rgba('+itms.theme_color[0]+', '+itms.theme_color[1]+', '+itms.theme_color[2]+', 100))'+';'}}"></view>
+                <view class="cover-bottom data-v-c5d44fa2" style="{{'background-color:'+'rgb('+itms.theme_color[0]+', '+itms.theme_color[1]+', '+itms.theme_color[2]+')'+';'}}"></view>
+            </view>
+        </view>
+    </view>
+    <view class="swiper-title data-v-c5d44fa2" style="{{'visibility:'+isShowTitle+';'}}">
+        <view class="{{['data-v-c5d44fa2','title','fw-xblack',titleClass]}}">
+            <filter-text bind:__l="__l" class="data-v-c5d44fa2" content="{{mainTitle}}" vueId="ebd62512-1"></filter-text>
+        </view>
+    </view>
+    <view class="indicator fw-semibold data-v-c5d44fa2" hidden="{{!isShowIndicator}}">{{''+currentInd+1+'/'+bannerCount+''}}</view>
+    <view class="indicator-blur fw-semibold data-v-c5d44fa2" hidden="{{!isShowIndicator}}"></view>
+    <view class="{{['data-v-c5d44fa2','front2']}}" style="{{frontImageStyle}}" wx:if="{{isShowNet}}">
+        <view class="netblock data-v-c5d44fa2">
+            <image class="netimg data-v-c5d44fa2" src="/static/images/index/net.png"></image>网络异常，请检查网络设置</view>
+    </view>
+    <view class="{{['data-v-c5d44fa2','front',frontFadeClass]}}" style="{{frontImageStyle}}">
+        <image class="image-blur data-v-c5d44fa2" mode="aspectFill" src="{{listData[delayCurrentIndex].back_img+'?imageMogr2/format/jpg/interlace/1/thumbnail/750x'}}"></image>
+        <view class="cover data-v-c5d44fa2">
+            <view class="cover-top data-v-c5d44fa2" style="{{'background-image:'+'linear-gradient(to bottom, rgba('+listData[delayCurrentIndex].theme_color[0]+', '+listData[delayCurrentIndex].theme_color[1]+', '+listData[delayCurrentIndex].theme_color[2]+', 0.5), rgba('+listData[delayCurrentIndex].theme_color[0]+', '+listData[delayCurrentIndex].theme_color[1]+', '+listData[delayCurrentIndex].theme_color[2]+', 0))'+';'}}"></view>
+        </view>
+    </view>
+</view>

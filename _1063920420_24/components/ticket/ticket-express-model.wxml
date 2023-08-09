@@ -1,0 +1,20 @@
+<view catchtouchmove="__e" class="v-ticket-express-model data-v-73e41960" data-event-opts="{{[ [ 'touchmove',[ [ 'clean',['$event'] ] ] ] ]}}" wx:if="{{showTicketExpressModel}}">
+    <view catchtap="__e" class="mask data-v-73e41960" data-event-opts="{{[ [ 'tap',[ [ 'clickCancel',['$event'] ] ] ] ]}}"></view>
+    <view class="model-box data-v-73e41960">
+        <view class="title _p data-v-73e41960">您为以下游客购买了优速通</view>
+        <view class="list data-v-73e41960">
+            <view class="item data-v-73e41960" wx:for="{{expressTouristList}}" wx:key="index">
+                <image class="ic-express data-v-73e41960" src="{{assetsImage.expressMid2}}" wx:if="{{expressTicketType=='Unlimited Re-Entry'}}"></image>
+                <image class="ic-express data-v-73e41960" src="{{assetsImage.expressMid1}}" wx:else></image>
+                <view class="l-name data-v-73e41960">
+                    <view class="name fw-semibold data-v-73e41960">{{''+item.name+''}}</view>
+                    <view class="data-v-73e41960">{{item.id_card}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="action data-v-73e41960">
+            <view catchtap="__e" class="_p data-v-73e41960" data-event-opts="{{[ [ 'tap',[ [ 'clickCancel',['$event'] ] ] ] ]}}">取消</view>
+            <view catchtap="__e" class="sure _p data-v-73e41960" data-event-opts="{{[ [ 'tap',[ [ 'clickSure',['$event'] ] ] ] ]}}">确定</view>
+        </view>
+    </view>
+</view>

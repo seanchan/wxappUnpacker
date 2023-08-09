@@ -1,0 +1,13 @@
+<view class="navBar-wrap _div data-v-62427aba" style="{{'opacity:'+(colorBlack?navBarBgOpacity:1-navBarBgOpacity)+';'+'height:'+navHeight+';'}}">
+    <view bindtap="__e" class="{{['_div data-v-62427aba','city-switch',colorBlack?'black':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'switchCity',['$event'] ] ] ] ]}}" style="{{'margin-top:'+menuTop+';'+'height:'+menuHeight+';'}}" wx:if="{{navType==='home'}}">
+        <view class="_div data-v-62427aba">{{cityName}}</view>
+        <image class="triagle data-v-62427aba" src="{{'/static/images/home/down'+(colorBlack?'-black':'')+'.png'}}"></image>
+    </view>
+    <view class="btns-wrap _div data-v-62427aba" style="{{'margin-top:'+menuTop+';'+'height:'+menuHeight+';'}}" wx:else>
+        <image bindtap="__e" class="goback-btn data-v-62427aba" data-event-opts="{{[ [ 'tap',[ [ 'goBack',['$event'] ] ] ] ]}}" src="{{'/static/images/nav/back'+(colorBlack?'-black':'')+'.png'}}" wx:if="{{showBack}}"></image>
+        <image bindtap="__e" class="home-btn data-v-62427aba" data-event-opts="{{[ [ 'tap',[ [ 'goHome',['$event'] ] ] ] ]}}" src="{{'/static/images/nav/home'+(colorBlack?'-black':'')+'.png'}}" wx:if="{{showHome}}"></image>
+    </view>
+    <view class="title _div data-v-62427aba" style="{{'margin-top:'+menuTop+';'+'height:'+menuHeight+';'+'width:'+titleWidth+';'+'margin-right:'+titleMargin+';'}}" wx:if="{{title}}">
+        <view class="title-text _div data-v-62427aba">{{''+title+''}}</view>
+    </view>
+</view>

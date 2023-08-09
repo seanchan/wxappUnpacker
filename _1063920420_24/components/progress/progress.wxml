@@ -1,0 +1,7 @@
+<view class="progress _div data-v-823dc1e2">
+    <view class="item _div data-v-823dc1e2" wx:for="{{$root.l0}}" wx:key="index">
+        <view class="{{['dot _div data-v-823dc1e2',item.g0?'active':'']}}"></view>
+        <view class="{{['line _div data-v-823dc1e2',item.g1?'active':'']}}" style="{{'display:'+(index===2?'none':'block')+';'}}"></view>
+        <view class="text _div data-v-823dc1e2">{{''+item[$orig]+''}}</view>
+    </view>
+</view>

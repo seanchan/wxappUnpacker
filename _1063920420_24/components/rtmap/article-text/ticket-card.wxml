@@ -1,0 +1,54 @@
+<view catchtap="__e" class="v-ticket-card data-v-12ca06d8" data-event-opts="{{[ [ 'tap',[ [ 'turnResult',['$0'],['content'] ] ] ] ]}}">
+    <font-weight bind:__l="__l" class="data-v-12ca06d8" vueId="053a1d20-1"></font-weight>
+    <view class="l-image data-v-12ca06d8">
+        <view class="image data-v-12ca06d8">
+            <om-image bind:__l="__l" class="data-v-12ca06d8" end="?imageMogr2/format/jpg/interlace/1" height="{{130}}" mode="aspectFill" url="{{content.cover_image||content.recommend_image}}" vueId="053a1d20-2" width="{{300}}"></om-image>
+        </view>
+        <view class="mark data-v-12ca06d8" style="{{'background-image:'+'linear-gradient(180deg, rgba('+content.theme_color[0]+', '+content.theme_color[1]+', '+content.theme_color[2]+', 0) 0%, rgba('+content.theme_color[0]+', '+content.theme_color[1]+', '+content.theme_color[2]+', 100%))'+';'}}"></view>
+    </view>
+    <view catchtap="__e" class="l-notice data-v-12ca06d8" data-event-opts="{{[ [ 'tap',[ [ 'checkNotice',['$0'],['content'] ] ] ] ]}}">
+        <view class="data-v-12ca06d8">预订须知</view>
+        <image class="ic-right data-v-12ca06d8" src="/static/images/ticket/ic-arrow-white.png"></image>
+    </view>
+    <view class="{{['data-v-12ca06d8','title','fw-xblack',type===3&&(content.special_right1||content.special_right2||content.special_right3)?'seasoncard-title':'']}}">
+        <view class="data-v-12ca06d8" wx:if="{{type===5}}">
+            <image class="ic-express data-v-12ca06d8" src="{{assetsImage.expressBai2}}" wx:if="{{content.ticket_type=='Unlimited Re-Entry'}}"></image>
+            <block wx:else>
+                <image class="ic-express ic-once-express data-v-12ca06d8" src="{{assetsImage.expressBai1}}" wx:if="{{content.ticket_type=='Limited Re-Entry'}}"></image>
+                <image class="ic-express ic-once-express data-v-12ca06d8" src="{{assetsImage.expressBai3}}" wx:else></image>
+            </block>
+        </view>
+        <view class="{{['texts data-v-12ca06d8',content.titles.length>28?'font-28':content.titles.length>24?'font-32':content.titles.length>22?'font-36':'']}}" wx:if="{{type===5}}">
+            <filter-text bind:__l="__l" class="data-v-12ca06d8" content="{{content.ticket_name}}" vueId="053a1d20-3"></filter-text>
+        </view>
+        <view class="{{['texts data-v-12ca06d8',content.titles.length>34?'font-28':content.titles.length>30?'font-32':content.titles.length>26?'font-36':'']}}" wx:else>
+            <filter-text bind:__l="__l" class="data-v-12ca06d8" content="{{content.ticket_name}}" vueId="053a1d20-4"></filter-text>
+        </view>
+    </view>
+    <view class="bottom-box data-v-12ca06d8" style="{{'background:'+'rgb('+content.theme_color+')'+';'}}">
+        <view class="{{['data-v-12ca06d8','l-tags-price',type===3&&(content.special_right1||content.special_right2||content.special_right3)?'seasoncard-tags':'']}}">
+            <view class="l-tags-main data-v-12ca06d8">
+                <view class="l-tags data-v-12ca06d8">
+                    <view class="tag data-v-12ca06d8" style="{{index===0?'max-width: 100%;':''}}" wx:for="{{content.ticket_label}}" wx:key="index">{{''+item+''}}</view>
+                </view>
+            </view>
+            <view class="l-price fw-avenir data-v-12ca06d8">
+                <view class="price data-v-12ca06d8">¥<view class="data-v-12ca06d8">{{content.amount}}</view>
+                </view>起</view>
+        </view>
+        <view class="{{['l-legal-rights data-v-12ca06d8',content.special_right1&&content.special_right2&&content.special_right3?'l-legal-rights-max':'']}}" wx:if="{{type===3&&(content.special_right1||content.special_right2||content.special_right3)}}">
+            <view class="legal data-v-12ca06d8" wx:if="{{content.special_right1}}">
+                <image class="ic-rights data-v-12ca06d8" src="/static/images/ticket/ic-card-vip.png"></image>
+                <view class="txt data-v-12ca06d8">{{''+content.special_right1+''}}</view>
+            </view>
+            <view class="legal data-v-12ca06d8" wx:if="{{content.special_right2}}">
+                <image class="ic-rights data-v-12ca06d8" src="/static/images/ticket/ic-card-vip.png"></image>
+                <view class="txt data-v-12ca06d8">{{''+content.special_right2+''}}</view>
+            </view>
+            <view class="legal data-v-12ca06d8" wx:if="{{content.special_right3}}">
+                <image class="ic-rights data-v-12ca06d8" src="/static/images/ticket/ic-card-vip.png"></image>
+                <view class="txt data-v-12ca06d8">{{''+content.special_right3+''}}</view>
+            </view>
+        </view>
+    </view>
+</view>

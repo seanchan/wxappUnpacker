@@ -1,0 +1,20 @@
+{
+    "component": true,
+    "usingComponents": {
+        "swiper-imgs": "/components/rtmap/article-text/swiper-imgs",
+        "imgs-component": "/components/rtmap/article-text/imgs-component",
+        "theme-card": "/components/rtmap/article-text/theme-card",
+        "copuon-card": "/components/rtmap/article-text/copuon-card",
+        "om-image": "/components/om-image/index",
+        "filter-text": "/components/ui/filterText",
+        "card-one": "/components/rtmap/article-text/card-one",
+        "card-two": "/components/rtmap/article-text/card-two",
+        "card-thr": "/components/rtmap/article-text/card-thr",
+        "detail-title": "/components/rtmap/article-text/detail-title",
+        "reservation-notice": "/components/ticket/reservation-notice",
+        "indicator": "/components/rtmap/indicator",
+        "universal-map": "plugin://wx209d168c345dce2c/universal-map",
+        "toast": "/components/rtmap/toast",
+        "universal-walk-line": "plugin://wx209d168c345dce2c/universal-walk-line"
+    }
+}

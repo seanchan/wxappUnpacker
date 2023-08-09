@@ -1,0 +1,4 @@
+<view class="map data-v-3b800e90" wx:if="{{paramReady}}">
+    <toast bind:__l="__l" class="data-v-3b800e90" vueId="5b0d33c6-1"></toast>
+    <universal-map baseUrl="{{$root.m0}}" bind:__l="__l" bind:evokeLocToast="__e" bind:login="__e" bind:navigate="__e" class="data-v-3b800e90" curLocation="{{curLocation}}" data-com-type="wx" data-event-opts="{{[ [ '^login',[ ['loginHandler'] ] ],[ '^navigate',[ ['navigateHandler'] ] ],[ '^evokeLocToast',[ ['evokeLoc'] ] ] ]}}" favourited="{{favourited}}" isMapMode="{{isMapMode}}" locationPageStatus="{{locationPageStatus}}" locationToastStatus="{{locationPopStatus}}" navBarData="{{navBarData}}" scenicBounds="{{scenicBounds}}" token="{{token}}" updatePoi="{{updatePoi}}" vueId="5b0d33c6-2"></universal-map>
+</view>

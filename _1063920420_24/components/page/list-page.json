@@ -1,0 +1,12 @@
+{
+    "component": true,
+    "usingComponents": {
+        "scroll-list": "/components/ui/scroll-list",
+        "navigation-bar": "/components/navigation/navigation-bar",
+        "error-page": "/components/page/error-page",
+        "indicator": "/components/indicator/indicator",
+        "toast": "/components/rtmap/toast",
+        "universal-map": "plugin://wx209d168c345dce2c/universal-map",
+        "universal-walk-line": "plugin://wx209d168c345dce2c/universal-walk-line"
+    }
+}

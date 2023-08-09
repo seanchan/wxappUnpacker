@@ -1,0 +1,63 @@
+<view catchtouchmove="__e" class="reservation-notice-model data-v-0b245ba6" data-event-opts="{{[ [ 'touchmove',[ [ 'clean',['$event'] ] ] ] ]}}">
+    <toast bind:__l="__l" class="data-v-0b245ba6" vueId="bc44d416-1"></toast>
+    <view catchtap="__e" class="{{['mask data-v-0b245ba6',showNoticeModel?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'onClickCancel',['$event'] ] ] ] ]}}"></view>
+    <view class="{{['model-box data-v-0b245ba6',showNoticeModel?'active':'']}}" style="{{'padding-bottom:'+(isiPhoneX?'168rpx':'100rpx')+';'}}">
+        <view class="title f-semibold data-v-0b245ba6">{{''+noticeTitle+''}}<image catchtap="__e" class="ic-close data-v-0b245ba6" data-event-opts="{{[ [ 'tap',[ [ 'onClickCancel',['$event'] ] ] ] ]}}" src="https://cdn.app.universalbeijingresort.com/mini-program/static/images/planning/ic-top-closex.png"></image>
+        </view>
+        <scroll-view class="l-detail-box data-v-0b245ba6" scrollTop="{{scrollTopHeight}}" scrollY="{{true}}" style="{{$root.s0}}" wx:if="{{noticeNew}}">
+            <view class="item data-v-0b245ba6" wx:for="{{orderNotice}}" wx:key="index">
+                <view class="item-title data-v-0b245ba6" wx:if="{{item.type=='title'}}">
+                    <filter-text bind:__l="__l" class="data-v-0b245ba6" content="{{item.content}}" vueId="{{'bc44d416-2-'+index}}"></filter-text>
+                </view>
+                <view class="item-title1 data-v-0b245ba6" wx:if="{{item.type=='title1'}}">
+                    <filter-text bind:__l="__l" class="data-v-0b245ba6" content="{{item.content}}" vueId="{{'bc44d416-3-'+index}}"></filter-text>
+                </view>
+                <view class="item-title data-v-0b245ba6" wx:if="{{item.type=='title2'}}">
+                    <filter-text bind:__l="__l" class="data-v-0b245ba6" content="{{item.content}}" vueId="{{'bc44d416-4-'+index}}"></filter-text>
+                </view>
+                <view class="item-title3 data-v-0b245ba6" wx:if="{{item.type=='title3'}}">
+                    <filter-text bind:__l="__l" class="data-v-0b245ba6" content="{{item.content}}" vueId="{{'bc44d416-5-'+index}}"></filter-text>
+                </view>
+                <block wx:else>
+                    <view class="data-v-0b245ba6" wx:if="{{item.type=='image'&&item.content}}">
+                        <image class="item-image data-v-0b245ba6" mode="widthFix" src="{{item.content}}"></image>
+                    </view>
+                    <block wx:else>
+                        <view class="data-v-0b245ba6" wx:if="{{item.type=='text'&&item.array}}">
+                            <block wx:for="{{item.array}}" wx:for-index="indc" wx:for-item="ite" wx:key="indc">
+                                <view class="item-desc inline-block data-v-0b245ba6" wx:if="{{ite.type==='text'&&ite.content}}">
+                                    <filter-text bind:__l="__l" bind:callPhone="__e" class="data-v-0b245ba6" content="{{ite.content}}" data-event-opts="{{[ [ '^callPhone',[ ['callPhone'] ] ] ]}}" vueId="{{'bc44d416-6-'+index+'-'+indc}}"></filter-text>
+                                </view>
+                                <view bindtap="__e" class="inline-block link data-v-0b245ba6" data-event-opts="{{[ [ 'tap',[ [ 'callUrl',['$event'] ] ] ] ]}}" data-value="{{ite.url}}" wx:if="{{ite.type==='url'}}">
+                                    <filter-text bind:__l="__l" class="data-v-0b245ba6" content="{{ite.content}}" vueId="{{'bc44d416-7-'+index+'-'+indc}}"></filter-text>
+                                </view>
+                                <image class="item-image data-v-0b245ba6" mode="widthFix" src="{{ite.content}}" wx:if="{{ite.type==='image'&&ite.content}}"></image>
+                            </block>
+                        </view>
+                        <block wx:else>
+                            <view class="data-v-0b245ba6" wx:if="{{item.type=='text'}}">
+                                <filter-text bind:__l="__l" class="data-v-0b245ba6" content="{{item.content}}" vueId="{{'bc44d416-8-'+index}}"></filter-text>
+                            </view>
+                        </block>
+                    </block>
+                </block>
+            </view>
+        </scroll-view>
+        <scroll-view class="l-detail-box data-v-0b245ba6" scrollTop="{{scrollTopHeight}}" scrollY="{{true}}" style="{{$root.s1}}" wx:else>
+            <view class="item data-v-0b245ba6" wx:for="{{orderNotice}}" wx:key="index">
+                <view class="item-title data-v-0b245ba6" wx:if="{{item.type=='title'}}">
+                    <filter-text bind:__l="__l" class="data-v-0b245ba6" content="{{item.content}}" vueId="{{'bc44d416-9-'+index}}"></filter-text>
+                </view>
+                <view class="data-v-0b245ba6" wx:if="{{item.type=='image'}}">
+                    <image class="item-image data-v-0b245ba6" mode="widthFix" src="{{item.content}}"></image>
+                </view>
+                <view class="item-desc data-v-0b245ba6" wx:if="{{item.type=='text'}}">
+                    <filter-text bind:__l="__l" class="data-v-0b245ba6" content="{{item.content}}" vueId="{{'bc44d416-10-'+index}}"></filter-text>
+                </view>
+            </view>
+        </scroll-view>
+        <view catchtap="__e" class="action data-v-0b245ba6" data-event-opts="{{[ [ 'tap',[ [ 'onClickSure',['$event'] ] ] ] ]}}" style="{{'padding-bottom:'+(isiPhoneX?'68rpx':'')+';'}}">
+            <view class="_p data-v-0b245ba6">确定</view>
+        </view>
+    </view>
+</view>

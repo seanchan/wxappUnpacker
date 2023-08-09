@@ -1,0 +1,7 @@
+<view class="data-v-5ce59bba" style="{{'overflow:'+'hidden'+';'}}">
+    <image class="{{['data-v-5ce59bba',imgClass]}}" src="{{BaseImage}}" wx:if="{{!url.length}}"></image>
+    <view class="data-v-5ce59bba" wx:else>
+        <image class="{{['data-v-5ce59bba',imgClass,radius]}}" hidden="{{!showMore}}" src="{{BaseImage}}"></image>
+        <image alt="{{alt}}" bindload="__e" class="{{['data-v-5ce59bba',imgClass,radius,'block']}}" data-event-opts="{{[ [ 'load',[ [ 'load',['$event'] ] ] ] ]}}" hidden="{{!!showMore}}" mode="{{mode||'scaleToFill'}}" src="{{url+end}}"></image>
+    </view>
+</view>

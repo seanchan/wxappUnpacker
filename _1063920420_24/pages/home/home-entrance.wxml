@@ -1,0 +1,31 @@
+<view class="{{['home-entrance data-v-6c148ecb',isRelease1=='S5'?'':'r1-home-class']}}">
+    <view class="ob-dom ob-fill data-v-6c148ecb"></view>
+    <view class="box-main data-v-6c148ecb" wx:if="{{isRelease1=='S5'}}">
+        <scroll-tab bind:__l="__l" class="data-v-6c148ecb" list="{{functionListData}}" vueId="36db65b9-1" wx:if="{{functionListData&&functionListData.length>0}}"></scroll-tab>
+        <button bindtap="__e" class="buy-btn fw-ubrheavy data-v-6c148ecb" data-event-opts="{{[ [ 'tap',[ [ 'goTicket',['$event'] ] ] ] ]}}" wx:if="{{wechatcore.title||wechatcore.mini_jump_url}}">{{wechatcore.title}}</button>
+    </view>
+    <view class="my-stroke data-v-6c148ecb" wx:if="{{$root.g0.length>0}}">
+        <view bindtap="__e" class="tour-contain _div data-v-6c148ecb" data-event-opts="{{[ [ 'tap',[ [ 'goLineList',['$0'],['myStrokeList.material_id'] ] ] ] ]}}">
+            <view class="left-contain _div data-v-6c148ecb">
+                <view class="left-top _div data-v-6c148ecb">
+                    <image class="left-top-icon data-v-6c148ecb" src="{{assetsImage.icItinerarySmall}}"></image>
+                    <view class="left-top-content fw-semibold _div data-v-6c148ecb">{{'行程提醒 '+$root.m0+''}}</view>
+                </view>
+                <view class="left-bottom _div data-v-6c148ecb">{{''+$root.f0+''}}</view>
+            </view>
+            <image class="right-icon data-v-6c148ecb" src="/static/images/personal/ic-arrow-black.png"></image>
+        </view>
+    </view>
+    <view class="{{['swiperStory data-v-6c148ecb',isRelease1=='S5'?'':'r1-swiper-class']}}">
+        <view bindtap="__e" class="{{['data-v-6c148ecb','story-box',idx===fadeInIndex?'fade-in':'',idx===fadeOutIndex?'fade-out':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'turnToStory',['$0'],[ [ ['storyListData.back_img','',idx] ] ] ] ] ] ]}}" wx:for="{{storyListData.back_img}}" wx:for-index="idx" wx:for-item="items" wx:key="idx">
+            <image bindload="__e" class="back-story data-v-6c148ecb" data-event-opts="{{[ [ 'load',[ [ 'onLoadImage',[idx] ] ] ] ]}}" mode="aspectFill" src="{{items+'?imageMogr2/format/jpg'}}"></image>
+            <view class="story-title fw-xblack data-v-6c148ecb">
+                <filter-text bind:__l="__l" class="data-v-6c148ecb" content="{{title}}" vueId="{{'36db65b9-2-'+idx}}"></filter-text>
+            </view>
+            <view class="story-content fw-semibold data-v-6c148ecb">
+                <filter-text bind:__l="__l" class="data-v-6c148ecb" content="{{storyListData.subtitle}}" vueId="{{'36db65b9-3-'+idx}}"></filter-text>
+            </view>
+            <view class="more-story data-v-6c148ecb">了解更多</view>
+        </view>
+    </view>
+</view>

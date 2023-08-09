@@ -1,0 +1,36 @@
+<view class="data-v-49202478">
+    <view class="imgs-component data-v-49202478" wx:if="{{content.page_type==='image_one_one'}}">
+        <view class="two data-v-49202478" wx:for="{{content.content.group_image}}" wx:key="index">
+            <image bindtap="__e" class="image data-v-49202478" data-event-opts="{{[ [ 'tap',[ [ 'jumpPage',['$0'],[ [ ['content.content.group_image','',index,'mini_jump_url'] ] ] ] ] ] ]}}" mode="aspectFill" src="{{item.url}}" style="{{'height:'+content.content.height+'rpx'+';'}}"></image>
+        </view>
+    </view>
+    <block wx:else>
+        <view class="imgs-component data-v-49202478" wx:if="{{content.page_type==='image_one_two'}}">
+            <view class="three-left data-v-49202478">
+                <image bindtap="__e" class="image data-v-49202478" data-event-opts="{{[ [ 'tap',[ [ 'jumpPage',['$0'],['content.content.group_image.__$n0.mini_jump_url'] ] ] ] ]}}" mode="aspectFill" src="{{content.content.group_image[0].url}}" style="{{'height:'+content.content.height+'rpx'+';'}}"></image>
+            </view>
+            <view class="three-right data-v-49202478">
+                <view class="three-right-item data-v-49202478">
+                    <image bindtap="__e" class="image data-v-49202478" data-event-opts="{{[ [ 'tap',[ [ 'jumpPage',['$0'],['content.content.group_image.__$n1.mini_jump_url'] ] ] ] ]}}" mode="aspectFill" src="{{content.content.group_image[1].url}}" style="{{'height:'+content.content.height/2+'rpx'+';'}}"></image>
+                </view>
+                <view class="three-right-item data-v-49202478">
+                    <image bindtap="__e" class="image data-v-49202478" data-event-opts="{{[ [ 'tap',[ [ 'jumpPage',['$0'],['content.content.group_image.__$n2.mini_jump_url'] ] ] ] ]}}" mode="aspectFill" src="{{content.content.group_image[2].url}}" style="{{'height:'+content.content.height/2+'rpx'+';'}}"></image>
+                </view>
+            </view>
+        </view>
+        <block wx:else>
+            <view class="imgs-component wrap data-v-49202478" wx:if="{{content.page_type==='image_two_two'}}">
+                <view class="four data-v-49202478" wx:for="{{content.content.group_image}}" wx:key="index">
+                    <image bindtap="__e" class="image data-v-49202478" data-event-opts="{{[ [ 'tap',[ [ 'jumpPage',['$0'],[ [ ['content.content.group_image','',index,'mini_jump_url'] ] ] ] ] ] ]}}" mode="widthFix" src="{{item.url}}" style="{{'height:'+content.content.height+'rpx'+';'}}"></image>
+                </view>
+            </view>
+            <block wx:else>
+                <view class="imgs-component wrap data-v-49202478" wx:if="{{content.page_type==='image_long'}}">
+                    <view class="one data-v-49202478" wx:for="{{content.content.group_image}}" wx:key="index">
+                        <image bindtap="__e" class="image data-v-49202478" data-event-opts="{{[ [ 'tap',[ [ 'jumpPage',['$0'],[ [ ['content.content.group_image','',index,'mini_jump_url'] ] ] ] ] ] ]}}" mode="widthFix" src="{{item.url}}" style="{{'height:'+item.height+'rpx'+';'}}"></image>
+                    </view>
+                </view>
+            </block>
+        </block>
+    </block>
+</view>

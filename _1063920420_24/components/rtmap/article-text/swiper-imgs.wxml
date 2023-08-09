@@ -1,0 +1,12 @@
+<view class="box _div data-v-c3af95b4">
+    <swiper autoplay="{{swiperAutoPlay}}" bindchange="__e" circular="true" class="swiper data-v-c3af95b4" data-event-opts="{{[ [ 'change',[ [ 'handleChange',['$event'] ] ] ] ]}}" interval="{{interval}}" style="{{styleObj}}">
+        <swiper-item bindtap="__e" class="swiper-item data-v-c3af95b4" data-event-opts="{{[ [ 'tap',[ [ 'goBannerDetail',[index] ] ] ] ]}}" wx:for="{{content.content.group_image}}" wx:key="index">
+            <view class="swiper-item-img data-v-c3af95b4">
+                <image alt="{{alt}}" bindtap="__e" class="image data-v-c3af95b4" data-event-opts="{{[ [ 'tap',[ [ 'jumpPage',['$0'],[ [ ['content.content.group_image','',index,'mini_jump_url'] ] ] ] ] ] ]}}" mode="aspectFill" src="{{item.url+'?imageMogr2/format/jpg/interlace/1'}}"></image>
+            </view>
+        </swiper-item>
+    </swiper>
+    <view class="dot-contain data-v-c3af95b4" wx:if="{{content.content.group_image.length>1}}">
+        <view class="{{['data-v-c3af95b4',idx==currentIndex?'dot big-dot':'dot small-dot']}}" wx:for="{{content.content.group_image}}" wx:for-index="idx" wx:key="idx"></view>
+    </view>
+</view>

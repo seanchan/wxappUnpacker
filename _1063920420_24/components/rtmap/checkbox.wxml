@@ -1,0 +1,1 @@
+<view bindtap="__e" class="{{['rtmap-check-box _div data-v-d5b31ede',!!(value&&!disabled)?'checked':'',indeterminate?'indeterminate':'',disabled?'disabled':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'handleClick',['$event'] ] ] ] ]}}"></view>

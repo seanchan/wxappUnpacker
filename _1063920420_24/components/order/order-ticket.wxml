@@ -1,0 +1,111 @@
+<view class="v-order-infor-bac data-v-d3d01842">
+    <font-weight bind:__l="__l" class="data-v-d3d01842" vueId="a76d6042-1"></font-weight>
+    <toast bind:__l="__l" class="data-v-d3d01842" vueId="a76d6042-2"></toast>
+    <view class="order-infor data-v-d3d01842">
+        <view class="data-v-d3d01842" wx:if="{{content.ticketType==='MultiplePark'}}">
+            <view class="multiple-title f-semibold data-v-d3d01842">
+                <filter-text bind:__l="__l" class="data-v-d3d01842" content="{{content.ticketName}}" vueId="a76d6042-3"></filter-text>
+            </view>
+            <view class="multiple-item data-v-d3d01842">
+                <view class="multiple-item-text f-semibold data-v-d3d01842">类型</view>
+                <view class="multiple-item-text mt10 data-v-d3d01842">
+                    <view class="multiple-item-text-label f-regular inline data-v-d3d01842" wx:for="{{content.ticket}}" wx:key="index">
+                        <filter-text bind:__l="__l" class="data-v-d3d01842" content="{{item.name}}" vueId="{{'a76d6042-4-'+index}}"></filter-text>{{'×'+item.quantity+''}}</view>
+                </view>
+            </view>
+            <view class="multiple-item data-v-d3d01842" wx:if="{{content.multipleType==='STATIC_MULTIPLE'}}">
+                <view class="multiple-item-text f-semibold data-v-d3d01842">有效期</view>
+                <view class="multiple-item-text mt10 data-v-d3d01842">
+                    <view class="f-regular data-v-d3d01842" wx:for="{{$root.l0}}" wx:key="index">{{''+item.f0+''}}</view>
+                </view>
+                <view bindtap="__e" class="use-rights multiple-right data-v-d3d01842" data-event-opts="{{[ [ 'tap',[ ['use'] ] ] ]}}" wx:if="{{!isPayPage}}">
+                    <label class="_span data-v-d3d01842">规则说明</label>
+                    <image alt class="_img data-v-d3d01842" src="/static/images/ticket/ic-arrow-white.png"></image>
+                </view>
+            </view>
+            <block wx:else>
+                <view class="multiple-item data-v-d3d01842">
+                    <view class="multiple-item-text f-semibold data-v-d3d01842">{{''+content.multipleTicketDate.first_check_in_date_name+''}}</view>
+                    <view class="multiple-item-text mt10 f-regular data-v-d3d01842">{{''+$root.f1+''}}</view>
+                </view>
+                <view class="multiple-item data-v-d3d01842">
+                    <view class="multiple-item-text f-semibold data-v-d3d01842">{{''+content.multipleTicketDate.other_check_in_date_name+''}}</view>
+                    <view class="multiple-item-text mt10 f-regular data-v-d3d01842">{{''+$root.f2+''}}</view>
+                </view>
+            </block>
+        </view>
+        <view class="order-infor-top data-v-d3d01842" wx:else>
+            <label class="ticket-date _span data-v-d3d01842" wx:if="{{content.ticketType!='seasoncard'&&content.ticketType!='GA 2_VISIT'}}">{{''+content.checkedDate+''}}</label>
+            <label class="line _span data-v-d3d01842" wx:if="{{content.ticketType!='seasoncard'&&content.ticketType!='GA 2_VISIT'}}"></label>
+            <view class="ticket-name inline data-v-d3d01842">
+                <filter-text bind:__l="__l" class="data-v-d3d01842" content="{{content.ticketName}}" vueId="a76d6042-5"></filter-text>
+            </view>
+        </view>
+        <view class="data-v-d3d01842" wx:if="{{content.ticketType=='entranceticket'}}">
+            <view class="order-infor-center data-v-d3d01842">
+                <view class="ticketType f-semibold data-v-d3d01842">
+                    <view class="data-v-d3d01842">门</view>
+                    <view class="data-v-d3d01842">票</view>
+                </view>
+                <view class="ticketinclude data-v-d3d01842">
+                    <view class="ticketinclude-item inline data-v-d3d01842" wx:for="{{content.ticket}}" wx:key="index">
+                        <filter-text bind:__l="__l" class="data-v-d3d01842" content="{{item.name}}" vueId="{{'a76d6042-6-'+index}}"></filter-text>{{'x '+item.quantity+''}}</view>
+                </view>
+            </view>
+            <view class="order-infor-bottom data-v-d3d01842" wx:if="{{content.express.length>0}}">
+                <view class="ticketType f-semibold data-v-d3d01842">
+                    <view class="data-v-d3d01842">优</view>
+                    <view class="data-v-d3d01842">速</view>
+                    <view class="data-v-d3d01842">通</view>
+                </view>
+                <view class="ticketinclude data-v-d3d01842">
+                    <view class="data-v-d3d01842" wx:if="{{content.entranceTicketType=='1-Day'}}">
+                        <view class="ticketinclude-item inline data-v-d3d01842" wx:for="{{content.express}}" wx:key="index">
+                            <filter-text bind:__l="__l" class="data-v-d3d01842" content="{{item.name}}" vueId="{{'a76d6042-7-'+index}}"></filter-text>{{'x '+item.quantity+''}}</view>
+                    </view>
+                    <view class="express-info data-v-d3d01842" wx:else>
+                        <view class="express _div data-v-d3d01842" wx:for="{{$root.l1}}" wx:key="index">
+                            <label class="express-time _span data-v-d3d01842" wx:if="{{item[$orig].visit_start_time}}">{{item.g0[1]+'/'+item.g1[2]}}</label>
+                            <view class="inline data-v-d3d01842">
+                                <filter-text bind:__l="__l" class="data-v-d3d01842" content="{{item[$orig].name}}" vueId="{{'a76d6042-8-'+index}}"></filter-text>{{'x '+item[$orig].quantity+''}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="data-v-d3d01842" wx:if="{{content.ticketType=='expressticket'}}">
+            <view class="order-infor-bottom order-infor-bottoms data-v-d3d01842">
+                <view class="ticketinclude data-v-d3d01842" wx:for="{{content.express}}" wx:key="index">
+                    <filter-text bind:__l="__l" class="data-v-d3d01842" content="{{item.name}}" vueId="{{'a76d6042-9-'+index}}"></filter-text>{{'x '+item.quantity+''}}</view>
+            </view>
+        </view>
+        <view class="data-v-d3d01842" wx:if="{{content.ticketType=='seasoncard'||content.ticketType=='GA 2_VISIT'}}">
+            <view class="order-infor-center data-v-d3d01842">
+                <view class="ticketType f-semibold data-v-d3d01842">
+                    <view class="data-v-d3d01842">类</view>
+                    <view class="data-v-d3d01842">型</view>
+                </view>
+                <view class="ticketinclude data-v-d3d01842">
+                    <view class="ticketinclude-item inline data-v-d3d01842" wx:for="{{content.ticket}}" wx:key="index">
+                        <filter-text bind:__l="__l" class="data-v-d3d01842" content="{{item.season}}" vueId="{{'a76d6042-10-'+index}}" wx:if="{{item.ticket_type=='Seasonal'}}"></filter-text>
+                        <filter-text bind:__l="__l" class="data-v-d3d01842" content="{{item.name}}" vueId="{{'a76d6042-11-'+index}}" wx:else></filter-text>{{'x'+item.quantity+''}}</view>
+                </view>
+            </view>
+            <view class="order-infor-bottom data-v-d3d01842">
+                <view class="ticketType f-semibold data-v-d3d01842">有效期</view>
+                <view class="ticketinclude data-v-d3d01842" wx:if="{{content.seasonalTicketType==='Seasonal'||content.seasonalTicketType==='GA 2_VISIT'}}">{{''+content.checkedDate+''}}</view>
+                <block wx:else>
+                    <view class="ticketinclude data-v-d3d01842" wx:if="{{expirationDate}}">{{''+expirationDate+''}}</view>
+                </block>
+            </view>
+        </view>
+        <view bindtap="__e" class="use-rights data-v-d3d01842" data-event-opts="{{[ [ 'tap',[ ['use'] ] ] ]}}" wx:if="{{(content.ticketType=='expressticket'||content.ticketType=='entranceticket')&&ticketStatus=='CONFIRMED'}}">
+            <label class="_span data-v-d3d01842">使用说明</label>
+            <image alt class="_img data-v-d3d01842" src="/static/images/ticket/ic-arrow-white.png"></image>
+        </view>
+        <view bindtap="__e" class="use-rights data-v-d3d01842" data-event-opts="{{[ [ 'tap',[ ['use'] ] ] ]}}" wx:if="{{content.ticketType=='seasoncard'&&ticketStatus=='CONFIRMED'}}">
+            <label class="_span data-v-d3d01842">年卡权益</label>
+            <image alt class="_img data-v-d3d01842" src="/static/images/ticket/ic-arrow-white.png"></image>
+        </view>
+    </view>
+</view>

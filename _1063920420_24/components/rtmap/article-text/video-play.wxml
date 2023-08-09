@@ -1,0 +1,4 @@
+<view catchtap="__e" class="video-play _div data-v-fcf6e6f6" data-event-opts="{{[ [ 'tap',[ [ '',['$event'] ] ] ] ]}}" wx:if="{{url&&autoplay}}">
+    <video autoplay="{{autoplay}}" bindended="__e" class="video-play_video data-v-fcf6e6f6" controls="false" data-event-opts="{{[ [ 'ended',[ [ 'handleVideoEnded',['$event'] ] ] ] ]}}" objectFit="contain" showMuteBtn="true" src="{{url}}"></video>
+    <image bindtap="__e" class="video-play_close _img data-v-fcf6e6f6" data-event-opts="{{[ [ 'tap',[ [ 'handleVideoClosed',['$event'] ] ] ] ]}}" src="{{$root.m0}}"></image>
+</view>

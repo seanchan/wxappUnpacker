@@ -1,0 +1,4 @@
+<view class="data-v-710e6c0c">
+    <top-nav bind:__l="__l" catch:clickLeft="__e" catch:clickRight="__e" class="data-v-710e6c0c" data-event-opts="{{[ [ '^clickLeft',[ [ 'clickLeft',['$event'] ] ] ],[ '^clickRight',[ [ 'clickRight',['$event'] ] ] ] ]}}" leftIcon="{{left}}" rightIcon="{{right}}" vueId="4fadfcbc-1"></top-nav>
+    <view class="{{['data-v-710e6c0c','front',frontFadeClass]}}" style="{{'height:'+frontImageStyle+'rpx'+';'+'background:'+background+';'+'opacity:'+opacity+';'}}"></view>
+</view>

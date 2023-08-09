@@ -1,0 +1,299 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/map/map",
+        "pages/home/getcode",
+        "pages/mall/mall",
+        "pages/personal/personal",
+        "pages/login/login"
+    ],
+    "subPackages": [
+        {
+            "root": "subPackage1/",
+            "pages": [
+                "coupon/list",
+                "coupon/list-free",
+                "coupon/details",
+                "coupon/ticket-give",
+                "coupon/ticket-give-success",
+                "coupon/exchange-gift",
+                "coupon/exchange-success",
+                "coupon/verification-line",
+                "coupon/exchange",
+                "operationtime/index",
+                "touristservices/index",
+                "touristservices/line",
+                "touristservices/functionlist",
+                "show/list",
+                "show/detail",
+                "scenic/list",
+                "scenic/detail",
+                "store/detail",
+                "planning/list",
+                "planning/planning-detail",
+                "planning/planning-my-detail",
+                "planning/planning-share-detail",
+                "vip/detail",
+                "activity/detail",
+                "restaurant/detail",
+                "restaurant/list",
+                "hotel/detail",
+                "hotelReservation/home",
+                "hotelReservation/oder",
+                "hotelReservation/payment",
+                "hotelReservation/paySuccessful",
+                "hotelReservation/oderComfied",
+                "hotelReservation/reimburse",
+                "hotelReservation/refundRefund",
+                "hotelReservation/refundProcess",
+                "hotelReservation/ChoosecheckOutTime",
+                "hotelReservation/ticketChange",
+                "story/detail",
+                "service/detail",
+                "washroom/detail",
+                "history/history",
+                "story/list",
+                "story/detail-morelist",
+                "story/detail-morelist-nearby",
+                "helpandfeedback/list",
+                "helpandfeedback/detail",
+                "helpandfeedback/mylist",
+                "helpandfeedback/mydetail",
+                "helpandfeedback/submit",
+                "helpandfeedback/web-view",
+                "collect/list",
+                "walkline/walkline",
+                "planning/planning-choose",
+                "planning/planning-create",
+                "planning/planning-history-list",
+                "planning/planning-confirm",
+                "hotel/pic-list",
+                "hotel/detail-video",
+                "h5webview/index",
+                "h5webview/h5agreement",
+                "hotelReservation/list",
+                "unsuitable/index"
+            ]
+        },
+        {
+            "root": "sprint4Package/",
+            "pages": [
+                "refund-ticket/refund-ticket-detail",
+                "ticket-change/ticket-change-detail",
+                "refund-ticket/refund-application",
+                "refund-ticket/refund-ticket-reason",
+                "ticket-change/refund-shop",
+                "ticket-change/ticket-change-tourists",
+                "ticket-change/ticket-change",
+                "ticket/endorse",
+                "testd/testd",
+                "order-center/ordercenter",
+                "order-center/order-verification",
+                "order-center/order-other",
+                "ticket/list",
+                "ticket/entranceticketdetail",
+                "ticket/expressticketdetail",
+                "ticket/express-singleticketdetail",
+                "ticket/seasoncarddetail",
+                "ticket/multiple-ticket-detail",
+                "order/cashier",
+                "order/cashierStatus",
+                "order/result",
+                "order/orderwrite",
+                "order/singleticket-order",
+                "order/addvisitors",
+                "search/search",
+                "search/search-result",
+                "camera/camera",
+                "camera/camera-detail",
+                "webview/webview",
+                "video/video-list",
+                "video/video-detail",
+                "location/location-open",
+                "vip/vip-list",
+                "vip/detail",
+                "vip/order",
+                "vip/vip-peo-list",
+                "order/tourist-info-card",
+                "order/vip-result",
+                "order-center/change-detail",
+                "vip/vip-refund-reason",
+                "vip/vip-refound"
+            ]
+        },
+        {
+            "root": "sprint8Package/",
+            "pages": [
+                "setup/setup",
+                "setup/checkhead",
+                "setup/edittel",
+                "setup/set-phone",
+                "setup/about",
+                "setup/agreement-list",
+                "setup/contact-us",
+                "setup/currencyset",
+                "setup/accountset",
+                "setup/editset",
+                "setup/passengers-list",
+                "setup/personset",
+                "invoice/invoiceCreate",
+                "invoice/invoiceDetail",
+                "invoice/invoiceEdit",
+                "invoice/invoiceSuccess",
+                "customer/customer",
+                "package/list",
+                "package/detail",
+                "package/package-order",
+                "package/package-guest",
+                "package/order-pay",
+                "package/order-success",
+                "package/order-detail",
+                "package/refund-reason",
+                "package/refund-detail",
+                "combination/list",
+                "combination/detail",
+                "article/detail",
+                "coupon/tickets",
+                "coupon/tickets-list",
+                "home-recommend-list/restaurant-list",
+                "home-recommend-list/meal-list",
+                "home-recommend-list/store-list",
+                "appointment/list",
+                "appointment/introduce",
+                "appointment/appoint",
+                "appointment/pass",
+                "recommended-tickets/recommended-tickets-list",
+                "parkreserve/list",
+                "parkreserve/index",
+                "parkreserve/reserve-history",
+                "parkreserve/index-change-date",
+                "parkreserve/reserve-certificate"
+            ],
+            "plugins": {
+                "wxparserPlugin": {
+                    "version": "0.1.0",
+                    "provider": "wx9d4d4ffa781ff3ac"
+                },
+                "QCloudAIVoice": {
+                    "version": "1.2.0",
+                    "provider": "wx3e17776051baf153"
+                }
+            }
+        },
+        {
+            "root": "sprint12Package/",
+            "pages": [
+                "debug/debug",
+                "components/confirm-btn/confirm",
+                "handelCoupon/index",
+                "handelCoupon/detail",
+                "handelCoupon/components/card",
+                "handelCoupon/order",
+                "handelCoupon/orderDetail",
+                "handelCoupon/paySuccess",
+                "handelCoupon/refundReasons",
+                "handelCoupon/refundResult",
+                "meal/detail",
+                "meal/mealsDetail",
+                "meal/orderwrite",
+                "meal/cashier",
+                "meal/paySuccess",
+                "meal/orderDetail",
+                "member/explain",
+                "member/authentication",
+                "member/thirdPartyOrder",
+                "member/authenticationSuccessful",
+                "member/center",
+                "member/area",
+                "member/location",
+                "member/interests",
+                "gift/list",
+                "gift/detail",
+                "gift/give-detail",
+                "gift/gift-list",
+                "gift/give-detail-success",
+                "gift/gift-present",
+                "refund-meal/refund-meal-reason",
+                "refund-meal/refund-meal-submit",
+                "refund-meal/refund-meal-detail",
+                "account/index",
+                "meal/voucherList",
+                "meal/use-voucher-list",
+                "account/bind",
+                "member/myMemberList",
+                "member/renewableCardList",
+                "member/renewableCardDetail",
+                "handelCoupon/selectDesigneePerple"
+            ],
+            "plugins": {
+                "sendCoupon": {
+                    "version": "1.4.11",
+                    "provider": "wxf3f436ba9bd4be7b"
+                }
+            }
+        }
+    ],
+    "window": {
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": " ",
+        "navigationBarBackgroundColor": "#0368d9",
+        "backgroundColor": "#ffffff",
+        "pageOrientation": "portrait"
+    },
+    "tabBar": {
+        "color": "#333333",
+        "selectedColor": "#0368d9",
+        "borderStyle": "white",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "static/images/tab-bar/ic-tab-home@3x.png",
+                "selectedIconPath": "static/images/tab-bar/ic-tab-home-select@3x.png"
+            },
+            {
+                "pagePath": "pages/map/map",
+                "text": "地图",
+                "iconPath": "static/images/tab-bar/ic-tab-map@3x.png",
+                "selectedIconPath": "static/images/tab-bar/ic-tab-map-select@3x.png"
+            },
+            {
+                "pagePath": "pages/mall/mall",
+                "text": "商城",
+                "iconPath": "static/images/tab-bar/ic-tab-store@3x.png",
+                "selectedIconPath": "static/images/tab-bar/ic-tab-store-select@3x.png"
+            },
+            {
+                "pagePath": "pages/personal/personal",
+                "text": "我的",
+                "iconPath": "static/images/tab-bar/ic-tab-me@3x.png",
+                "selectedIconPath": "static/images/tab-bar/ic-tab-me-select@3x.png"
+            }
+        ]
+    },
+    "requiredPrivateInfos": [
+        "getLocation"
+    ],
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序地图的定位以及路线规划"
+        }
+    },
+    "requiredBackgroundModes": [
+        "audio"
+    ],
+    "plugins": {
+        "universal-map": {
+            "version": "0.10.53",
+            "provider": "wx209d168c345dce2c",
+            "export": "index.js"
+        }
+    },
+    "usingComponents": {
+        "indicator": "/components/rtmap/indicator",
+        "universal-map": "plugin://wx209d168c345dce2c/universal-map",
+        "toast": "/components/rtmap/toast",
+        "universal-walk-line": "plugin://wx209d168c345dce2c/universal-walk-line"
+    }
+}

@@ -1,0 +1,7 @@
+<view class="v-nodata _div data-v-3da7fda6">
+    <view class="{{['back _div data-v-3da7fda6',isMini?'mini':'',isReservation?'reservation':'']}}">
+        <image alt="{{true}}" class="_img data-v-3da7fda6" src="https://cdn.app.universalbeijingresort.com/mini-program/static/images/newstory/noip2.png"></image>
+        <view class="text data-v-3da7fda6">{{''+localNoData+''}}</view>
+        <slot></slot>
+    </view>
+</view>

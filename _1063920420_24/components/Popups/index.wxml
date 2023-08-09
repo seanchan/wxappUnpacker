@@ -1,0 +1,12 @@
+<view class="Popups data-v-c96c8580" wx:if="{{show}}">
+    <mask bind:__l="__l" bind:updateShow="__e" class="data-v-c96c8580" data-event-opts="{{[ [ '^updateShow',[ [ '__set_sync',['$0','isShow','$event'],[''] ] ] ] ]}}" isTapClose="{{isTapClose}}" show="{{isShow}}" vueId="01e921c1-1"></mask>
+    <view catchtouchmove="__e" class="Popups-box _div data-v-c96c8580" data-event-opts="{{[ [ 'touchmove',[ [ 'clean',['$event'] ] ] ] ]}}">
+        <view class="_header data-v-c96c8580">{{''+title+''}}</view>
+        <view class="_main data-v-c96c8580">
+            <slot></slot>
+        </view>
+        <view bindtap="__e" class="_footer data-v-c96c8580" data-event-opts="{{[ [ 'tap',[ [ 'onTap',['$event'] ] ] ] ]}}">
+            <view class="btns data-v-c96c8580" data-index="{{index}}" style="{{item.s0}}" wx:for="{{$root.l0}}" wx:key="index">{{''+item[$orig].text+''}}</view>
+        </view>
+    </view>
+</view>

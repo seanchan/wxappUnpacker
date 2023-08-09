@@ -1,0 +1,12 @@
+{
+    "component": true,
+    "usingComponents": {
+        "font-weight": "/components/ui/font-weight",
+        "om-image": "/components/om-image/index",
+        "filter-text": "/components/ui/filterText",
+        "indicator": "/components/rtmap/indicator",
+        "universal-map": "plugin://wx209d168c345dce2c/universal-map",
+        "toast": "/components/rtmap/toast",
+        "universal-walk-line": "plugin://wx209d168c345dce2c/universal-walk-line"
+    }
+}

@@ -1,0 +1,240 @@
+<view class="_div data-v-867efc7a">
+    <view bindtap="__e" class="_div data-v-867efc7a" data-event-opts="{{[ [ 'tap',[ [ 'goToDetail',['$0'],[ [ ['list','',index] ] ] ] ] ] ]}}" wx:if="{{index===0}}" wx:for="{{$root.l0}}" wx:key="index">
+        <view class="gift-card _div data-v-867efc7a" wx:if="{{item[$orig].material_type=='coupon_theme'}}">
+            <om-image bind:__l="__l" class="bg data-v-867efc7a" height="{{120}}" url="{{item[$orig].recommend_image}}" vueId="{{'8ea99e5e-1-'+index}}" width="{{335}}"></om-image>
+            <view class="{{['gift-card-title fw-xblack _div data-v-867efc7a',titleClass,!item[$orig].sub_title?'title2':'']}}">
+                <filter-text bind:__l="__l" class="data-v-867efc7a" content="{{item[$orig].title}}" vueId="{{'8ea99e5e-2-'+index}}"></filter-text>
+            </view>
+            <view class="gift-card-subtitle f-regular _div data-v-867efc7a" wx:if="{{item[$orig].sub_title}}">
+                <filter-text bind:__l="__l" class="data-v-867efc7a" content="{{item[$orig].sub_title}}" vueId="{{'8ea99e5e-3-'+index}}"></filter-text>
+            </view>
+            <view class="gift-card-btn f-semibold _div data-v-867efc7a">立即购买</view>
+            <view class="gift-card-bg _div data-v-867efc7a" style="{{'background-image:'+item.m0+';'}}"></view>
+        </view>
+        <view class="exchange-success-card _div data-v-867efc7a" wx:if="{{item[$orig].material_type=='hotel'}}">
+            <view class="tip _div data-v-867efc7a" style="{{'background:'+colorStyle[item[$orig].material_type]+';'}}" wx:if="{{item[$orig].star}}">{{''+item[$orig].star+''}}</view>
+            <om-image bind:__l="__l" class="bg data-v-867efc7a" height="{{120}}" url="{{item[$orig].recommend_image}}" vueId="{{'8ea99e5e-4-'+index}}" width="{{335}}"></om-image>
+            <view class="exchange-bg _div data-v-867efc7a"></view>
+            <view class="success-top fw-xblack _div data-v-867efc7a">
+                <view class="{{['left _div data-v-867efc7a',item[$orig].title.length>30?'f12':item[$orig].title.length>27?'f14':'']}}">
+                    <filter-text bind:__l="__l" class="data-v-867efc7a" content="{{item[$orig].title}}" vueId="{{'8ea99e5e-5-'+index}}"></filter-text>
+                </view>
+                <view class="right fw-avenir _div data-v-867efc7a">
+                    <text class="price data-v-867efc7a">{{'¥ '+item[$orig].price+''}}</text>
+                    <text class="people data-v-867efc7a">起</text>
+                </view>
+            </view>
+            <view class="success-bottom success-bottom-ticket _div data-v-867efc7a">
+                <view class="tag _div data-v-867efc7a">{{''+item[$orig].label[0]+''}}</view>
+                <view class="tag _div data-v-867efc7a" style="{{'color:'+colorStyle[item[$orig].material_type]+';'}}" wx:if="{{item[$orig].label[1]}}">{{''+item[$orig].label[1]+''}}</view>
+            </view>
+        </view>
+        <view class="exchange-success-card _div data-v-867efc7a" wx:if="{{item[$orig].material_type=='ticket'||item[$orig].material_type=='MultiplePark'}}">
+            <view class="bg data-v-867efc7a">
+                <om-image bind:__l="__l" class="data-v-867efc7a" height="{{120}}" url="{{item[$orig].recommend_image}}" vueId="{{'8ea99e5e-6-'+index}}" width="{{335}}"></om-image>
+            </view>
+            <view class="exchange-bg _div data-v-867efc7a"></view>
+            <view class="success-top _div data-v-867efc7a">
+                <view class="{{['left fw-xblack _div data-v-867efc7a',item[$orig].title.length>30?'f12':item[$orig].title.length>27?'f14':'']}}">
+                    <filter-text bind:__l="__l" class="data-v-867efc7a" content="{{item[$orig].ticket_name}}" vueId="{{'8ea99e5e-7-'+index}}"></filter-text>
+                </view>
+                <view class="right fw-avenir _div data-v-867efc7a">
+                    <text class="price data-v-867efc7a">{{'¥ '+item[$orig].amount+''}}</text>
+                    <text class="people data-v-867efc7a">起</text>
+                </view>
+            </view>
+            <view class="success-bottom success-bottom-ticket _div data-v-867efc7a">
+                <view class="tag _div data-v-867efc7a" wx:for="{{item[$orig].ticket_label}}" wx:for-index="idx" wx:for-item="itm" wx:key="idx">{{''+itm+''}}</view>
+            </view>
+        </view>
+        <view class="exchange-success-card _div data-v-867efc7a" wx:if="{{item[$orig].material_type=='quick_ticket'||item[$orig].material_type=='single_express'}}">
+            <view class="bg data-v-867efc7a">
+                <om-image bind:__l="__l" class="data-v-867efc7a" height="{{120}}" url="{{item[$orig].recommend_image}}" vueId="{{'8ea99e5e-8-'+index}}" width="{{335}}"></om-image>
+            </view>
+            <view class="exchange-bg _div data-v-867efc7a"></view>
+            <view class="success-top _div data-v-867efc7a">
+                <view class="{{['left fw-xblack _div data-v-867efc7a',item[$orig].title.length>30?'f12':item[$orig].title.length>27?'f14':'']}}">
+                    <filter-text bind:__l="__l" class="data-v-867efc7a" content="{{item[$orig].ticket_name}}" vueId="{{'8ea99e5e-9-'+index}}"></filter-text>
+                </view>
+                <view class="right fw-avenir _div data-v-867efc7a">
+                    <text class="price data-v-867efc7a">{{'¥ '+item[$orig].amount+''}}</text>
+                    <text class="people data-v-867efc7a">起</text>
+                </view>
+            </view>
+            <view class="success-bottom success-bottom-ticket _div data-v-867efc7a">
+                <view class="tag _div data-v-867efc7a" wx:for="{{item[$orig].ticket_label}}" wx:for-index="idx" wx:for-item="itm" wx:key="idx">{{''+itm+''}}</view>
+            </view>
+        </view>
+        <view class="exchange-success-card _div data-v-867efc7a" wx:if="{{item[$orig].material_type=='seasonal_ticket'||item[$orig].material_type=='annual_ticket'}}">
+            <view class="bg data-v-867efc7a">
+                <om-image bind:__l="__l" class="data-v-867efc7a" height="{{120}}" url="{{item[$orig].recommend_image}}" vueId="{{'8ea99e5e-10-'+index}}" width="{{335}}"></om-image>
+            </view>
+            <view class="exchange-bg _div data-v-867efc7a"></view>
+            <view class="success-top _div data-v-867efc7a">
+                <view class="{{['left fw-xblack _div data-v-867efc7a',item[$orig].title.length>30?'f12':item[$orig].title.length>27?'f14':'']}}">
+                    <filter-text bind:__l="__l" class="data-v-867efc7a" content="{{item[$orig].ticket_name}}" vueId="{{'8ea99e5e-11-'+index}}"></filter-text>
+                </view>
+                <view class="right fw-avenir _div data-v-867efc7a">
+                    <text class="price data-v-867efc7a">{{'¥ '+item[$orig].amount+''}}</text>
+                    <text class="people data-v-867efc7a">起</text>
+                </view>
+            </view>
+            <view class="success-bottom success-bottom-ticket _div data-v-867efc7a">
+                <view class="tag _div data-v-867efc7a" wx:for="{{item[$orig].ticket_label}}" wx:for-index="idx" wx:for-item="itm" wx:key="idx">{{''+itm+''}}</view>
+            </view>
+        </view>
+        <view class="exchange-success-card _div data-v-867efc7a" wx:if="{{item[$orig].material_type=='vip_ticket'}}">
+            <view class="bg data-v-867efc7a">
+                <om-image bind:__l="__l" class="data-v-867efc7a" height="{{120}}" url="{{item[$orig].recommend_image}}" vueId="{{'8ea99e5e-12-'+index}}" width="{{335}}"></om-image>
+            </view>
+            <view class="success-top _div data-v-867efc7a">
+                <view class="{{['left fw-xblack vip-color _div data-v-867efc7a',item[$orig].title.length>30?'f12':item[$orig].title.length>27?'f14':'']}}">
+                    <filter-text bind:__l="__l" class="data-v-867efc7a" content="{{item[$orig].ticket_name}}" vueId="{{'8ea99e5e-13-'+index}}"></filter-text>
+                </view>
+                <view class="right fw-avenir vip-color _div data-v-867efc7a">
+                    <text class="price data-v-867efc7a">{{'¥ '+item[$orig].amount+''}}</text>
+                    <text class="people data-v-867efc7a">起</text>
+                </view>
+            </view>
+            <view class="{{['success-bottom _div data-v-867efc7a',item[$orig].vip_special_right.length===3?'success-bottom3':'',item[$orig].vip_special_right.length===2?'success-bottom2':'',item[$orig].vip_special_right.length===1?'success-bottom1':'']}}">
+                <view class="tag _div data-v-867efc7a" wx:for="{{item[$orig].vip_special_right}}" wx:for-index="idx" wx:for-item="itm" wx:key="idx">{{''+itm.content+''}}</view>
+            </view>
+        </view>
+        <view class="exchange-success-card _div data-v-867efc7a" wx:if="{{item[$orig].material_type=='perform'}}">
+            <view class="tip _div data-v-867efc7a" style="{{'background:'+colorStyle[item[$orig].material_type]+';'}}" wx:if="{{item[$orig].is_support_express}}">优速通</view>
+            <view class="bg data-v-867efc7a">
+                <om-image bind:__l="__l" class="data-v-867efc7a" height="{{120}}" url="{{item[$orig].recommend_image}}" vueId="{{'8ea99e5e-14-'+index}}" width="{{335}}"></om-image>
+            </view>
+            <view class="exchange-bg _div data-v-867efc7a"></view>
+            <view class="success-top _div data-v-867efc7a">
+                <view class="{{['left _div data-v-867efc7a',item[$orig].title.length>30?'f12':item[$orig].title.length>27?'f14':'']}}">
+                    <filter-text bind:__l="__l" class="data-v-867efc7a" content="{{item[$orig].title}}" vueId="{{'8ea99e5e-15-'+index}}"></filter-text>
+                </view>
+            </view>
+            <view class="success-bottom _div data-v-867efc7a">
+                <view class="tag _div data-v-867efc7a">
+                    <label class="tag-more _span data-v-867efc7a" wx:for="{{item[$orig].show_time}}" wx:for-index="ind" wx:for-item="it" wx:key="ind">{{''+it+''}}<label class="_span data-v-867efc7a">|</label>
+                    </label>
+                </view>
+            </view>
+        </view>
+        <view class="exchange-success-card _div data-v-867efc7a" wx:if="{{item[$orig].material_type=='restaurant'}}">
+            <view class="tip _div data-v-867efc7a" style="{{'background:'+colorStyle[item[$orig].material_type]+';'}}" wx:if="{{item[$orig].is_can_book}}">可预订</view>
+            <view class="tip _div data-v-867efc7a" style="{{'background:'+colorStyle[item[$orig].material_type]+';'}}" wx:else>不可预订</view>
+            <view class="bg data-v-867efc7a">
+                <om-image bind:__l="__l" class="data-v-867efc7a" height="{{120}}" url="{{item[$orig].recommend_image}}" vueId="{{'8ea99e5e-16-'+index}}" width="{{335}}"></om-image>
+            </view>
+            <view class="exchange-bg _div data-v-867efc7a"></view>
+            <view class="success-top _div data-v-867efc7a">
+                <view class="left _div data-v-867efc7a">
+                    <filter-text bind:__l="__l" class="data-v-867efc7a" content="{{item[$orig].title}}" vueId="{{'8ea99e5e-17-'+index}}"></filter-text>
+                </view>
+                <view class="right _div data-v-867efc7a">
+                    <text class="price data-v-867efc7a">{{'¥ '+item[$orig].price+''}}</text>
+                    <text class="data-v-867efc7a">/</text>
+                    <text class="people data-v-867efc7a">人</text>
+                </view>
+            </view>
+            <view class="success-bottom _div data-v-867efc7a">
+                <view class="tag _div data-v-867efc7a" wx:for="{{item[$orig].label}}" wx:for-index="idx" wx:for-item="itm" wx:key="idx">{{''+itm+''}}</view>
+            </view>
+        </view>
+        <view class="exchange-success-card _div data-v-867efc7a" wx:if="{{item[$orig].material_type=='scenic'}}">
+            <view class="tip _div data-v-867efc7a" style="{{'background:'+colorStyle[item[$orig].material_type]+';'}}" wx:if="{{item[$orig].is_support_express}}">优速通</view>
+            <view class="bg data-v-867efc7a">
+                <om-image bind:__l="__l" class="data-v-867efc7a" height="{{120}}" url="{{item[$orig].recommend_image}}" vueId="{{'8ea99e5e-18-'+index}}" width="{{335}}"></om-image>
+            </view>
+            <view class="exchange-bg _div data-v-867efc7a"></view>
+            <view class="success-top _div data-v-867efc7a">
+                <view class="{{['left _div data-v-867efc7a',item[$orig].title.length>30?'f12':item[$orig].title.length>27?'f14':'']}}">
+                    <filter-text bind:__l="__l" class="data-v-867efc7a" content="{{item[$orig].title}}" vueId="{{'8ea99e5e-19-'+index}}"></filter-text>
+                </view>
+            </view>
+            <view class="success-bottom success-bottom-ticket _div data-v-867efc7a">
+                <view class="tag _div data-v-867efc7a" style="{{'color:'+colorStyle[item[$orig].material_type]+';'}}" wx:if="{{item[$orig].subtitle}}">{{''+item[$orig].subtitle+''}}</view>
+            </view>
+        </view>
+        <view class="exchange-success-card _div data-v-867efc7a" wx:if="{{item[$orig].material_type=='activity'}}">
+            <view class="tip _div data-v-867efc7a" style="{{'background:'+colorStyle[item[$orig].material_type]+';'}}">活动</view>
+            <view class="bg data-v-867efc7a">
+                <om-image bind:__l="__l" class="data-v-867efc7a" height="{{120}}" url="{{item[$orig].recommend_image}}" vueId="{{'8ea99e5e-20-'+index}}" width="{{335}}"></om-image>
+            </view>
+            <view class="exchange-bg _div data-v-867efc7a"></view>
+            <view class="success-top _div data-v-867efc7a">
+                <view class="{{['left _div data-v-867efc7a',item[$orig].title.length>30?'f12':item[$orig].title.length>27?'f14':'']}}">
+                    <filter-text bind:__l="__l" class="data-v-867efc7a" content="{{item[$orig].title}}" vueId="{{'8ea99e5e-21-'+index}}"></filter-text>
+                </view>
+            </view>
+            <view class="success-bottom _div data-v-867efc7a"></view>
+        </view>
+        <view class="exchange-success-card _div data-v-867efc7a" wx:if="{{item[$orig].material_type=='article'}}">
+            <view class="tip _div data-v-867efc7a" style="{{'background:'+colorStyle[item[$orig].material_type]+';'}}" wx:if="{{item[$orig].label}}">{{''+item[$orig].label+''}}</view>
+            <view class="bg data-v-867efc7a">
+                <om-image bind:__l="__l" class="data-v-867efc7a" height="{{120}}" url="{{item[$orig].recommend_image}}" vueId="{{'8ea99e5e-22-'+index}}" width="{{335}}"></om-image>
+            </view>
+            <view class="exchange-bg _div data-v-867efc7a"></view>
+            <view class="success-top _div data-v-867efc7a">
+                <view class="{{['left _div data-v-867efc7a',item[$orig].title.length>30?'f12':item[$orig].title.length>27?'f14':'']}}">
+                    <filter-text bind:__l="__l" class="data-v-867efc7a" content="{{item[$orig].subtitle}}" vueId="{{'8ea99e5e-23-'+index}}"></filter-text>
+                </view>
+            </view>
+        </view>
+        <view class="{{['_div data-v-867efc7a','coupon-Card']}}" style="{{'background-image:'+'url('+item.m1+')'+';'}}" wx:if="{{item[$orig].material_type=='coupon'}}">
+            <view class="{{['_div data-v-867efc7a','cardTop']}}">
+                <view class="type _div data-v-867efc7a">{{''+item[$orig].type_name+''}}</view>
+                <view class="{{['title fw-xblack _div data-v-867efc7a',item[$orig].title.length>44?'titles2':item[$orig].title.length>38?'titles1':'']}}">
+                    <filter-text bind:__l="__l" class="data-v-867efc7a" content="{{item[$orig].title}}" vueId="{{'8ea99e5e-24-'+index}}"></filter-text>
+                </view>
+                <view class="tips _div data-v-867efc7a">
+                    <filter-text bind:__l="__l" class="data-v-867efc7a" content="{{item[$orig].sub_title}}" vueId="{{'8ea99e5e-25-'+index}}"></filter-text>
+                </view>
+            </view>
+            <view class="price-box _div data-v-867efc7a" wx:if="{{item[$orig].is_free===0}}">
+                <view class="price fw-avenir _div data-v-867efc7a">{{'¥'+item[$orig].price+''}}</view>
+                <view class="base-price _div data-v-867efc7a" wx:if="{{item[$orig].base_price>item[$orig].price}}">{{'¥'+item[$orig].base_price+''}}</view>
+            </view>
+            <view class="{{['get _div data-v-867efc7a',item[$orig].stock_status===2?'noget':item[$orig].is_receive?'noget':'']}}">{{''+(item[$orig].stock_status===2?'已抢光':item[$orig].is_free===0?'购买':item[$orig].is_receive?'已领取':'领取')+''}}</view>
+        </view>
+        <block wx:else>
+            <view catchtap="__e" class="package-card _div data-v-867efc7a" data-event-opts="{{[ [ 'tap',[ [ 'goPackageDetail',['$0'],[ [ ['list','',index] ] ] ] ] ] ]}}" wx:if="{{item[$orig].material_type=='package'||item[$orig].material_type=='combination'}}">
+                <font-weight bind:__l="__l" class="data-v-867efc7a" vueId="{{'8ea99e5e-26-'+index}}"></font-weight>
+                <view class="image data-v-867efc7a">
+                    <om-image bind:__l="__l" class="data-v-867efc7a" end="?imageMogr2/format/jpg/interlace/1" height="{{120}}" url="{{item[$orig].recommend_image}}" vueId="{{'8ea99e5e-27-'+index}}" width="{{335}}"></om-image>
+                </view>
+                <view class="mark _div data-v-867efc7a" style="{{'background:'+'linear-gradient(180deg, rgba('+item[$orig].theme_color[0]+', '+item[$orig].theme_color[1]+', '+item[$orig].theme_color[2]+', 0) 0%, rgba('+item[$orig].theme_color[0]+', '+item[$orig].theme_color[1]+', '+item[$orig].theme_color[2]+', 100%))'+';'}}" wx:if="{{item[$orig].recommend_image}}"></view>
+                <view class="bottom-box package _div data-v-867efc7a">
+                    <view class="title fw-xblack _div data-v-867efc7a">
+                        <filter-text bind:__l="__l" class="data-v-867efc7a" content="{{item[$orig].title}}" vueId="{{'8ea99e5e-28-'+index}}"></filter-text>
+                    </view>
+                    <view class="label _div data-v-867efc7a">{{''+(item[$orig].sub_title||item[$orig].subtitle||'')+''}}</view>
+                    <view class="package-price fw-avenir _div data-v-867efc7a" wx:if="{{item[$orig].material_type=='package'&&item[$orig].amount}}">{{'¥'+item[$orig].amount+''}}<view class="amount _div data-v-867efc7a">起</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class="exchange-success-card _div data-v-867efc7a" style="display:none;">
+        <image alt class="bg _img data-v-867efc7a" src="https://cdn.app.universalbeijingresort.com/mini-program/static/images/coupon/vip@2x.png"></image>
+        <view class="top _div data-v-867efc7a">
+            <view class="title _div data-v-867efc7a">北京环球影城VIP体验</view>
+            <view class="price _div data-v-867efc7a">
+                <view class="num _div data-v-867efc7a">¥ 3000</view>起</view>
+        </view>
+        <view class="bottom _div data-v-867efc7a">
+            <view class="item _div data-v-867efc7a">
+                <image alt class="img _img data-v-867efc7a" src="{{$root.m2}}"></image>
+                <view class="text _div data-v-867efc7a">我是</view>
+            </view>
+            <view class="line _div data-v-867efc7a"></view>
+            <view class="item _div data-v-867efc7a">
+                <image class="img _img data-v-867efc7a" src="{{$root.m3}}"></image>
+                <view class="text _div data-v-867efc7a">我是五个字</view>
+            </view>
+            <view class="line _div data-v-867efc7a"></view>
+            <view class="item _div data-v-867efc7a">
+                <image alt class="img _img data-v-867efc7a" src="{{$root.m4}}"></image>
+                <view class="text _div data-v-867efc7a">我是五个字么</view>
+            </view>
+        </view>
+    </view>
+</view>

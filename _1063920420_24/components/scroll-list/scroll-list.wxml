@@ -1,0 +1,72 @@
+<view class="data-v-582e8259">
+    <font-weight bind:__l="__l" class="data-v-582e8259" vueId="8fd08af8-1"></font-weight>
+    <scroll-view class="swiper data-v-582e8259" scrollX="true">
+        <view bindtap="__e" class="swiper-item data-v-582e8259" data-event-opts="{{[ [ 'tap',[ [ 'goDetail',['$0',idx],[ [ ['list','',idx] ] ] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:for-index="idx" wx:for-item="items" wx:key="idx">
+            <view class="item-top data-v-582e8259">
+                <view class="top-image data-v-582e8259">
+                    <om-image bind:__l="__l" class="data-v-582e8259" end="?imageMogr2/format/jpg/interlace/1/thumbnail/750x" height="{{130}}" mode="aspectFill" url="{{items[$orig].back_img}}" vueId="{{'8fd08af8-2-'+idx}}" width="{{300}}"></om-image>
+                </view>
+            </view>
+            <view class="{{['data-v-582e8259','mark-box',types==='hotel'?'hotelBac':'',types==='store'?'storeBac':'']}}" wx:if="{{items[$orig].material_type==='restaurant'&&items[$orig].is_can_book||items[$orig].label&&items[$orig].material_type!=='restaurant'&&isRelease1=='S5'}}">
+                <view class="mark data-v-582e8259" wx:if="{{items[$orig].material_type==='restaurant'&&items[$orig].is_can_book}}">可订餐</view>
+                <view class="mark data-v-582e8259" wx:if="{{items[$orig].label&&items[$orig].material_type!=='restaurant'}}">{{''+items[$orig].label+''}}</view>
+            </view>
+            <view class="bottom-box data-v-582e8259">
+                <view class="{{['content-title fw-xblack data-v-582e8259',items[$orig].title.length>=20?'title2':items[$orig].title.length>=17?'title1':'',items[$orig].title.length>=16&&(items[$orig].gems_status==='1'&&items[$orig].next_time_str||items[$orig].gems_status!=='1'&&items[$orig].gems_copywriting)?'title2':items[$orig].title.length>=12&&(items[$orig].gems_status==='1'&&items[$orig].next_time_str||items[$orig].gems_status!=='1'&&items[$orig].gems_copywriting)?'title1':'']}}" style="{{'max-width:'+( (items[$orig].gems_status==='1'||items[$orig].gems_status==='2')&&items[$orig].next_time_str||(items[$orig].gems_status!=='1'||items[$orig].gems_status==='2')&&items[$orig].gems_copywriting?'400rpx':'' )+';'}}" wx:if="{{types=='play'||types=='show'}}">
+                    <filter-text bind:__l="__l" class="data-v-582e8259" content="{{items[$orig].title}}" vueId="{{'8fd08af8-3-'+idx}}"></filter-text>
+                </view>
+                <view class="flex-box data-v-582e8259" wx:else>
+                    <view class="{{['content-title-t fw-xblack data-v-582e8259',items[$orig].price===0||items[$orig].price?items[$orig].title.length>=14?'title2':items[$orig].title.length>=12?'title1':'':items[$orig].title.length>20?'title2':items[$orig].title.length>=15?'title1':'']}}" style="{{'flex:'+'1'+';'+'max-width:'+(items[$orig].gems_status?'400rpx':'')+';'}}">
+                        <filter-text bind:__l="__l" class="data-v-582e8259" content="{{items[$orig].title}}" vueId="{{'8fd08af8-4-'+idx}}"></filter-text>
+                    </view>
+                    <view class="{{['data-v-582e8259',types==='hotel'||types==='restaurant'?'price other-price':'price']}}" wx:if="{{items[$orig].price===0||items[$orig].price}}">
+                        <text class="{{['data-v-582e8259','price-num','fw-avenir']}}">
+                            <text class="data-v-582e8259">¥</text>{{''+items[$orig].price+''}}</text>
+                        <text class="data-v-582e8259" wx:if="{{types==='hotel'}}">起</text>
+                        <text class="data-v-582e8259" wx:else>/人</text>
+                    </view>
+                </view>
+                <view class="tag-contain data-v-582e8259" wx:if="{{types=='play'}}">
+                    <view class="tag-content data-v-582e8259">
+                        <view class="content-left data-v-582e8259">{{''+items.f0+''}}</view>
+                        <view class="content-right data-v-582e8259">{{''+items[$orig].custom_label+''}}</view>
+                    </view>
+                </view>
+                <view class="tag-contain data-v-582e8259" wx:if="{{types=='restaurant'}}">
+                    <view class="tag-content data-v-582e8259">
+                        <view class="content-left data-v-582e8259">
+                            <text class="data-v-582e8259" wx:if="{{items[$orig].cuisine}}">{{''+items.f1+''}}</text>
+                            <block wx:else>
+                                <text class="data-v-582e8259" wx:if="{{items[$orig].tags[0]}}">{{''+items[$orig].tags[0]+''}}</text>
+                            </block>
+                        </view>
+                        <view class="content-right data-v-582e8259" wx:if="{{items[$orig].tags[0]&&items[$orig].cuisine}}">{{''+items[$orig].tags[0]+''}}</view>
+                    </view>
+                </view>
+                <view class="tag-contain data-v-582e8259" wx:if="{{types==='hotel'||types==='store'}}">
+                    <view class="tag-content data-v-582e8259">
+                        <view class="content-left data-v-582e8259" wx:if="{{items[$orig].tags[0]}}">{{''+items.f2+''}}</view>
+                        <view class="{{['data-v-582e8259','content-right',subColor]}}" wx:if="{{items[$orig].tags[1]}}">{{''+items.f3+''}}</view>
+                    </view>
+                </view>
+                <view class="tag-contain data-v-582e8259" wx:if="{{types=='show'&&(items[$orig].gems_status==='1'||items[$orig].gems_status==='2')}}">
+                    <view class="tag-content data-v-582e8259" wx:if="{{isRelease1=='S5'}}">{{''+items[$orig].show_time+''}}</view>
+                    <view class="tag-content data-v-582e8259" wx:else></view>
+                </view>
+            </view>
+            <view class="circle-box data-v-582e8259" wx:if="{{isRelease1=='S5'&&types==='show'&&items[$orig].gems_status}}">
+                <circle-box bind:__l="__l" class="data-v-582e8259" status="{{items[$orig].gems_status}}" time="{{items[$orig].next_time_str}}" type="{{1}}" vueId="{{'8fd08af8-5-'+idx}}" wx:if="{{(items[$orig].gems_status==='1'||items[$orig].gems_status==='2')&&items[$orig].next_time_str}}"></circle-box>
+                <circle-box bind:__l="__l" class="data-v-582e8259" status="{{items[$orig].gems_status}}" time="{{items[$orig].gems_copywriting}}" type="{{3}}" vueId="{{'8fd08af8-6-'+idx}}" wx:if="{{(items[$orig].gems_status!=='1'||items[$orig].gems_status!=='2')&&items[$orig].gems_copywriting}}"></circle-box>
+            </view>
+            <view class="circle-box data-v-582e8259" wx:if="{{types==='play'&&items[$orig].gems_status}}">
+                <circle-box bind:__l="__l" class="data-v-582e8259" status="{{items[$orig].gems_status}}" time="{{items[$orig].waiting_time}}" type="{{2}}" vueId="{{'8fd08af8-7-'+idx}}" wx:if="{{(items[$orig].gems_status==='1'||items[$orig].gems_status==='2')&&items[$orig].waiting_time&&items[$orig].waiting_time!==-1}}"></circle-box>
+                <block wx:else>
+                    <circle-box bind:__l="__l" class="data-v-582e8259" status="{{items[$orig].gems_status}}" time="{{items[$orig].next_time_str}}" type="{{1}}" vueId="{{'8fd08af8-8-'+idx}}" wx:if="{{(items[$orig].gems_status==='1'||items[$orig].gems_status==='2')&&items[$orig].waiting_time===-1&&items[$orig].next_time_str}}"></circle-box>
+                    <block wx:else>
+                        <circle-box bind:__l="__l" class="data-v-582e8259" status="{{items[$orig].gems_status}}" time="{{items[$orig].gems_copywriting}}" type="{{3}}" vueId="{{'8fd08af8-9-'+idx}}" wx:if="{{(items[$orig].gems_status!=='1'||items[$orig].gems_status!=='2')&&items[$orig].gems_copywriting}}"></circle-box>
+                    </block>
+                </block>
+            </view>
+        </view>
+    </scroll-view>
+</view>

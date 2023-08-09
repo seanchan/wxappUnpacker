@@ -1,0 +1,136 @@
+<view class="body-contain _div data-v-2a7384c6">
+    <font-weight bind:__l="__l" class="data-v-2a7384c6" vueId="ffa91980-1"></font-weight>
+    <toast bind:__l="__l" class="data-v-2a7384c6" vueId="ffa91980-2"></toast>
+    <home-action background="{{backcolor}}" bind:__l="__l" class="data-v-2a7384c6" type="{{actionType}}" vueId="ffa91980-3"></home-action>
+    <view class="head-contain _div data-v-2a7384c6" style="{{'padding-top:'+getiphonestyle+'rpx'+';'}}">
+        <image bindtap="__e" class="head-img data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ ['loginHandler'] ] ] ]}}" src="{{avatar}}" wx:if="{{avatar}}"></image>
+        <view bindtap="__e" class="head-img _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ ['loginHandler'] ] ] ]}}" wx:else></view>
+        <view bindtap="__e" class="right-box _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ ['loginHandler'] ] ] ]}}">
+            <view class="name fw-xblack _div data-v-2a7384c6">{{''+nickName+''}}<view class="{{['members _div data-v-2a7384c6',memdetail.isMember?'':'no-members']}}" wx:if="{{isLogin}}">
+                    <image class="members-icon data-v-2a7384c6" src="{{members.memberWhite}}"></image>{{''+(memdetail.memberLabel||'')+''}}</view>
+            </view>
+            <view class="content _div data-v-2a7384c6">{{''+loginDesc+''}}</view>
+        </view>
+    </view>
+    <view class="tab-contain _div data-v-2a7384c6" wx:if="{{isRelease1=='S5'}}">
+        <view bindtap="__e" class="tab-box _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'orderList',[0] ] ] ] ]}}">
+            <image class="tab-icon data-v-2a7384c6" src="{{assetsImage1.icmeall}}"></image>
+            <view class="tab-content _div data-v-2a7384c6">全部订单</view>
+        </view>
+        <view bindtap="__e" class="tab-box _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'orderList',[1] ] ] ] ]}}">
+            <image class="tab-icon data-v-2a7384c6" src="{{assetsImage1.icmepending}}"></image>
+            <view class="tab-content _div data-v-2a7384c6">待支付</view>
+        </view>
+        <view bindtap="__e" class="tab-box _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'orderList',[2] ] ] ] ]}}">
+            <image class="tab-icon data-v-2a7384c6" src="{{assetsImage.processing}}"></image>
+            <view class="tab-content _div data-v-2a7384c6">待使用</view>
+        </view>
+        <view bindtap="__e" class="tab-box _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'orderList',[3] ] ] ] ]}}">
+            <image class="tab-icon data-v-2a7384c6" src="{{assetsImage.icMeRefund}}"></image>
+            <view class="tab-content _div data-v-2a7384c6">退款</view>
+        </view>
+    </view>
+    <view class="member _div data-v-2a7384c6" wx:if="{{isLogin}}">
+        <view bindtap="__e" class="member-box member-box1 _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'gomemInfo',['$event'] ] ] ] ]}}" wx:if="{{memdetail.isArticle&&memdetail.isMember}}">
+            <image class="member-image data-v-2a7384c6" mode="aspectFill" src="{{memdetail.article.image}}"></image>
+            <view class="mask _div data-v-2a7384c6"></view>
+            <view class="{{['member-title fw-xblack _div data-v-2a7384c6',memdetail.article.title.length>42?'member-title2':memdetail.article.title.length>36?'member-title1':'']}}">
+                <filter-text bind:__l="__l" class="data-v-2a7384c6" content="{{memdetail.article.title}}" vueId="ffa91980-4"></filter-text>
+            </view>
+            <view class="member-go _div data-v-2a7384c6">去查看>></view>
+            <view catchtap="__e" class="member-btn _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'gomemCenter',['$event'] ] ] ] ]}}">进入年卡中心</view>
+        </view>
+        <view bindtap="__e" class="{{['member-box _div data-v-2a7384c6',inLength<3?'member-box3':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'gomemCenter',['$event'] ] ] ] ]}}" wx:else>
+            <view class="{{['member-top4 _div data-v-2a7384c6',inLength===3?'member-top3':'']}}" wx:if="{{inLength>2}}">
+                <view class="member-item _div data-v-2a7384c6" wx:for="{{memdetail.interests}}" wx:key="index">
+                    <image class="item-icon data-v-2a7384c6" src="{{item.iconCn}}" wx:if="{{memdetail.isMember}}"></image>
+                    <image class="item-icon data-v-2a7384c6" src="{{item.iconCnGrey}}" wx:else></image>
+                    <view class="item-label _div data-v-2a7384c6" wx:if="{{memdetail.isMember&&item.label}}">{{''+item.label+''}}</view>
+                    <view class="{{['item-title _div data-v-2a7384c6',item.name.length===5?'item-title-five':'']}}" wx:if="{{item.name}}">{{''+item.name+''}}</view>
+                </view>
+            </view>
+            <view class="member-bottom _div data-v-2a7384c6" wx:if="{{memdetail.isMember}}">进入年卡中心</view>
+            <view class="member-bottom _div data-v-2a7384c6" wx:else>立即成为年卡持卡人</view>
+        </view>
+    </view>
+    <view bindtap="__e" class="tour-contain _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'goLineList',['$0'],['myStrokeList.material_id'] ] ] ] ]}}">
+        <view class="left-contain _div data-v-2a7384c6">
+            <view class="left-top _div data-v-2a7384c6">
+                <image class="left-top-icon data-v-2a7384c6" src="{{assetsImage.icItinerarySmall}}"></image>
+                <view class="left-top-content fw-semibold _div data-v-2a7384c6">{{''+($root.g0.length>0&&isInUbrPolygon?'行程提醒 '+$root.m0:'我的行程')+''}}</view>
+            </view>
+            <view class="left-bottom _div data-v-2a7384c6">{{''+tourText+''}}</view>
+        </view>
+        <image class="right-icon data-v-2a7384c6" src="/static/images/personal/ic-arrow-black.png"></image>
+    </view>
+    <view class="scroll-contain _div data-v-2a7384c6" wx:if="{{list.length>0}}">
+        <scroll-view class="scroll-box data-v-2a7384c6" scrollX="true">
+            <view bindtap="__e" class="tab-box _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'goTicket',['$0'],[ [ ['list','',idx] ] ] ] ] ] ]}}" wx:for="{{list}}" wx:for-index="idx" wx:for-item="items" wx:key="idx">
+                <image class="tab-img data-v-2a7384c6" mode="aspectFill" src="{{items.back}}"></image>
+                <view class="tab-text _div data-v-2a7384c6">
+                    <view class="content-top fw-semibold _div data-v-2a7384c6">{{''+items.topContent+''}}</view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="navi-contain _div data-v-2a7384c6">
+        <view bindtap="__e" class="navi-title fw-semibold _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'enableDev',['$event'] ] ] ] ]}}">常用工具</view>
+        <view bindtap="__e" class="navi-box _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'goCollect',['$event'] ] ] ] ]}}">
+            <view class="navi-left _div data-v-2a7384c6">
+                <image class="navi-icon data-v-2a7384c6" src="{{assetsImage.icMeFavorite}}"></image>
+                <view bindtap="__e" class="navi-content _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'mylove',['$event'] ] ] ] ]}}">我的收藏</view>
+            </view>
+            <image class="turn-icon data-v-2a7384c6" src="/static/images/personal/ic-arrow-black.png"></image>
+        </view>
+        <view bindtap="__e" class="navi-box _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'goFeedback',['$event'] ] ] ] ]}}">
+            <view class="navi-left _div data-v-2a7384c6">
+                <image class="navi-icon data-v-2a7384c6" src="{{assetsImage1.icmefeedbac}}"></image>
+                <view bindtap="__e" class="navi-content _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'myfeedback',['$event'] ] ] ] ]}}">帮助&反馈</view>
+            </view>
+            <image class="turn-icon data-v-2a7384c6" src="/static/images/personal/ic-arrow-black.png"></image>
+        </view>
+        <view bindtap="__e" class="navi-box _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'goHistory',['$event'] ] ] ] ]}}">
+            <view class="navi-left _div data-v-2a7384c6">
+                <image class="navi-icon data-v-2a7384c6" src="{{assetsImage.icMeHistory}}"></image>
+                <view bindtap="__e" class="navi-content _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'myhistorty',['$event'] ] ] ] ]}}">浏览历史</view>
+            </view>
+            <image class="turn-icon data-v-2a7384c6" src="/static/images/personal/ic-arrow-black.png"></image>
+        </view>
+        <view bindtap="__e" class="navi-box _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'goToSetUp',['$event'] ] ] ] ]}}">
+            <view class="navi-left _div data-v-2a7384c6">
+                <image class="navi-icon data-v-2a7384c6" src="{{assetsImage.icMeSetting}}"></image>
+                <view class="navi-content _div data-v-2a7384c6">设置</view>
+            </view>
+            <image class="turn-icon data-v-2a7384c6" src="/static/images/personal/ic-arrow-black.png"></image>
+        </view>
+        <view bindtap="__e" class="navi-box _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'goDebugPage',['$event'] ] ] ] ]}}" wx:if="{{isShowDev}}">
+            <view class="navi-left _div data-v-2a7384c6">
+                <image class="navi-icon data-v-2a7384c6" src="{{assetsImage.icMeSetting}}"></image>
+                <view class="navi-content _div data-v-2a7384c6">开发人员选项</view>
+            </view>
+            <image class="turn-icon data-v-2a7384c6" src="/static/images/personal/ic-arrow-black.png"></image>
+        </view>
+        <view bindtap="__e" class="navi-box _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'goGetCodePage',['$event'] ] ] ] ]}}" wx:if="{{isShowDev}}">
+            <view class="navi-left _div data-v-2a7384c6">
+                <image class="navi-icon data-v-2a7384c6" src="{{assetsImage.icMeSetting}}"></image>
+                <view class="navi-content _div data-v-2a7384c6">获取code</view>
+            </view>
+            <image class="turn-icon data-v-2a7384c6" src="/static/images/personal/ic-arrow-black.png"></image>
+        </view>
+        <view bindtap="__e" class="navi-box _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'goKefuTest',['$event'] ] ] ] ]}}" wx:if="{{isShowDev}}">
+            <view class="navi-left _div data-v-2a7384c6">
+                <image class="navi-icon data-v-2a7384c6" src="{{assetsImage.icMeSetting}}"></image>
+                <view class="navi-content _div data-v-2a7384c6">客服入口</view>
+            </view>
+            <image class="turn-icon data-v-2a7384c6" src="/static/images/personal/ic-arrow-black.png"></image>
+        </view>
+        <view bindtap="__e" class="navi-box _div data-v-2a7384c6" data-event-opts="{{[ [ 'tap',[ [ 'goDetailTest',['$event'] ] ] ] ]}}" wx:if="{{isShowDev}}">
+            <view class="navi-left _div data-v-2a7384c6">
+                <image class="navi-icon data-v-2a7384c6" src="{{assetsImage.icMeSetting}}"></image>
+                <view class="navi-content _div data-v-2a7384c6">测试详情跳转</view>
+            </view>
+            <image class="turn-icon data-v-2a7384c6" src="/static/images/personal/ic-arrow-black.png"></image>
+        </view>
+    </view>
+    <indicator bind:__l="__l" bind:reload="__e" class="data-v-2a7384c6" data-event-opts="{{[ [ '^reload',[ ['getMyData'] ] ] ]}}" status="{{indicatorStatus}}" vueId="ffa91980-5"></indicator>
+</view>

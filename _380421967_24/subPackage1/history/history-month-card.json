@@ -1,0 +1,1 @@
+{"component":true,"usingComponents":{"home-card":"/subPackage1/history/history-card","universal-map":"plugin://universal-map/universal-map","universal-walk-line":"plugin://universal-map/universal-walk-line","toast":"/components/rtmap/toast","indicator":"/components/rtmap/indicator"}}

@@ -1,0 +1,36 @@
+<view class="inline-block _div data-v-65ec26f9" wx:if="{{cont}}">
+    <view class="inline-block data-v-65ec26f9" wx:for="{{cont}}" wx:for-index="ind" wx:for-item="it" wx:key="ind">
+        <text class="data-v-65ec26f9" wx:if="{{it.type==='text'}}">{{''+it.content+''}}</text>
+        <block wx:else>
+            <text bindtap="__e" class="phone data-v-65ec26f9" data-event-opts="{{[ [ 'tap',[ [ 'callPhone',['$event'] ] ] ] ]}}" data-value="{{it.content}}" userSelect="true" wx:if="{{it.type==='phone'}}">{{''+it.content+''}}</text>
+            <block wx:else>
+                <text bindtap="__e" class="link data-v-65ec26f9" data-event-opts="{{[ [ 'tap',[ [ 'callUrl',['$event'] ] ] ] ]}}" data-value="{{it.content}}" userSelect="true" wx:if="{{it.type==='link'}}">{{''+it.content+''}}</text>
+                <block wx:else>
+                    <text bindtap="__e" class="email data-v-65ec26f9" data-event-opts="{{[ [ 'tap',[ [ 'copyEmail',['$event'] ] ] ] ]}}" data-value="{{it.content}}" userSelect="true" wx:if="{{it.type==='email'}}">{{''+it.content+''}}</text>
+                    <block wx:else>
+                        <text class="bold data-v-65ec26f9" wx:if="{{it.type==='bold'}}">{{''+it.content+''}}</text>
+                        <block wx:else>
+                            <text class="italic data-v-65ec26f9" wx:if="{{it.type==='italic'}}">{{''+it.content+''}}</text>
+                            <block wx:else>
+                                <text class="boldItalic data-v-65ec26f9" wx:if="{{it.type==='boldItalic'}}">{{''+it.content+''}}</text>
+                                <block wx:else>
+                                    <text class="data-v-65ec26f9" wx:if="{{it.type==='dot'}}">{{'•'+it.content+''}}</text>
+                                    <block wx:else>
+                                        <text class="underline data-v-65ec26f9" wx:if="{{it.type==='underline'}}">{{''+it.content+''}}</text>
+                                        <block wx:else>
+                                            <text class="boldUnderline data-v-65ec26f9" wx:if="{{it.type==='boldUnderline'}}">{{''+it.content+''}}</text>
+                                            <block wx:else>
+                                                <text class="wrap data-v-65ec26f9" decode="true" wx:if="{{it.type==='wrap'}}">
+</text>
+                                            </block>
+                                        </block>
+                                    </block>
+                                </block>
+                            </block>
+                        </block>
+                    </block>
+                </block>
+            </block>
+        </block>
+    </view>
+</view>

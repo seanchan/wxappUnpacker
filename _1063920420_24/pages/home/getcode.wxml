@@ -1,0 +1,8 @@
+<view class="test data-v-c6d86b9e">
+    <view class="data-v-c6d86b9e">当前appid为：</view>
+    <view class="data-v-c6d86b9e">wx3ba512d53df66a75</view>
+    <view class="data-v-c6d86b9e">当前code为：</view>
+    <text class="data-v-c6d86b9e" selectable="true">{{''+code+''}}</text>
+    <button bindtap="__e" class="data-v-c6d86b9e" data-event-opts="{{[ [ 'tap',[ [ 'fuzhi',['$event'] ] ] ] ]}}" wx:if="{{code}}">复制</button>
+    <button bindtap="__e" class="bottom-btn data-v-c6d86b9e" data-event-opts="{{[ [ 'tap',[ [ 'getCode',['$event'] ] ] ] ]}}">获取code</button>
+</view>

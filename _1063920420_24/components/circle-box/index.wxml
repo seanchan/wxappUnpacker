@@ -1,0 +1,23 @@
+<view class="_div data-v-3bcb2cde" wx:if="{{type&&status!=='0'&&time}}">
+    <view class="circle-box _div data-v-3bcb2cde" wx:if="{{(status=='1'||status=='2')&&type==1}}">
+        <image class="circle-back data-v-3bcb2cde" src="{{assetsImage.cardTime}}"></image>
+        <view class="circle-txt data-v-3bcb2cde">
+            <view class="circle-time-show fw-heavy data-v-3bcb2cde">{{''+time+''}}</view>
+            <view class="circle-content fw-medium data-v-3bcb2cde">下一场</view>
+        </view>
+    </view>
+    <block wx:else>
+        <view class="circle-box-wait _div data-v-3bcb2cde" wx:if="{{(status=='1'||status=='2')&&type==2}}">
+            <image class="circle-back data-v-3bcb2cde" src="{{assetsImage.cardTime}}"></image>
+            <view class="wait data-v-3bcb2cde">等待</view>
+            <view class="minute-num minute-nums fw-xblack data-v-3bcb2cde">{{''+time+''}}</view>
+            <view class="minute-text data-v-3bcb2cde">分钟</view>
+        </view>
+        <block wx:else>
+            <view class="circle-box _div data-v-3bcb2cde" wx:if="{{time}}">
+                <image class="circle-back data-v-3bcb2cde" src="{{assetsImage.cardTimeClose}}"></image>
+                <view class="close fw-xblack _div data-v-3bcb2cde">{{''+time+''}}</view>
+            </view>
+        </block>
+    </block>
+</view>

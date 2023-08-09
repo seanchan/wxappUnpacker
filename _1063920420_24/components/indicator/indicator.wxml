@@ -1,0 +1,13 @@
+<view class="{{['data-v-14689993','indicator',useWhiteMask?'white-mask':'no-event',isHome?'home-mask':'']}}" wx:if="{{isShowSelf}}">
+    <custom-navigation bind:__l="__l" class="data-v-14689993" vueId="9792843c-1" wx:if="{{useCustomNavigationBar&&useWhiteMask&&(isShowLoading||isShowError)}}"></custom-navigation>
+    <view class="loading data-v-14689993" wx:if="{{isShowLoading}}">
+        <image class="loading-animation data-v-14689993" src="{{assetsImage.loading}}"></image>
+        <view class="loading-text data-v-14689993">{{loadingText}}</view>
+    </view>
+    <view class="error data-v-14689993" wx:if="{{isShowError}}">
+        <image class="{{['data-v-14689993','error-image',isHome?'home':'']}}" src="{{isHome?'/static/images/index/loading.png':isImage+'?imageMogr2/format/jpg/interlace/1'}}"></image>
+        <view class="error-text white data-v-14689993" wx:if="{{isHome}}">{{homeErrorText}}</view>
+        <view class="error-text data-v-14689993" wx:else>{{errorText}}</view>
+        <view bindtap="__e" class="{{['data-v-14689993','btn-reload',isHome?'white':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'emitReload',['$event'] ] ] ] ]}}" wx:if="{{isShowBt}}">{{buttonText}}</view>
+    </view>
+</view>

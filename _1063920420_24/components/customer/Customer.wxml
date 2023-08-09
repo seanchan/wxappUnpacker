@@ -1,0 +1,7 @@
+<view class="_div data-v-f4947a74">
+    <movable-area class="moveContainer data-v-f4947a74" style="{{topStyle}}">
+        <movable-view animation="{{false}}" class="moveCustomer data-v-f4947a74" direction="all" x="{{x}}" y="{{y}}">
+            <image alt bindtap="__e" class="{{['_img data-v-f4947a74','customer-icon',isShow?'show':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'openService',['$event'] ] ] ] ]}}" id="J_btn" src="https://cdn.app.universalbeijingresort.com/mini-program/static/images/coupon/online-server@2x.png"></image>
+        </movable-view>
+    </movable-area>
+</view>

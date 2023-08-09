@@ -1,0 +1,47 @@
+<view class="login data-v-597ab9e8">
+    <home-action background="{{backcolor}}" bind:__l="__l" class="data-v-597ab9e8" left="{{leftIcon}}" type="{{actionType}}" vueId="35a7246c-1"></home-action>
+    <view class="top-box data-v-597ab9e8">
+        <view class="top-img data-v-597ab9e8">
+            <image class="top-logo _img data-v-597ab9e8" src="{{assetsImage.newlogo}}"></image>
+        </view>
+        <view class="top-text data-v-597ab9e8">北京环球度假区</view>
+    </view>
+    <view class="bottom-box iphonex-bot data-v-597ab9e8">
+        <view class="bottom-text data-v-597ab9e8">请完成微信授权以继续使用</view>
+        <view class="bottom-view data-v-597ab9e8">
+            <button bindgetphonenumber="__e" class="bottom-btn data-v-597ab9e8" data-event-opts="{{[ [ 'getphonenumber',[ [ 'userInfoGet',['$event'] ] ] ] ]}}" loading="{{loading}}" openType="getPhoneNumber" wx:if="{{checkedTips}}">微信登录</button>
+            <view class="gray-btn data-v-597ab9e8" wx:else>微信登录</view>
+        </view>
+        <view class="tips-box data-v-597ab9e8">
+            <view class="tip-circle data-v-597ab9e8">
+                <image bindtap="__e" class="tip-circle _img data-v-597ab9e8" data-event-opts="{{[ [ 'tap',[ [ 'turnChecked',['$event'] ] ] ] ]}}" src="{{checkedTips?'/static/images/coupon/like-select-on@2x.png':'/static/images/coupon/like-select@2x.png'}}"></image>
+            </view>
+            <view class="tip-text data-v-597ab9e8">
+                <view class="data-v-597ab9e8">我已阅读并确认同意<block wx:for="{{$root.l0}}" wx:key="index">
+                        <text bindtap="__e" class="blue data-v-597ab9e8" data-event-opts="{{[ [ 'tap',[ [ 'agreement',['$0','$1'],[ [ ['titleList','',index,'h5_register_url'] ],[ ['titleList','',index,'title'] ] ] ] ] ] ]}}">{{''+item.f0+''}}</text>
+                        <text class="nomal data-v-597ab9e8" wx:if="{{titleList.length>2&&index!==titleList.length-2&&index!==titleList.length-1}}">,</text>
+                        <block wx:else>
+                            <text class="nomal data-v-597ab9e8" wx:if="{{index!==titleList.length-1}}">和</text>
+                        </block>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <view class="tips-box mt20 data-v-597ab9e8" wx:if="{{marketingList&&marketingList.length>0}}">
+            <view class="tip-circle data-v-597ab9e8">
+                <image bindtap="__e" class="tip-circle _img data-v-597ab9e8" data-event-opts="{{[ [ 'tap',[ [ 'turnCheckedMarketing',['$event'] ] ] ] ]}}" src="{{checkedMarketing?'/static/images/coupon/like-select-on@2x.png':'/static/images/coupon/like-select@2x.png'}}"></image>
+            </view>
+            <view class="tip-text data-v-597ab9e8">
+                <view class="data-v-597ab9e8">我已阅读并确认同意<block wx:for="{{$root.l1}}" wx:key="index">
+                        <text bindtap="__e" class="blue data-v-597ab9e8" data-event-opts="{{[ [ 'tap',[ [ 'agreement',['$0','$1'],[ [ ['marketingList','',index,'h5_register_url'] ],[ ['marketingList','',index,'title'] ] ] ] ] ] ]}}">{{''+item.f1+''}}</text>
+                        <text class="nomal data-v-597ab9e8" wx:if="{{marketingList.length>2&&index!==marketingList.length-2&&index!==marketingList.length-1}}">,</text>
+                        <block wx:else>
+                            <text class="nomal data-v-597ab9e8" wx:if="{{index!==marketingList.length-1}}">和</text>
+                        </block>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+    <indicator bind:__l="__l" bind:reload="__e" class="data-v-597ab9e8" data-event-opts="{{[ [ '^reload',[ ['getAgreement'] ] ] ]}}" status="{{indicatorStatus}}" vueId="35a7246c-2"></indicator>
+</view>

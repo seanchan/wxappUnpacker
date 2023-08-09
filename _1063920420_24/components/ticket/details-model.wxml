@@ -1,0 +1,29 @@
+<view catchtouchmove="__e" class="v-details-model data-v-5bfcc5cc" data-event-opts="{{[ [ 'touchmove',[ [ 'clean',['$event'] ] ] ] ]}}" style="{{'bottom:'+(isiPhoneX?'182rpx':'')+';'}}" wx:if="{{showDetailsModel}}">
+    <view catchtap="__e" class="mask data-v-5bfcc5cc" data-event-opts="{{[ [ 'tap',[ [ 'onClickCancel',['$event'] ] ] ] ]}}"></view>
+    <view class="model-box data-v-5bfcc5cc">
+        <view class="title data-v-5bfcc5cc">{{''+detailTitle+''}}<image catchtap="__e" class="ic-close data-v-5bfcc5cc" data-event-opts="{{[ [ 'tap',[ [ 'onClickCancel',['$event'] ] ] ] ]}}" src="https://cdn.app.universalbeijingresort.com/mini-program/static/images/planning/ic-top-closex.png"></image>
+        </view>
+        <view class="l-detail-box data-v-5bfcc5cc">
+            <view class="item data-v-5bfcc5cc" wx:for="{{content}}" wx:key="index">
+                <view class="item-left data-v-5bfcc5cc">
+                    <filter-text bind:__l="__l" class="data-v-5bfcc5cc" content="{{item.name}}" vueId="{{'625a0770-1-'+index}}"></filter-text>
+                    <label class="left-x _span data-v-5bfcc5cc">x</label>
+                    <label class="_span data-v-5bfcc5cc">{{item.quantity}}</label>
+                </view>
+                <view class="item-right data-v-5bfcc5cc">
+                    <view class="fw-semibold data-v-5bfcc5cc">{{'¥'+item.price+' x '+item.quantity+''}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="l-detail-box coupon-box data-v-5bfcc5cc" wx:if="{{orderDiscounts!=='0.00'||couponDiscounts!=='0.00'}}">
+            <view class="item data-v-5bfcc5cc" wx:if="{{orderDiscounts!=='0.00'}}">
+                <view class="item-left data-v-5bfcc5cc">促销</view>
+                <view class="item-right fw-semibold data-v-5bfcc5cc">{{'-¥'+orderDiscounts+''}}</view>
+            </view>
+            <view class="item data-v-5bfcc5cc" wx:if="{{couponDiscounts!=='0.00'}}">
+                <view class="item-left data-v-5bfcc5cc">优惠券</view>
+                <view class="item-right fw-semibold data-v-5bfcc5cc">{{'-¥'+couponDiscounts+''}}</view>
+            </view>
+        </view>
+    </view>
+</view>

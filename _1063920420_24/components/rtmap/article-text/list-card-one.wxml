@@ -1,0 +1,21 @@
+<view class="package-card-wrap data-v-2b80af72">
+    <view catchtap="__e" class="package-card data-v-2b80af72" data-event-opts="{{[ [ 'tap',[ [ 'goDetail',['$0','$1','$2'],['content.id','content.type','content.title'] ] ] ] ]}}">
+        <font-weight bind:__l="__l" class="data-v-2b80af72" vueId="6851686e-1"></font-weight>
+        <view class="image data-v-2b80af72">
+            <om-image bind:__l="__l" class="data-v-2b80af72" end="?imageMogr2/format/jpg/interlace/1" height="{{190}}" mode="aspectFill" url="{{content.cover_image}}" vueId="6851686e-2" width="{{335}}"></om-image>
+        </view>
+        <view class="mark data-v-2b80af72" style="{{'background:'+'linear-gradient(180deg, rgba('+content.theme_color[0]+', '+content.theme_color[1]+', '+content.theme_color[2]+', 0) 0%, rgba('+content.theme_color[0]+', '+content.theme_color[1]+', '+content.theme_color[2]+', 100%))'+';'}}"></view>
+        <view class="bottom-box data-v-2b80af72">
+            <view class="title fw-xblack data-v-2b80af72">
+                <filter-text bind:__l="__l" class="data-v-2b80af72" content="{{content.title}}" vueId="6851686e-3"></filter-text>
+            </view>
+            <view class="label data-v-2b80af72">
+                <view class="label-left data-v-2b80af72">
+                    <filter-text bind:__l="__l" class="data-v-2b80af72" content="{{content.subtitle}}" vueId="6851686e-4"></filter-text>
+                </view>
+                <view class="label-right fw-semibold data-v-2b80af72">{{'¥'+content.amount+''}}<view class="amount data-v-2b80af72">起</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

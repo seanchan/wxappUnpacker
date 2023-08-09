@@ -1,0 +1,7 @@
+<view class="navbar-contain data-v-c797d592" style="{{topStyle}}" wx:if="{{topStyle}}">
+    <font-weight bind:__l="__l" class="data-v-c797d592" vueId="6a656dac-1"></font-weight>
+    <image bindtap="__e" class="top-icon data-v-c797d592" data-event-opts="{{[ [ 'tap',[ [ 'onClickLeft',['$event'] ] ] ],[ 'tap',[ [ 'clickBlack',['$event'] ] ] ] ]}}" src="{{leftIcon}}"></image>
+    <image bindtap="__e" class="top-icon data-v-c797d592" data-event-opts="{{[ [ 'tap',[ [ 'onClickRight',['$event'] ] ] ] ]}}" src="{{rightIcon}}" wx:if="{{!showClose}}"></image>
+    <view class="nav-title fw-semibold data-v-c797d592" style="{{'color:'+textColor+';'}}" wx:if="{{titleShow}}">{{navTitle}}</view>
+    <view bindtap="__e" class="close fw-medium data-v-c797d592" data-event-opts="{{[ [ 'tap',[ [ 'hideSelf',['$event'] ] ] ] ]}}" wx:if="{{showClose}}">关闭</view>
+</view>

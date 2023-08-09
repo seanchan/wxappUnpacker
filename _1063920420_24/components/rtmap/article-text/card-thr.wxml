@@ -1,0 +1,49 @@
+<view class="card data-v-11a78c52">
+    <font-weight bind:__l="__l" class="data-v-11a78c52" vueId="2eecc81a-1"></font-weight>
+    <scroll-view class="swiper data-v-11a78c52" scrollX="true">
+        <view catchtap="__e" class="card-thr data-v-11a78c52" data-event-opts="{{[ [ 'tap',[ [ 'turnResult',['$0'],[ [ ['content','',index] ] ] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:key="index">
+            <view class="top data-v-11a78c52">
+                <view class="image data-v-11a78c52">
+                    <om-image bind:__l="__l" class="data-v-11a78c52" end="?imageMogr2/format/jpg" height="{{140}}" mode="aspectFill" url="{{item[$orig].cover_image}}" vueId="{{'2eecc81a-2-'+index}}" width="{{140}}"></om-image>
+                </view>
+                <view class="{{['data-v-11a78c52','topLabel','fw-ubrheavy','quick_ticket']}}" wx:if="{{item[$orig].is_support_express}}">优速通</view>
+                <block wx:else>
+                    <view class="{{['data-v-11a78c52','topLabel','fw-ubrheavy','quick_ticket']}}" wx:if="{{item[$orig].material_type==='restaurant'&&item[$orig].is_can_book==1}}">可订餐</view>
+                    <block wx:else>
+                        <view class="{{['data-v-11a78c52','topLabel','fw-heavy','hotel']}}" wx:if="{{item[$orig].material_type==='hotel'&&item[$orig].star}}">{{''+item[$orig].star+''}}</view>
+                        <block wx:else>
+                            <view class="{{['data-v-11a78c52','topLabel','fw-ubrheavy',item[$orig].material_type==='activity'?'activity':item[$orig].material_type==='shop'?'shop':'quick_ticket']}}" wx:if="{{item[$orig].map_label}}">{{''+item[$orig].map_label+''}}</view>
+                        </block>
+                    </block>
+                </block>
+            </view>
+            <view class="bottom data-v-11a78c52">
+                <view class="title fw-ubrheavy data-v-11a78c52">
+                    <view class="{{['data-v-11a78c52',item[$orig].title.length>22?'title1':'']}}" wx:if="{{item[$orig].title}}">
+                        <filter-text bind:__l="__l" class="data-v-11a78c52" content="{{item[$orig].title}}" vueId="{{'2eecc81a-3-'+index}}"></filter-text>
+                    </view>
+                    <block wx:else>
+                        <view class="{{['data-v-11a78c52',item[$orig].ticket_name.length>22?'title1':'']}}" wx:if="{{item[$orig].ticket_name}}">
+                            <filter-text bind:__l="__l" class="data-v-11a78c52" content="{{item[$orig].ticket_name}}" vueId="{{'2eecc81a-4-'+index}}"></filter-text>
+                        </view>
+                    </block>
+                </view>
+                <view class="price other-price data-v-11a78c52" wx:if="{{item[$orig].material_type==='hotel'&&item[$orig].price&&item[$orig].price>=0}}">{{'¥ '+item[$orig].price+' 起'}}</view>
+                <block wx:else>
+                    <view class="{{['data-v-11a78c52',item[$orig].material_type==='restaurant'?'other-price price':'price']}}" wx:if="{{item[$orig].price&&item[$orig].price>=0}}">
+                        <text class="data-v-11a78c52">{{'¥ '+item[$orig].price+''}}</text>
+                        <text class="data-v-11a78c52" style="{{'margin-left:'+'5rpx'+';'}}" wx:if="{{item.m0}}">起</text>
+                        <text class="data-v-11a78c52" wx:else>/人</text>
+                    </view>
+                    <block wx:else>
+                        <view class="{{['data-v-11a78c52',item[$orig].material_type==='restaurant'?'other-price price':'price']}}" wx:if="{{item[$orig].amount&&item[$orig].amount>=0}}">
+                            <text class="data-v-11a78c52">{{'¥ '+item[$orig].amount+''}}</text>
+                            <text class="data-v-11a78c52" style="{{'margin-left:'+'5rpx'+';'}}" wx:if="{{item.m1}}">起</text>
+                            <text class="data-v-11a78c52" wx:else>/人</text>
+                        </view>
+                    </block>
+                </block>
+            </view>
+        </view>
+    </scroll-view>
+</view>

@@ -1,0 +1,1 @@
+{"componentGenerics":{"scoped-slots-rowContent":true},"component":true,"usingComponents":{"universal-map":"plugin://universal-map/universal-map","universal-walk-line":"plugin://universal-map/universal-walk-line","toast":"/components/rtmap/toast","indicator":"/components/rtmap/indicator"}}

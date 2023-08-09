@@ -1,0 +1,21 @@
+<scroll-view class="mall-artical-box data-v-2e19f293" scrollX="{{true}}" style="width:100%;">
+    <toast bind:__l="__l" class="data-v-2e19f293" vueId="1c944edf-1"></toast>
+    <view bindtap="__e" class="items-box data-v-2e19f293" data-event-opts="{{[ [ 'tap',[ [ 'showTips',['$0',idx],[ [ ['listData','',idx] ] ] ] ] ] ]}}" wx:for="{{listData}}" wx:for-index="idx" wx:for-item="lis" wx:key="idx">
+        <view class="img-box data-v-2e19f293">
+            <view class="poster-img data-v-2e19f293">
+                <om-image bind:__l="__l" class="data-v-2e19f293" end="?imageMogr2/format/jpg/interlace/1/thumbnail/750x" height="{{170}}" mode="aspectFill" url="{{lis.back_img}}" vueId="{{'1c944edf-2-'+idx}}" width="{{300}}"></om-image>
+            </view>
+            <view class="backcolor data-v-2e19f293" style="{{'background:'+'linear-gradient(to bottom, rgba(0,0,0,0) 0%, '+lis.theme_color_fe+' 100%)'+';'}}"></view>
+        </view>
+        <view class="con-box data-v-2e19f293">
+            <view class="title-box data-v-2e19f293">
+                <view class="title fw-xblack data-v-2e19f293">
+                    <filter-text bind:__l="__l" class="data-v-2e19f293" content="{{lis.title}}" vueId="{{'1c944edf-3-'+idx}}"></filter-text>
+                </view>
+                <view class="subtitle fw-regular data-v-2e19f293">
+                    <filter-text bind:__l="__l" class="data-v-2e19f293" content="{{lis.subtitle}}" vueId="{{'1c944edf-4-'+idx}}"></filter-text>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

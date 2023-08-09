@@ -1,0 +1,7 @@
+<view class="_div data-v-e9d2b906">
+    <view catchtap="__e" class="bottom _div data-v-e9d2b906" data-event-opts="{{[ [ 'tap',[ [ 'ruleShowFn',['$event'] ] ] ] ]}}">
+        <view class="text _div data-v-e9d2b906">退改规则</view>
+        <image alt="123" class="careful _img data-v-e9d2b906" src="{{$root.m0}}"></image>
+    </view>
+    <ticket-back-tip bind:__l="__l" bind:closeRule="__e" class="data-v-e9d2b906" content="{{content}}" data-event-opts="{{[ [ '^closeRule',[ ['closeRule'] ] ] ]}}" isNew="{{isNew}}" ruleShow="{{ruleShow}}" vueId="00882b02-1"></ticket-back-tip>
+</view>

@@ -1,0 +1,1 @@
+{"component":true,"usingComponents":{"detail-title":"/subPackage1/scenic/detail-title","filter-text":"/components/ui/filterText","om-image":"/components/om-image/index","universal-map":"plugin://universal-map/universal-map","universal-walk-line":"plugin://universal-map/universal-walk-line","toast":"/components/rtmap/toast","indicator":"/components/rtmap/indicator"}}

@@ -1,0 +1,11 @@
+<view class="body-contain data-v-20ca58d6">
+    <scroll-view bindscroll="__e" bindscrolltolower="__e" bindscrolltoupper="__e" class="scroll-contain data-v-20ca58d6" data-event-opts="{{[ [ 'scroll',[ [ 'scroll',['$event'] ] ] ],[ 'scrolltoupper',[ [ 'toupper',['$event'] ] ] ],[ 'scrolltolower',[ [ 'tolower',['$event'] ] ] ] ]}}" scrollX="true">
+        <view bindtap="__e" class="tab-box data-v-20ca58d6" data-event-opts="{{[ [ 'tap',[ [ 'showTips',['$0',idx],[ [ ['newList','',idx] ] ] ] ] ] ]}}" wx:for="{{newList}}" wx:for-index="idx" wx:for-item="items" wx:key="idx">
+            <image class="tab-img data-v-20ca58d6" src="{{items.icon_img}}"></image>
+            <view class="tab-content data-v-20ca58d6">{{''+items.title+''}}</view>
+        </view>
+    </scroll-view>
+    <view class="scroll-line data-v-20ca58d6" style="{{'width:'+'36rpx'+';'}}" wx:if="{{showScrollLine}}">
+        <view class="line-tab data-v-20ca58d6" style="{{'width:'+smallLineWidth+'rpx'+';'+'left:'+smallLineLeft+';'+'right:'+smallLineRight+';'}}"></view>
+    </view>
+</view>

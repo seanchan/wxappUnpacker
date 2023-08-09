@@ -1,0 +1,51 @@
+<view class="{{['mall-container data-v-37861846','page',platform]}}">
+    <top-bar bind:__l="__l" bind:toCustomer="__e" bind:turnSearch="__e" class="data-v-37861846" data-event-opts="{{[ [ '^turnSearch',[ ['turnSearch'] ] ],[ '^toCustomer',[ ['toCustomer'] ] ] ]}}" vueId="d71edf80-1"></top-bar>
+    <toast bind:__l="__l" class="data-v-37861846" vueId="d71edf80-2"></toast>
+    <view class="back-face data-v-37861846" style="{{'height:'+headHeight+';'}}">
+        <image class="image-blur data-v-37861846" mode="widthFix" src="{{mallDetailData.banner[currentIndex].back_img+'?imageMogr2/format/jpg/interlace/1'}}"></image>
+    </view>
+    <view class="{{['data-v-37861846','back-face-mask',backfaceMaskFadeClass]}}"></view>
+    <view class="front data-v-37861846" style="{{fontImageStyle}}" wx:if="{{backfaceMaskFadeClass==='fade-in'}}">
+        <image class="image-blur data-v-37861846" mode="widthFix" src="{{mallDetailData.banner[currentIndex].back_img+'?imageMogr2/format/jpg/interlace/1'}}"></image>
+    </view>
+    <view class="front2 data-v-37861846" style="{{fontImageStyle}}" wx:if="{{network}}">
+        <view class="netblock data-v-37861846">
+            <image class="netimg data-v-37861846" src="/static/images/index/net.png"></image>网络异常，请检查网络设置</view>
+    </view>
+    <view class="page-content data-v-37861846">
+        <view class="banner-box data-v-37861846" style="{{'height:'+wholeHeadHeight+';'}}">
+            <swiper autoplay="{{swiperAutoPlay}}" bindchange="__e" circular="true" class="swiper-box ob-dom data-v-37861846" data-event-opts="{{[ [ 'change',[ [ 'handleChange',['$event'] ] ] ] ]}}" interval="{{interval}}" style="{{'top:'+swiperHeadTop+';'}}">
+                <swiper-item bindtap="__e" class="swiper-item data-v-37861846" data-event-opts="{{[ [ 'tap',[ [ 'goBannerDetail',[index] ] ] ] ]}}" wx:for="{{mallDetailData.banner}}" wx:key="index">
+                    <view class="swiper-item-img data-v-37861846">
+                        <om-image alt="{{item.title}}" bind:__l="__l" class="data-v-37861846" end="?imageMogr2/format/jpg/interlace/1" height="{{120}}" mode="aspectFill" url="{{item.back_img}}" vueId="{{'d71edf80-3-'+index}}" width="{{335}}"></om-image>
+                    </view>
+                </swiper-item>
+            </swiper>
+            <view class="dot-contain data-v-37861846" wx:if="{{mallDetailData.banner.length>1}}">
+                <view class="{{['data-v-37861846',idx==currentIndex?'dot big-dot':'dot small-dot']}}" wx:for="{{mallDetailData.banner}}" wx:for-index="idx" wx:key="idx"></view>
+            </view>
+        </view>
+        <function-tab bind:__l="__l" class="data-v-37861846" listData="{{mallDetailData.function_list_r6}}" vueId="d71edf80-4"></function-tab>
+        <view class="line data-v-37861846"></view>
+        <view class="content data-v-37861846">
+            <view class="data-v-37861846" wx:for="{{recommendList}}" wx:for-item="lists" wx:key="index">
+                <view class="recommend-wrapper data-v-37861846" wx:if="{{lists.block_type==='ticket'&&lists.list.length>=3||lists.block_type==='article'&&lists.list.length>=2||lists.block_type==='hotel'&&lists.list.length>=2||lists.block_type==='vip'}}">
+                    <title-card bind:__l="__l" class="data-v-37861846" isShowMore="{{lists.is_show_list}}" title="{{lists.title}}" type="{{lists.block_type}}" vueId="{{'d71edf80-5-'+index}}" wx:if="{{lists.block_type!=='vip'}}"></title-card>
+                    <view class="recommend-content data-v-37861846">
+                        <artical-card bind:__l="__l" class="data-v-37861846" listData="{{lists.list}}" vueId="{{'d71edf80-6-'+index}}" wx:if="{{lists.block_type==='article'}}"></artical-card>
+                        <ticket-card bind:__l="__l" class="data-v-37861846" listData="{{lists.list}}" vueId="{{'d71edf80-7-'+index}}" wx:if="{{lists.block_type==='ticket'}}"></ticket-card>
+                        <vip-card bind:__l="__l" class="data-v-37861846" listData="{{lists.list}}" vueId="{{'d71edf80-8-'+index}}" wx:if="{{lists.block_type==='vip'}}"></vip-card>
+                        <hotel-card bind:__l="__l" bind:goDetail="__e" class="data-v-37861846" data-event-opts="{{[ [ '^goDetail',[ ['goHotelDetail'] ] ] ]}}" listData="{{lists.list}}" vueId="{{'d71edf80-9-'+index}}" wx:if="{{lists.block_type==='hotel'}}"></hotel-card>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="nomore fw-regular data-v-37861846" wx:if="{{pagination.total_page===pagination.current_page&&isRequestEnd}}">暂无更多</view>
+    </view>
+    <view class="advertising data-v-37861846" wx:if="{{mallAdStatus&&advertising.is_show}}">
+        <image alt bindtap="__e" class="advertising-img _img data-v-37861846" data-event-opts="{{[ [ 'tap',[ [ 'openAdvertising',['$event'] ] ] ] ]}}" src="{{advertising.image}}"></image>
+        <image alt bindtap="__e" class="advertising-close _img data-v-37861846" data-event-opts="{{[ [ 'tap',[ [ 'closeAdvertising',['$event'] ] ] ] ]}}" src="{{assetsImage.adClose}}"></image>
+    </view>
+    <indicator bind:__l="__l" bind:reload="__e" class="data-v-37861846" data-event-opts="{{[ [ '^reload',[ ['getHomeData'] ] ] ]}}" status="{{indicatorStatus}}" useWhiteMask="{{useWhiteMask}}" vueId="d71edf80-10"></indicator>
+    <launchapp bind:__l="__l" class="data-v-37861846" vueId="d71edf80-11"></launchapp>
+</view>

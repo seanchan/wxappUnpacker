@@ -1,0 +1,18 @@
+{
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "artical-card": "/pages/mall/artical-card",
+        "function-tab": "/pages/mall/function-tab",
+        "ticket-card": "/pages/mall/ticket-card",
+        "hotel-card": "/pages/mall/hotel-card",
+        "vip-card": "/pages/mall/vip-card",
+        "title-card": "/pages/mall/title-card",
+        "top-bar": "/pages/mall/mall-top",
+        "indicator": "/components/indicator/indicator",
+        "om-image": "/components/om-image/index",
+        "launchapp": "/components/launchapp/launchapp",
+        "toast": "/components/rtmap/toast",
+        "universal-map": "plugin://wx209d168c345dce2c/universal-map",
+        "universal-walk-line": "plugin://wx209d168c345dce2c/universal-walk-line"
+    }
+}

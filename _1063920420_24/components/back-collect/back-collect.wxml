@@ -1,0 +1,5 @@
+<view class="data-v-6b6d7475">
+    <top-nav bind:__l="__l" bind:clickBlack="__e" bind:clickLeft="__e" bind:clickRight="__e" bind:hideSelf="__e" class="data-v-6b6d7475" data-event-opts="{{[ [ '^clickLeft',[ ['clickLeft'] ] ],[ '^clickRight',[ ['clickRight'] ] ],[ '^hideSelf',[ ['hideVideo'] ] ],[ '^clickBlack',[ ['clickBlacks'] ] ] ]}}" leftIcon="{{isBlack?'/static/images/index/ic-top-back.png':'/static/images/index/ic-top-back-white.png'}}" navTitle="{{navTitle}}" rightIcon="{{rightIcon}}" showClose="{{showClose}}" textColor="{{textColor}}" titleShow="{{titleShow}}" vueId="35032582-1"></top-nav>
+    <view class="{{['data-v-6b6d7475','front',frontFadeClass,isBlack?'bg-white':'']}}" style="{{'height:'+frontImageStyle+'rpx'+';'+'background:'+background+';'+'opacity:'+(background?1:'')+';'}}"></view>
+    <view class="{{['data-v-6b6d7475','back-liner',frontFadeClass!=='fade-in'?'bg':'']}}" style="{{'height:'+frontImageStyle+'rpx'+';'}}"></view>
+</view>

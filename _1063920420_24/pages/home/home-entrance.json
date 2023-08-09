@@ -1,0 +1,11 @@
+{
+    "component": true,
+    "usingComponents": {
+        "scroll-tab": "/components/scroll-tab/scroll-tab",
+        "filter-text": "/components/ui/filterText",
+        "indicator": "/components/rtmap/indicator",
+        "universal-map": "plugin://wx209d168c345dce2c/universal-map",
+        "toast": "/components/rtmap/toast",
+        "universal-walk-line": "plugin://wx209d168c345dce2c/universal-walk-line"
+    }
+}

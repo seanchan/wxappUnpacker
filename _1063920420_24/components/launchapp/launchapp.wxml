@@ -1,0 +1,4 @@
+<view class="{{['data-v-614af1f6','launchapp',appName]}}" style="{{frontImageStyle}}" wx:if="{{isLaunch}}">
+    <button binderror="__e" bindlaunchapp="__e" class="bottom-btn data-v-614af1f6" data-event-opts="{{[ [ 'error',[ [ 'launchAppError',['$event'] ] ] ],[ 'launchapp',[ [ 'launchAppSuccess',['$event'] ] ] ] ]}}" openType="launchApp">
+        <image class="launch-icon _img data-v-614af1f6" src="{{icon}}" wx:if="{{icon}}"></image>{{''+launchTitle+''}}</button>
+</view>

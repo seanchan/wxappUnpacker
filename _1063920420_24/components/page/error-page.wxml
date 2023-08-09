@@ -1,0 +1,9 @@
+<view class="{{['_div data-v-4ef37f04','error-page',isGlobal?'global':'']}}" wx:if="{{errorData}}">
+    <view class="error-page-wrapper _div data-v-4ef37f04">
+        <view class="error-icon data-v-4ef37f04">
+            <om-image bind:__l="__l" class="data-v-4ef37f04" height="{{140}}" url="{{errorData.path}}" vueId="799c4c46-1" width="{{140}}"></om-image>
+        </view>
+        <view class="error-title-text _div data-v-4ef37f04">{{''+errorData.title+''}}</view>
+        <view bindtap="__e" class="error-action-btn _div data-v-4ef37f04" data-event-opts="{{[ [ 'tap',[ [ 'handleTapBtn',['$event'] ] ] ] ]}}">{{''+errorData.button+''}}</view>
+    </view>
+</view>

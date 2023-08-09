@@ -1,0 +1,114 @@
+<view class="data-v-4c864ae2">
+    <font-weight bind:__l="__l" class="data-v-4c864ae2" vueId="4ebd4b32-1"></font-weight>
+    <view class="card data-v-4c864ae2">
+        <view bindtap="__e" class="data-v-4c864ae2" data-event-opts="{{[ [ 'tap',[ [ 'turnResult',['$0'],['content.__$n0'] ] ] ] ]}}" wx:if="{{content[0].material_type==='story'}}">
+            <view class="story-card data-v-4c864ae2">
+                <view class="poster data-v-4c864ae2">
+                    <om-image bind:__l="__l" class="data-v-4c864ae2" end="?imageMogr2/format/jpg" height="{{208}}" mode="aspectFill" url="{{content[0].cover_image}}" vueId="4ebd4b32-2" width="{{335}}"></om-image>
+                </view>
+                <view class="collect-box data-v-4c864ae2">
+                    <image alt="{{content[0].title}}" catchtap="__e" class="img data-v-4c864ae2" data-event-opts="{{[ [ 'tap',[ [ 'onCollect',['$0','$1','$2',0],['content.__$n0.material_type','content.__$n0.material_id','content.__$n0'] ] ] ] ]}}" src="{{content[0].favourited?'/static/images/show/ic_like-select.png':'/static/images/show/ic_like-nor.png'}}"></image>
+                </view>
+                <view class="title-box data-v-4c864ae2">
+                    <view class="title fw-xblack data-v-4c864ae2">
+                        <filter-text bind:__l="__l" class="data-v-4c864ae2" content="{{content[0].title}}" vueId="4ebd4b32-3"></filter-text>
+                    </view>
+                </view>
+                <view class="btn data-v-4c864ae2">了解更多</view>
+            </view>
+        </view>
+        <block wx:else>
+            <view class="box data-v-4c864ae2" wx:if="{{content[0].material_type==='package'}}">
+                <package-card bind:__l="__l" bind:goDetail="__e" class="data-v-4c864ae2" content="{{content[0]}}" data-event-opts="{{[ [ '^goDetail',[ ['goPackageDetail'] ] ] ]}}" type="{{1}}" vueId="4ebd4b32-4"></package-card>
+            </view>
+            <block wx:else>
+                <combination-card bind:__l="__l" bind:turnResult="__e" class="data-v-4c864ae2" data-event-opts="{{[ [ '^turnResult',[ ['turnResult'] ] ] ]}}" item="{{content[0]}}" vueId="4ebd4b32-5" wx:if="{{content[0].material_type==='combination'}}"></combination-card>
+                <block wx:else>
+                    <copuon-card bind:__l="__l" card="{{content[0]}}" class="data-v-4c864ae2 vue-ref" componentType="multiple" data-ref="couponCard" vueId="4ebd4b32-6" wx:if="{{content[0].material_type==='coupon'}}"></copuon-card>
+                    <block wx:else>
+                        <ticket-card bind:__l="__l" bind:checkNotice="__e" bind:turnResult="__e" class="data-v-4c864ae2" content="{{content[0]}}" data-event-opts="{{[ [ '^turnResult',[ ['turnResult'] ] ],[ '^checkNotice',[ ['checkNotice'] ] ] ]}}" type="{{1}}" vueId="4ebd4b32-7" wx:if="{{content[0].material_type==='ticket'||content[0].material_type==='MultiplePark'}}"></ticket-card>
+                        <block wx:else>
+                            <ticket-card bind:__l="__l" bind:checkNotice="__e" bind:turnResult="__e" class="data-v-4c864ae2" content="{{content[0]}}" data-event-opts="{{[ [ '^turnResult',[ ['turnResult'] ] ],[ '^checkNotice',[ ['checkNotice'] ] ] ]}}" type="{{5}}" vueId="4ebd4b32-8" wx:if="{{content[0].material_type==='quick_ticket'||content[0].material_type==='single_express'}}"></ticket-card>
+                            <block wx:else>
+                                <vip-card bind:__l="__l" bind:checkNotice="__e" bind:turnResult="__e" class="data-v-4c864ae2" data-event-opts="{{[ [ '^turnResult',[ ['turnResult'] ] ],[ '^checkNotice',[ ['checkNotice'] ] ] ]}}" item="{{content[0]}}" vueId="4ebd4b32-9" wx:if="{{content[0].material_type==='vip_ticket'}}"></vip-card>
+                                <block wx:else>
+                                    <ticket-card bind:__l="__l" bind:checkNotice="__e" bind:turnResult="__e" class="data-v-4c864ae2" content="{{content[0]}}" data-event-opts="{{[ [ '^turnResult',[ ['turnResult'] ] ],[ '^checkNotice',[ ['checkNotice'] ] ] ]}}" type="{{3}}" vueId="4ebd4b32-10" wx:if="{{content[0].material_type==='seasonal_ticket'||content[0].material_type==='annual_ticket'}}"></ticket-card>
+                                    <view catchtap="__e" class="card-one data-v-4c864ae2" data-event-opts="{{[ [ 'tap',[ [ 'turnResult',['$0'],['content.__$n0'] ] ] ] ]}}" wx:else>
+                                        <view catchtap="__e" class="collect data-v-4c864ae2" data-event-opts="{{[ [ 'tap',[ [ 'onCollect',['$0','$1','$2',0],['content.__$n0.material_type','content.__$n0.material_id','content.__$n0'] ] ] ] ]}}">
+                                            <image alt="{{true}}" class="data-v-4c864ae2" src="{{content[0].favourited?'/static/images/show/ic_like-select.png':'/static/images/show/ic_like-nor.png'}}"></image>
+                                        </view>
+                                        <view class="top data-v-4c864ae2">
+                                            <view class="image data-v-4c864ae2">
+                                                <om-image bind:__l="__l" class="data-v-4c864ae2" end="?imageMogr2/format/jpg" height="{{120}}" mode="aspectFill" url="{{content[0].cover_image}}" vueId="4ebd4b32-11" width="{{335}}"></om-image>
+                                            </view>
+                                            <view class="{{['data-v-4c864ae2','topLabel','f-semibold','quick_ticket']}}" wx:if="{{content[0].is_support_express}}">优速通</view>
+                                            <block wx:else>
+                                                <view class="{{['data-v-4c864ae2','topLabel','f-semibold','quick_ticket']}}" wx:if="{{content[0].material_type==='restaurant'&&content[0].is_can_book==1}}">可订餐</view>
+                                                <block wx:else>
+                                                    <view class="{{['data-v-4c864ae2','topLabel','f-semibold','hotel']}}" wx:if="{{content[0].material_type==='hotel'&&content[0].star}}">{{''+content[0].star+''}}</view>
+                                                    <block wx:else>
+                                                        <view class="{{['data-v-4c864ae2','topLabel','f-semibold',content[0].material_type==='activity'?'activity':content[0].material_type==='shop'?'shop':'quick_ticket']}}" wx:if="{{content[0].map_label}}">{{''+content[0].map_label+''}}</view>
+                                                    </block>
+                                                </block>
+                                            </block>
+                                        </view>
+                                        <view class="bottom data-v-4c864ae2">
+                                            <view class="bottom-top data-v-4c864ae2">
+                                                <view class="{{['title fw-xblack data-v-4c864ae2',content[0].title.length>=19?'title2':content[0].title.length>=17?'title1':'']}}" wx:if="{{content[0].title}}">
+                                                    <filter-text bind:__l="__l" class="data-v-4c864ae2" content="{{content[0].title}}" vueId="4ebd4b32-12"></filter-text>
+                                                </view>
+                                                <view class="{{['data-v-4c864ae2',content[0].title.length>=19?'title2':content[0].title.length>=17?'title1':'',content[0].material_type==='hotel'||content[0].material_type==='restaurant'?'price-box other-box':'price-box']}}" wx:if="{{content[0].price||content[0].price===0}}">
+                                                    <text class="price fw-avenir data-v-4c864ae2">{{'¥ '+content[0].price+''}}</text>
+                                                    <text class="data-v-4c864ae2" wx:if="{{$root.m0}}">起</text>
+                                                    <text class="data-v-4c864ae2" wx:else>/人</text>
+                                                </view>
+                                            </view>
+                                            <view class="bottom-bottom data-v-4c864ae2">
+                                                <view class="subtitle data-v-4c864ae2">
+                                                    <view class="data-v-4c864ae2" wx:if="{{content[0].material_type==='scenic'}}">
+                                                        <text class="data-v-4c864ae2" style="{{'margin-right:'+'20rpx'+';'}}" wx:if="{{content[0].subtitle}}">{{''+$root.f0+''}}</text>
+                                                        <text class="{{['data-v-4c864ae2',content[0].subtitle?'favourited':'']}}" wx:if="{{content[0].custom_label}}">{{''+$root.f1+''}}</text>
+                                                    </view>
+                                                    <view class="data-v-4c864ae2" wx:if="{{content[0].material_type==='perform'}}">
+                                                        <text class="data-v-4c864ae2" style="{{'margin-right:'+'20rpx'+';'}}" wx:if="{{content[0].show_time.length}}">演出时间</text>
+                                                        <text class="data-v-4c864ae2" style="{{'margin-right:'+'20rpx'+';'}}" wx:if="{{content[0].show_time.length}}">{{''+content[0].show_time[0]+''}}</text>
+                                                        <text class="data-v-4c864ae2" style="{{'margin-right:'+'20rpx'+';'}}" wx:if="{{content[0].show_time[1]}}">{{''+content[0].show_time[1]+''}}</text>
+                                                        <text class="data-v-4c864ae2" style="{{'margin-right:'+'20rpx'+';'}}" wx:if="{{content[0].show_time[2]}}">{{''+content[0].show_time[2]+''}}</text>
+                                                    </view>
+                                                    <view class="data-v-4c864ae2" wx:if="{{content[0].material_type==='shop'}}">
+                                                        <text class="{{['data-v-4c864ae2',index===1&&content[0].label.length>1?'shopColor':'']}}" style="{{'margin-right:'+'20rpx'+';'}}" wx:for="{{$root.l0}}" wx:key="index">{{''+item.f2+''}}</text>
+                                                    </view>
+                                                    <view class="data-v-4c864ae2" wx:if="{{content[0].material_type==='activity'}}">
+                                                        <text class="storyColor data-v-4c864ae2" wx:if="{{content[0].custom_label}}">{{''+content[0].custom_label+''}}</text>
+                                                    </view>
+                                                    <view class="data-v-4c864ae2" wx:if="{{content[0].material_type==='restaurant'}}">
+                                                        <text class="data-v-4c864ae2" style="{{'margin-right:'+'20rpx'+';'}}" wx:if="{{content[0].cuisine}}">{{''+$root.f3+''}}</text>
+                                                        <text class="{{['data-v-4c864ae2',content[0].cuisine?'favourited':'']}}" wx:if="{{content[0].label.length}}">{{''+$root.f4+''}}</text>
+                                                    </view>
+                                                    <view class="hotel-bottom data-v-4c864ae2" wx:if="{{content[0].material_type==='hotel'}}">
+                                                        <text class="{{['hotel-bottom-text data-v-4c864ae2',j>0?'hotelColor':'']}}" style="{{'margin-right:'+'20rpx'+';'}}" wx:for="{{content[0].label}}" wx:for-index="j" wx:for-item="i" wx:key="j">{{''+i+''}}</text>
+                                                    </view>
+                                                    <view class="data-v-4c864ae2" wx:if="{{content[0].material_type==='restroom'}}">
+                                                        <text class="data-v-4c864ae2" style="{{'margin-right:'+'20rpx'+';'}}" wx:if="{{content[0].is_mother_baby}}">家庭式卫生间</text>
+                                                        <text class="data-v-4c864ae2" wx:if="{{content[0].is_accessibility}}">无障碍</text>
+                                                    </view>
+                                                    <view class="data-v-4c864ae2" wx:else>
+                                                        <text class="data-v-4c864ae2" wx:if="{{content[0].address}}">{{''+content[0].address+''}}</text>
+                                                    </view>
+                                                </view>
+                                                <view class="distance data-v-4c864ae2" wx:if="{{content[0].distance&&isInUbrPolygon}}">
+                                                    <text class="data-v-4c864ae2" wx:if="{{content[0].distance<1000}}">{{''+content[0].distance+'米'}}</text>
+                                                    <text class="data-v-4c864ae2" wx:else>{{''+$root.m1/100+'公里'}}</text>
+                                                </view>
+                                            </view>
+                                        </view>
+                                    </view>
+                                </block>
+                            </block>
+                        </block>
+                    </block>
+                </block>
+            </block>
+        </block>
+    </view>
+</view>

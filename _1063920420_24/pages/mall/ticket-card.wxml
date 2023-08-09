@@ -1,0 +1,11 @@
+<scroll-view class="mall-ticket-box data-v-e4524c22" scrollX="{{true}}" style="width:100%;">
+    <view bindtap="__e" class="items-box _div data-v-e4524c22" data-event-opts="{{[ [ 'tap',[ [ 'showTips',['$0','$1','$2',idx],[ [ ['listData','',idx,'material_id'] ],[ ['listData','',idx,'material_type'] ],[ ['listData','',idx] ] ] ] ] ] ]}}" wx:for="{{listData}}" wx:for-index="idx" wx:for-item="lis" wx:key="idx">
+        <view class="img-wrapper _div data-v-e4524c22">
+            <om-image alt="{{lis.title}}" bind:__l="__l" class="data-v-e4524c22" end="?imageMogr2/format/jpg/interlace/1/thumbnail/750x" height="{{120}}" mode="aspectFill" url="{{lis.back_img}}" vueId="{{'c9a7d092-1-'+idx}}" width="{{120}}"></om-image>
+        </view>
+        <view class="{{['_div data-v-e4524c22','title','fw-PFSC-Semibold',lis.title.length>14?lis.title.length>16?'title2':'title1':'']}}">
+            <filter-text bind:__l="__l" class="data-v-e4524c22" content="{{lis.title}}" vueId="{{'c9a7d092-2-'+idx}}"></filter-text>
+        </view>
+        <view class="price fw-regular _div data-v-e4524c22">{{'¥'+lis.price+' 起'}}</view>
+    </view>
+</scroll-view>

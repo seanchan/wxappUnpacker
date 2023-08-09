@@ -1,0 +1,10 @@
+<view class="{{['_div data-v-2f84de60','list-page',platform,templateClass,h5Class]}}" style="{{wrapStyle}}">
+    <indicator bind:__l="__l" bind:reload="__e" class="data-v-2f84de60" data-event-opts="{{[ [ '^reload',[ ['handleRefresh'] ] ] ]}}" status="{{indicatorStatus}}" useWhiteMask="{{useWhiteMask}}" vueId="3b04e64d-1"></indicator>
+    <navigation-bar alwaysShowHome="{{customNavigationBarShowHome}}" bind:__l="__l" class="data-v-2f84de60" navType="{{customNavigationBarType}}" vueId="3b04e64d-2" wx:if="{{customNavigationBar}}"></navigation-bar>
+    <slot name="top"></slot>
+    <scroll-list bind:__l="__l" bind:containerHeight="__e" bind:reachBottom="__e" class="data-v-2f84de60" collectStyle="{{collectStyle}}" data-event-opts="{{[ [ '^reachBottom',[ ['reachBottom'] ] ],[ '^containerHeight',[ ['containerHeight'] ] ] ]}}" listTypes="{{listTypes}}" navHight="{{navHight}}" nearStyle="{{nearStyle}}" showLoadMore="{{showLoadMore}}" status="{{status}}" tabHeight="{{tabHeight}}" vueId="3b04e64d-3" vueSlots="{{['default']}}" wx:if="{{showList}}">
+        <error-page bind:__l="__l" bind:navigate="__e" class="data-v-2f84de60" data-event-opts="{{[ [ '^navigate',[ ['handleNavigate'] ] ] ]}}" error="{{listEmptyError}}" vueId="{{'3b04e64d-4'+','+'3b04e64d-3'}}" wx:if="{{listEmptyError}}"></error-page>
+        <slot></slot>
+    </scroll-list>
+    <slot name="bottom" wx:if="{{showList}}"></slot>
+</view>

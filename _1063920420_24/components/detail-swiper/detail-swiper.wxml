@@ -1,0 +1,13 @@
+<view class="body-contain data-v-4ee1df42" style="{{'height:'+height*2+'rpx'+';'}}">
+    <swiper autoplay="{{swiperAutoPlay}}" bindchange="__e" circular="{{circular}}" class="swiper-contain data-v-4ee1df42" data-event-opts="{{[ [ 'change',[ [ 'currentChange',['$event','$0'],['bannerList'] ] ] ] ]}}" duration="{{duration}}" hidden="{{!!showSwiper}}" indicatorDots="{{indicatorDots}}" interval="{{interval}}">
+        <swiper-item bindtap="__e" class="swiper-item data-v-4ee1df42" data-event-opts="{{[ [ 'tap',[ [ 'clickimg',['$0',idx],[ [ ['bannerList','',idx] ] ] ] ] ] ]}}" wx:for="{{bannerList}}" wx:for-index="idx" wx:key="idx">
+            <view bindtap="__e" class="swiper-image data-v-4ee1df42" data-event-opts="{{[ [ 'tap',[ [ 'preview',['$event'] ] ] ] ]}}">
+                <om-image bind:__l="__l" class="data-v-4ee1df42" end="?imageMogr2/format/jpg/interlace/1" height="{{280}}" mode="aspectFill" url="{{item.image_url}}" vueId="{{'49721718-1-'+idx}}" width="{{375}}"></om-image>
+            </view>
+            <image bindtap="__e" class="play-icon data-v-4ee1df42" data-event-opts="{{[ [ 'tap',[ [ 'play',['$event'] ] ] ] ]}}" src="/static/images/scenic/button-like-select.png" wx:if="{{item.media_type=='video'}}"></image>
+        </swiper-item>
+    </swiper>
+    <view class="dot-contain data-v-4ee1df42" wx:if="{{!swiperShow&&bannerList.length>1}}">
+        <view class="{{['data-v-4ee1df42',idx==currentIndex?'dot big-dot':'dot small-dot']}}" style="{{'background-color:'+color+';'}}" wx:for="{{bannerList}}" wx:for-index="idx" wx:key="idx"></view>
+    </view>
+</view>

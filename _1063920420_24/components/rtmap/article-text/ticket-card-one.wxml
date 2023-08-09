@@ -1,0 +1,56 @@
+<view catchtap="__e" class="v-ticket-card data-v-db98f240" data-event-opts="{{[ [ 'tap',[ [ 'goDetail',['$0'],['content'] ] ] ] ]}}">
+    <font-weight bind:__l="__l" class="data-v-db98f240" vueId="5ceff612-1"></font-weight>
+    <view class="l-image data-v-db98f240">
+        <view class="image data-v-db98f240" wx:if="{{type===3||type===5}}">
+            <om-image bind:__l="__l" class="data-v-db98f240" end="?imageMogr2/format/jpg/interlace/1" height="{{130}}" mode="aspectFill" url="{{content.cover_image}}" vueId="5ceff612-2" width="{{335}}"></om-image>
+        </view>
+        <view class="image data-v-db98f240" wx:else>
+            <om-image bind:__l="__l" class="data-v-db98f240" end="?imageMogr2/format/jpg/interlace/1" height="{{130}}" mode="aspectFill" url="{{content.cover_image}}" vueId="5ceff612-3" width="{{335}}"></om-image>
+        </view>
+        <view class="mark data-v-db98f240" style="{{'background-image:'+'linear-gradient(180deg, rgba('+content.theme_color[0]+', '+content.theme_color[1]+', '+content.theme_color[2]+', 0) 0%, rgba('+content.theme_color[0]+', '+content.theme_color[1]+', '+content.theme_color[2]+', 100%))'+';'}}" wx:if="{{type===3||type===5}}"></view>
+        <view class="mark data-v-db98f240" style="{{'background-image:'+'linear-gradient(180deg, rgba('+content.theme_color[0]+', '+content.theme_color[1]+', '+content.theme_color[2]+', 0) 0%, rgba('+content.theme_color[0]+', '+content.theme_color[1]+', '+content.theme_color[2]+', 100%))'+';'}}" wx:else></view>
+    </view>
+    <view catchtap="__e" class="l-notice data-v-db98f240" data-event-opts="{{[ [ 'tap',[ [ 'checkNotice',['$0'],['content'] ] ] ] ]}}">
+        <view class="data-v-db98f240">预订须知</view>
+        <image class="ic-right data-v-db98f240" src="/static/images/ticket/ic-arrow-white.png"></image>
+    </view>
+    <view class="{{['data-v-db98f240','title','fw-xblack',type===3&&(content.special_right1||content.special_right2||content.special_right3)?'seasoncard-title':'']}}">
+        <view class="data-v-db98f240" wx:if="{{type===5}}">
+            <image class="ic-express data-v-db98f240" src="{{assetsImage.expressBai2}}" wx:if="{{content.ticket_type=='Unlimited Re-Entry'}}"></image>
+            <block wx:else>
+                <image class="ic-express ic-once-express data-v-db98f240" src="{{assetsImage.expressBai1}}" wx:if="{{content.ticket_type=='Limited Re-Entry'}}"></image>
+                <image class="ic-express ic-once-express data-v-db98f240" src="{{assetsImage.expressBai3}}" wx:else></image>
+            </block>
+        </view>
+        <view class="{{['texts data-v-db98f240',content.titles.length>32?'font-28':content.titles.length>28?'font-32':content.titles.length>24?'font-36':'']}}" wx:if="{{type===5}}">
+            <filter-text bind:__l="__l" class="data-v-db98f240" content="{{content.ticket_name}}" vueId="5ceff612-4"></filter-text>
+        </view>
+        <view class="{{['texts data-v-db98f240',content.titles.length>38?'font-28':content.titles.length>34?'font-32':content.titles.length>30?'font-36':'']}}" wx:else>
+            <filter-text bind:__l="__l" class="data-v-db98f240" content="{{content.ticket_name}}" vueId="5ceff612-5"></filter-text>
+        </view>
+    </view>
+    <view class="bottom-box data-v-db98f240" style="{{'background:'+'rgb('+(content.ticket_image.theme_color_fe||$root.g0)+')'+';'}}">
+        <view class="{{['data-v-db98f240','l-tags-price',type===3&&(content.special_right1||content.special_right2||content.special_right3)?'seasoncard-tags':'']}}">
+            <view class="l-tags data-v-db98f240">
+                <view class="tag data-v-db98f240" wx:for="{{content.ticket_label}}" wx:key="index">{{''+item+''}}</view>
+            </view>
+            <view class="l-price fw-avenir data-v-db98f240">
+                <view class="price data-v-db98f240">¥<view class="data-v-db98f240">{{content.amount}}</view>
+                </view>起</view>
+        </view>
+        <view class="{{['l-legal-rights data-v-db98f240',content.special_right1&&content.special_right2&&content.special_right3?'l-legal-rights-max':'']}}" wx:if="{{type===3&&(content.special_right1||content.special_right2||content.special_right3)}}">
+            <view class="legal data-v-db98f240" wx:if="{{content.special_right1}}">
+                <image class="ic-rights data-v-db98f240" src="/static/images/ticket/ic-card-vip.png"></image>
+                <view class="txt data-v-db98f240">{{''+content.special_right1+''}}</view>
+            </view>
+            <view class="legal data-v-db98f240" wx:if="{{content.special_right2}}">
+                <image class="ic-rights data-v-db98f240" src="/static/images/ticket/ic-card-vip.png"></image>
+                <view class="txt data-v-db98f240">{{''+content.special_right2+''}}</view>
+            </view>
+            <view class="legal data-v-db98f240" wx:if="{{content.special_right3}}">
+                <image class="ic-rights data-v-db98f240" src="/static/images/ticket/ic-card-vip.png"></image>
+                <view class="txt data-v-db98f240">{{''+content.special_right3+''}}</view>
+            </view>
+        </view>
+    </view>
+</view>

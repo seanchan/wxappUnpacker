@@ -1,0 +1,10 @@
+<view class="data-v-4f0d7a55">
+    <view class="mask data-v-4f0d7a55" wx:if="{{showInquiryModel}}"></view>
+    <view class="inquiry-model data-v-4f0d7a55" wx:if="{{showInquiryModel}}">
+        <view class="inquiry data-v-4f0d7a55">确定取消订单吗？</view>
+        <view class="inquiry-result data-v-4f0d7a55">
+            <view bindtap="__e" class="cancel data-v-4f0d7a55" data-event-opts="{{[ [ 'tap',[ [ 'cancelBtn',['$event'] ] ] ] ]}}">取消</view>
+            <view bindtap="__e" class="affirm data-v-4f0d7a55" data-event-opts="{{[ [ 'tap',[ [ 'confirmBtn',['$event'] ] ] ] ]}}">确定</view>
+        </view>
+    </view>
+</view>

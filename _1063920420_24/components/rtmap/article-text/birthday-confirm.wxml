@@ -1,0 +1,24 @@
+<view catchtap="__e" class="v-delete-model data-v-e64b2a78" data-event-opts="{{[ [ 'tap',[ [ 'clickCancelMask',['$event'] ] ] ] ]}}" wx:if="{{showDeleteModel}}">
+    <view class="model-box data-v-e64b2a78" wx:if="{{!isBirthday}}">
+        <view class="model-box-top data-v-e64b2a78">
+            <om-image bind:__l="__l" class="data-v-e64b2a78" end="?imageMogr2/format/png/interlace/1" height="{{100}}" mode="aspectFill" url="{{assetsImage.editBirthdayBg}}" vueId="5527994b-1" width="{{275}}"></om-image>
+        </view>
+        <view class="model-box-bottom data-v-e64b2a78">
+            <view class="title f-semibold _p data-v-e64b2a78">
+                <rich-text class="data-v-e64b2a78" nodes="{{$root.g0}}"></rich-text>
+            </view>
+            <view class="action data-v-e64b2a78">
+                <view catchtap="__e" class="btn sure f-semibold data-v-e64b2a78" data-event-opts="{{[ [ 'tap',[ [ 'clickConfirm',['$event'] ] ] ] ]}}">确定</view>
+            </view>
+        </view>
+        <image catchtap="__e" class="model-box-close data-v-e64b2a78" data-event-opts="{{[ [ 'tap',[ [ 'clickCancel',['$event'] ] ] ] ]}}" src="{{assetsImage.birthdayClose}}"></image>
+    </view>
+    <view class="birthday data-v-e64b2a78" style="{{'background-image:'+'url('+assetsImage.birthdayBg2+')'+';'+'background-size:'+'100% 100%'+';'}}" wx:else>
+        <image class="birthday-icon data-v-e64b2a78" src="{{assetsImage.birthdayBgIcon}}"></image>
+        <view class="birthday-text fw-xblack data-v-e64b2a78">
+            <rich-text class="data-v-e64b2a78" nodes="{{$root.g1}}"></rich-text>
+        </view>
+        <view bindtap="__e" class="birthday-btn f-semibold data-v-e64b2a78" data-event-opts="{{[ [ 'tap',[ [ 'confirmBirthday',['$event'] ] ] ] ]}}">好的</view>
+        <image catchtap="__e" class="model-box-close data-v-e64b2a78" data-event-opts="{{[ [ 'tap',[ [ 'clickCancelBithday',['$event'] ] ] ] ]}}" src="{{assetsImage.birthdayClose}}"></image>
+    </view>
+</view>

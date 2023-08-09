@@ -1,0 +1,6 @@
+{
+    "navigationStyle": "custom",
+    "disableScroll": false,
+    "onReachBottonDistance": 50,
+    "__warning__": "无效的 page.json [\"onReachBottonDistance\"]"
+}

@@ -1,0 +1,17 @@
+{
+    "component": true,
+    "usingComponents": {
+        "filter-text": "/components/ui/filterText",
+        "font-weight": "/components/ui/font-weight",
+        "package-card": "/components/rtmap/article-text/list-card-one",
+        "copuon-card": "/components/rtmap/article-text/copuon-card",
+        "ticket-card": "/components/rtmap/article-text/ticket-card-one",
+        "vip-card": "/components/rtmap/article-text/vip-card-one",
+        "combination-card": "/components/rtmap/article-text/combination-card",
+        "om-image": "/components/om-image/index",
+        "indicator": "/components/rtmap/indicator",
+        "universal-map": "plugin://wx209d168c345dce2c/universal-map",
+        "toast": "/components/rtmap/toast",
+        "universal-walk-line": "plugin://wx209d168c345dce2c/universal-walk-line"
+    }
+}

@@ -1,0 +1,1 @@
+<top-nav bind:__l="__l" bind:clickLeft="__e" bind:clickRight="__e" class="data-v-753b01d8" data-event-opts="{{[ [ '^clickLeft',[ ['clickLeft'] ] ],[ '^clickRight',[ ['clickRight'] ] ] ]}}" leftIcon="/static/images/index/ic-top-search.png" rightIcon="/static/images/index/ic-top-scan.png" vueId="e392030e-1"></top-nav>

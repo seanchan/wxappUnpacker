@@ -1,0 +1,7 @@
+<view class="check-ticket _div data-v-e5fa0eb8">
+    <view class="{{['ticket-options _div data-v-e5fa0eb8',localIsShow?'active':'']}}">
+        <view bindtap="__e" class="item _div data-v-e5fa0eb8" data-event-opts="{{[ [ 'tap',[ [ 'select',[index] ] ] ] ]}}" wx:for="{{tickets}}" wx:key="index">{{''+item.name+''}}</view>
+        <view bindtap="__e" class="cancel _div data-v-e5fa0eb8" data-event-opts="{{[ [ 'tap',[ [ 'cancel',['$event'] ] ] ] ]}}">取消</view>
+    </view>
+    <view bindtap="__e" class="mask _div data-v-e5fa0eb8" data-event-opts="{{[ [ 'tap',[ [ 'cancel',['$event'] ] ] ] ]}}" hidden="{{!localIsShow}}"></view>
+</view>

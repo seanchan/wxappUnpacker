@@ -1,0 +1,15 @@
+<view class="{{['_div data-v-47c7671e','loadmore',listTypes==='help'?'pad':'',styleType?'reserve':'',status==='hidden'?'hidden':'',isiPhoneX?'ipx':'',loadHeight?'h100':'']}}" wx:if="{{showLoadMore}}">
+    <view class="loading _div data-v-47c7671e" wx:if="{{status==='loading'}}">
+        <image class="loading-icon data-v-47c7671e" src="/static/images/components/ui/loading.png"></image>
+        <view class="loading-text _div data-v-47c7671e">加载中</view>
+    </view>
+    <block wx:else>
+        <view class="nomore _div data-v-47c7671e" wx:if="{{status==='finished'}}">暂无更多</view>
+        <block wx:else>
+            <view class="_div data-v-47c7671e" wx:if="{{status==='failed'}}">加载失败，请稍后重试</view>
+            <block wx:else>
+                <view class="_div data-v-47c7671e" wx:if="{{status==='empty'&&!!isShow}}">暂无数据</view>
+            </block>
+        </block>
+    </block>
+</view>

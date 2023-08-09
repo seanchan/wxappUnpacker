@@ -1,0 +1,3 @@
+<view class="toast-contain data-v-194eddb0" wx:if="{{isActive}}">
+    <view class="text data-v-194eddb0">{{message}}</view>
+</view>

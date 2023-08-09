@@ -1,0 +1,6 @@
+<view class="_div data-v-14da5c51">
+    <view class="{{['btn-gap _div data-v-14da5c51',isiPhoneX?'iphonex':'']}}"></view>
+    <view class="{{['btn-wrap _div data-v-14da5c51',isiPhoneX?'iphonex':'']}}">
+        <view bindtap="__e" class="{{['_div data-v-14da5c51','btn','f-semibold',isSub?'active':'',isLight?'light':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'submitInfo',['$event'] ] ] ] ]}}">{{''+submitText+''}}</view>
+    </view>
+</view>

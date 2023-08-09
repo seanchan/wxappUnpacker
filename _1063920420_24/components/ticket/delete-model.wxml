@@ -1,0 +1,9 @@
+<view catchtap="__e" class="v-delete-model data-v-9b49081a" data-event-opts="{{[ [ 'tap',[ [ 'clickCancel',['$event'] ] ] ] ]}}" wx:if="{{showDeleteModel}}">
+    <view class="model-box data-v-9b49081a">
+        <view class="title _p data-v-9b49081a">{{''+showText+''}}</view>
+        <view class="action data-v-9b49081a">
+            <view catchtap="__e" class="_p data-v-9b49081a" data-event-opts="{{[ [ 'tap',[ [ 'clickCancel',['$event'] ] ] ] ]}}">{{''+cancelText+''}}</view>
+            <view catchtap="__e" class="sure _p data-v-9b49081a" data-event-opts="{{[ [ 'tap',[ [ 'clickDelete',['$event'] ] ] ] ]}}">确定</view>
+        </view>
+    </view>
+</view>

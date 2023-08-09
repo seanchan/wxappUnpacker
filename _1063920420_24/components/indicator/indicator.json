@@ -1,0 +1,10 @@
+{
+    "component": true,
+    "usingComponents": {
+        "custom-navigation": "/components/navigation/custom-navigation",
+        "indicator": "/components/rtmap/indicator",
+        "universal-map": "plugin://wx209d168c345dce2c/universal-map",
+        "toast": "/components/rtmap/toast",
+        "universal-walk-line": "plugin://wx209d168c345dce2c/universal-walk-line"
+    }
+}

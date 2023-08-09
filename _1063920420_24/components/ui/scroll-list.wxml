@@ -1,0 +1,6 @@
+<view class="_div data-v-521588bb" style="{{wrapStyle}}">
+    <scroll-view bindscrolltolower="__e" class="{{['data-v-521588bb','scroll-view',collectStyle===1?'pb0':'']}}" data-event-opts="{{[ [ 'scrolltolower',[ [ 'scrolltolower',['$event'] ] ] ] ]}}" data-name="{{nearStyle}}" lowerThreshold="60" scrollY="{{true}}" style="{{frontImageStylec}}">
+        <slot></slot>
+        <load-more bind:__l="__l" class="data-v-521588bb" listTypes="{{listTypes}}" showLoadMore="{{showLoadMore}}" status="{{status}}" vueId="462c20b0-1"></load-more>
+    </scroll-view>
+</view>

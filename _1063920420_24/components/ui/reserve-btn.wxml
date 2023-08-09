@@ -1,0 +1,10 @@
+<view class="data-v-f4bc8994">
+    <view class="data-v-f4bc8994" wx:if="{{list.reservation_show===1}}">
+        <view class="{{['data-v-f4bc8994','reserve',info==='detail'||info==='details'?'pt20':'']}}">
+            <view class="reserve-text f-regular data-v-f4bc8994">请预约入园时间</view>
+            <view bindtap="__e" class="reserve-btn f-semibold data-v-f4bc8994" data-event-opts="{{[ [ 'tap',[ [ 'goReserve',['$event'] ] ] ] ]}}">{{''+btnName+''}}</view>
+        </view>
+        <view class="{{['data-v-f4bc8994',info==='detail'?'details':'']}}"></view>
+    </view>
+    <indicator bind:__l="__l" class="data-v-f4bc8994" status="{{indicatorStatus}}" useWhiteMask="{{false}}" vueId="f4bcb4ca-1"></indicator>
+</view>

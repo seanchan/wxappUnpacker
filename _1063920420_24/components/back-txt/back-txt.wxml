@@ -1,0 +1,8 @@
+<view class="data-v-15cbc1d6">
+    <font-weight bind:__l="__l" class="data-v-15cbc1d6" vueId="9ffdf77c-1"></font-weight>
+    <view class="navbar-contain data-v-15cbc1d6" style="{{'padding-top:'+top+'px'+';'+'height:'+frontImageStyle+'rpx'+';'+'background:'+backColor+';'}}">
+        <image bindtap="__e" class="top-icon data-v-15cbc1d6" data-event-opts="{{[ [ 'tap',[ [ 'onClickLeft',['$event'] ] ] ] ]}}" src="{{leftIcon}}"></image>
+        <view class="nav-title fw-semibold data-v-15cbc1d6" style="{{'color:'+textColor+';'}}">{{''+navTitle+''}}</view>
+        <view class="empty data-v-15cbc1d6"></view>
+    </view>
+</view>

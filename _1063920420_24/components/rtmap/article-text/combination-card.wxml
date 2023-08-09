@@ -1,0 +1,13 @@
+<view bindtap="__e" class="item data-v-85649afc" data-event-opts="{{[ [ 'tap',[ [ 'goDetail',['$0','$1'],['item','index'] ] ] ] ]}}">
+    <font-weight bind:__l="__l" class="data-v-85649afc" vueId="4c49e82d-1"></font-weight>
+    <view class="image data-v-85649afc">
+        <om-image bind:__l="__l" class="data-v-85649afc" end="?imageMogr2/format/jpg/interlace/1/thumbnail/750x" height="{{190}}" mode="aspectFill" url="{{item.cover_image}}" vueId="4c49e82d-2" width="{{335}}"></om-image>
+    </view>
+    <view class="mark data-v-85649afc" style="{{'background:'+'linear-gradient(180deg, rgba('+item.theme_color[0]+', '+item.theme_color[1]+', '+item.theme_color[2]+', 0) 0%, rgba('+item.theme_color[0]+', '+item.theme_color[1]+', '+item.theme_color[2]+', 100%))'+';'}}"></view>
+    <view class="itemTitle fw-xblack data-v-85649afc">
+        <filter-text bind:__l="__l" class="data-v-85649afc" content="{{item.title}}" vueId="4c49e82d-3"></filter-text>
+    </view>
+    <view class="itemSubTitle data-v-85649afc">
+        <filter-text bind:__l="__l" class="data-v-85649afc" content="{{item.sub_title}}" vueId="4c49e82d-4"></filter-text>
+    </view>
+</view>
